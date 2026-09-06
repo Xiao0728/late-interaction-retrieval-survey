@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "Please cite the survey using the preferred citation below."
+title: "Late-Interaction Neural Retrieval: Survey and Resources"
+type: dataset
+authors:
+  - family-names: Wang
+    given-names: Xiao
+  - family-names: Yu
+    given-names: Chuting
+  - family-names: Li
+    given-names: Minghan
+  - family-names: Yang
+    given-names: Binci
+  - family-names: Li
+    given-names: Hang
+  - family-names: He
+    given-names: Ben
+repository-code: "https://github.com/Xiao0728/late-interaction-retrieval-survey"
+url: "https://ssrn.com/abstract=7412000"
+preferred-citation:
+  type: generic
+  title: "A Survey of Late-Interaction Neural Retrieval: Paradigms, Systems, and Research Frontiers"
+  authors:
+    - family-names: Wang
+      given-names: Xiao
+    - family-names: Yu
+      given-names: Chuting
+    - family-names: Li
+      given-names: Minghan
+    - family-names: Yang
+      given-names: Binci
+    - family-names: Li
+      given-names: Hang
+    - family-names: He
+      given-names: Ben
+  year: 2026
+  publisher:
+    name: SSRN
+  url: "https://ssrn.com/abstract=7412000"
+  notes: "Preprint; SSRN abstract 7412000."
