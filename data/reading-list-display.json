@@ -1,0 +1,227 @@
+{
+  "answerai2024": {
+    "name": "RAGatouille",
+    "venue": "Software",
+    "role": "Provides accessible ColBERT training and retrieval tooling."
+  },
+  "archish2026": {
+    "name": "Token importance",
+    "venue": "AAAI",
+    "role": "Incorporates token importance into multi-vector retrieval."
+  },
+  "bian2025": {
+    "name": "IGP",
+    "venue": "SIGIR",
+    "role": "Uses a proximity graph for efficient multi-vector retrieval."
+  },
+  "chaffin2025": {
+    "name": "PyLate",
+    "venue": "CIKM",
+    "role": "Supports flexible training and retrieval for late-interaction models."
+  },
+  "chen2024": {
+    "name": "M3-Embedding / BGE-M3",
+    "venue": "ACL Findings",
+    "role": "Combines multilingual, dense, sparse, and multi-vector retrieval capabilities."
+  },
+  "clavie2025": {
+    "name": "JaColBERTv2.5",
+    "venue": "Journal of Natural Language Processing",
+    "role": "Studies training and inference improvements for Japanese multi-vector retrieval."
+  },
+  "clavie2026": {
+    "name": "LIR Workshop",
+    "venue": "ECIR",
+    "role": "Provides context for the late-interaction and multi-vector retrieval research community."
+  },
+  "cui2025": {
+    "name": "AGREE",
+    "venue": "arXiv",
+    "role": "Uses attention-derived region signals for visual retrieval supervision."
+  },
+  "edy2026": {
+    "name": "Late interaction dynamics",
+    "venue": "LIR Workshop",
+    "role": "Analyzes length bias and similarities beyond the strongest token match."
+  },
+  "engels2023": {
+    "name": "DESSERT",
+    "venue": "NeurIPS",
+    "role": "Uses retrieval tables for vector-set search."
+  },
+  "formal2021a": {
+    "name": "SPLADE",
+    "venue": "SIGIR",
+    "role": "Supplies a learned sparse lexical retrieval comparison."
+  },
+  "giacalone2024": {
+    "name": "Beneath [MASK]",
+    "venue": "ECIR",
+    "role": "Analyzes the role of structural query tokens in ColBERT."
+  },
+  "he2025": {
+    "name": "LeapMV",
+    "venue": "ECIR",
+    "role": "Optimizes token pruning for efficient multi-vector dense retrieval."
+  },
+  "hofstatter2022": {
+    "name": "ColBERTer",
+    "venue": "CIKM",
+    "role": "Combines whole-word representations, dimensionality reduction, and learned pruning."
+  },
+  "humeau2020": {
+    "name": "Poly-encoders",
+    "venue": "ICLR",
+    "role": "Uses learned attention codes as a boundary example of multi-vector representation."
+  },
+  "izacard2022": {
+    "name": "Contriever",
+    "venue": "TMLR",
+    "role": "Provides an unsupervised single-vector dense retrieval baseline."
+  },
+  "jha2024": {
+    "name": "Jina-ColBERT-v2",
+    "venue": "MRL Workshop",
+    "role": "Supports multilingual late interaction and reduced embedding dimensionality."
+  },
+  "karpukhin2020": {
+    "name": "DPR",
+    "venue": "EMNLP",
+    "role": "Provides a supervised single-vector dense passage retrieval baseline."
+  },
+  "kim2026heaven": {
+    "name": "HEAVEN / ViMDOC",
+    "venue": "ACL Findings",
+    "role": "Combines single-vector efficiency with multi-vector matching for visually rich documents."
+  },
+  "lei2023": {
+    "name": "Relevance-aware contrastive pre-training",
+    "venue": "ACL Findings",
+    "role": "Provides background on unsupervised dense retriever pre-training."
+  },
+  "li2021": {
+    "name": "VectorPRF",
+    "venue": "arXiv",
+    "role": "Studies the benefits and pitfalls of feedback for dense retrievers."
+  },
+  "lin2021notes": {
+    "name": "DeepImpact / COIL conceptual notes",
+    "venue": "arXiv",
+    "role": "Clarifies relationships between contextualized lexical and other retrieval approaches."
+  },
+  "lin2021book": {
+    "name": "Pretrained Transformers for Text Ranking",
+    "venue": "Book",
+    "role": "Provides background on transformer-based ranking architectures."
+  },
+  "luan2020": {
+    "name": "ME-BERT",
+    "venue": "arXiv",
+    "role": "Uses a fixed number of document vectors as a wider multi-vector design."
+  },
+  "ma2025": {
+    "name": "Light-ColPali / Light-ColQwen2",
+    "venue": "ACL Findings",
+    "role": "Studies storage reduction through fewer patch-level embeddings."
+  },
+  "macavaney2025": {
+    "name": "ConstBERT",
+    "venue": "ECIR",
+    "role": "Uses a fixed vector budget for constant-space document representations."
+  },
+  "macavaney2019": {
+    "name": "CEDR",
+    "venue": "SIGIR",
+    "role": "Provides a contextualized joint-encoding ranking comparison."
+  },
+  "macdonald2021": {
+    "name": "PyTerrier",
+    "venue": "CIKM",
+    "role": "Supports declarative retrieval experiments and pipeline evaluation."
+  },
+  "ni2022": {
+    "name": "Large dual encoders",
+    "venue": "EMNLP",
+    "role": "Studies generalization of single-vector dual-encoder retrieval."
+  },
+  "nogueira2019mono": {
+    "name": "BERT passage reranking",
+    "venue": "arXiv",
+    "role": "Provides a cross-encoder passage reranking comparison."
+  },
+  "nogueira2019multi": {
+    "name": "Multi-stage BERT ranking",
+    "venue": "arXiv",
+    "role": "Provides background on multi-stage neural ranking pipelines."
+  },
+  "pradeep2021": {
+    "name": "Expando–Mono–Duo",
+    "venue": "arXiv",
+    "role": "Describes expansion and sequence-to-sequence reranking pipelines."
+  },
+  "qdrantteamnd": {
+    "name": "Qdrant",
+    "venue": "Software",
+    "role": "Provides vector database infrastructure with multi-vector search support."
+  },
+  "qian2022": {
+    "name": "ALIGNER",
+    "venue": "arXiv",
+    "role": "Formulates multi-vector retrieval as sparse alignment."
+  },
+  "robertson1994": {
+    "name": "Okapi / BM25",
+    "venue": "TREC",
+    "role": "Provides the classical lexical retrieval baseline."
+  },
+  "sparckjones2000": {
+    "name": "Probabilistic retrieval model",
+    "venue": "Information Processing & Management",
+    "role": "Provides the probabilistic lexical retrieval foundations."
+  },
+  "tang2021": {
+    "name": "MVR",
+    "venue": "ACL",
+    "role": "Generates multiple pseudo-query embeddings to represent document relevance views."
+  },
+  "thakur2021": {
+    "name": "BEIR",
+    "venue": "arXiv",
+    "role": "Provides heterogeneous datasets for zero-shot retrieval evaluation."
+  },
+  "wang2023c": {
+    "name": "Col⋆",
+    "venue": "SIGIR",
+    "role": "Studies reproducibility and replicability of dense multi-representation retrieval."
+  },
+  "weller2024": {
+    "name": "NevIR",
+    "venue": "EACL",
+    "role": "Evaluates sensitivity to negation in neural retrieval."
+  },
+  "xie2025": {
+    "name": "MLR",
+    "venue": "EMNLP Findings",
+    "role": "Constructs document representations from multiple encoder layers."
+  },
+  "xiong2021": {
+    "name": "ANCE",
+    "venue": "ICLR",
+    "role": "Provides a single-vector baseline trained with approximate-neighbor hard negatives."
+  },
+  "yu2021": {
+    "name": "ANCE-PRF",
+    "venue": "CIKM",
+    "role": "Studies pseudo-relevance feedback for single-vector dense retrieval."
+  },
+  "zhang2022": {
+    "name": "Multi-view document representation",
+    "venue": "ACL",
+    "role": "Learns multiple document views for open-domain dense retrieval."
+  },
+  "reddy2025": {
+    "name": "Video-ColBERT",
+    "venue": "CVPR",
+    "role": "Extends contextualized late interaction to text-to-video retrieval."
+  }
+}

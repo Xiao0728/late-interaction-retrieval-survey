@@ -2,7 +2,7 @@
 
 The reading lists reconcile **120 distinct literature/resource records** with the authors’ August 2026 manuscript snapshot (59 PDF pages including front matter). The public survey is [SSRN 7412000](https://ssrn.com/abstract=7412000). The live SSRN PDF was not independently compared with this snapshot.
 
-Reading lists follow numbered subsections. One paper can appear in multiple relevant subsections. Explicit citations and named discussions are distinguished; background/boundary works and software are labeled separately. See the [citation reconciliation report](citation-audit.md) for evidence, duplicate handling, and validation.
+README reading lists use one table per chapter (§§3–11), with background and boundary cases collected at the end. Papers are deduplicated within a chapter and may recur across chapters. Subsection mappings and the distinction between explicit citations and named discussions are retained in the audit data. See the [citation reconciliation report](citation-audit.md) for evidence, duplicate handling, and validation.
 
 [survey.bib](../survey.bib) and [CITATION.cff](../CITATION.cff) cite the survey itself. [references.bib](../references.bib) exports the surveyed literature, including contextual and software references. Publication years follow the surveyed reference version; a linked preprint may have a different initial posting year or later publication. Generic BibTeX entries preserve title, authors, year, URL, and available venue information without inferring missing publication fields.
 

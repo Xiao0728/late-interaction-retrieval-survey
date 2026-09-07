@@ -35,11 +35,17 @@ survey = re.findall(r'^@\w+\{([^,]+),', (ROOT / 'survey.bib').read_text(), re.M)
 assert survey == ['wang2026lateinteractionsurvey'], 'survey.bib must cite only the survey'
 assert not set(survey) & set(keys), 'Survey citation mixed into literature bibliography'
 readme = (ROOT / 'README.md').read_text()
-for section in sections:
-    block = readme.split(f'<a id="section-{section}"></a>', 1)[1].split('<a id=', 1)[0].split('## Citation', 1)[0]
-    actual = set(re.findall(r'· `([^`]+)`', block))
-    expected = {p['citation_key'] for p in papers if section in p['discussed_in_sections']}
-    assert actual == expected, f'Reading list mismatch in §{section}: {actual ^ expected}'
+for section in [str(i) for i in range(3, 12)] + ['background-and-boundary-cases']:
+    anchor = section if section == 'background-and-boundary-cases' else 'section-' + section
+    block = readme.split(f'<a id="{anchor}"></a>', 1)[1].split('<a id=', 1)[0].split('## Citation', 1)[0]
+    actual = re.findall(r'\]\((https?://[^\s]+)\) \|', block)
+    if section == 'background-and-boundary-cases':
+        expected = [p['url'] for p in papers if p['category'] == 'background-and-boundary']
+    else:
+        expected = [p['url'] for p in papers if p['category'] != 'background-and-boundary' and any(s.split('.')[0] == section for s in p['discussed_in_sections'])]
+    assert len(actual) == len(set(actual)), f'Duplicate paper within chapter: {section}'
+    assert set(actual) == set(expected), f'Reading list mismatch: {section}'
+assert all(f"]({p['url']})" in readme for p in papers), 'Literature omitted from README'
 for path, content in outputs().items():
     assert (ROOT / path).read_text() == content, f'Stale generated file: {path}'
 print(f'PASS: {len(papers)} literature records; {len(occurrences)} evidence records; {len(sections)} outline entries; survey citation separate.')

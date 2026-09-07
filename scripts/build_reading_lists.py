@@ -11,34 +11,34 @@ def outputs():
     sections = json.loads((ROOT / 'data/sections.json').read_text())
     readme = (ROOT / 'README.md').read_text()
     prefix = readme.split('## Reading Lists')[0]
-    prefix = re.sub(r'This initial collection contains.*?See \[coverage and provenance\]\(docs/coverage.md\)\.', 'The collection contains **120 distinct bibliography records** from the August 2026 survey snapshot, including background work and software. Reading lists follow the actual numbered subsections; the same paper can appear wherever it is cited or discussed. See [coverage and provenance](docs/coverage.md) and the [citation audit](docs/citation-audit.md).', prefix)
-    prefix = prefix.replace('| 2 | Definition and boundaries | [Scope](#scope) |', '| 1–2 | Background and boundary cases | [Reading list](#background-and-boundary-cases) |')
-    prefix = prefix.replace('engines, proxies, query pruning, and fused scoring in Section 6.', 'engines, proxies, and query pruning in Section 6; fused scoring kernels in Section 11.2.')
+    prefix = re.sub(r'The collection contains.*?\[citation audit\]\(docs/citation-audit.md\)\.', 'The collection contains **120 distinct bibliography records** from the August 2026 survey snapshot, including background work and software. Papers are grouped by survey chapter; a work may appear in multiple relevant chapters. Background and boundary cases are collected at the end. See [coverage and provenance](docs/coverage.md).', prefix)
     text = prefix + '## Reading Lists\n\n'
-    text += 'Download [references.bib](references.bib) for the cited literature; use [survey.bib](survey.bib) to cite the survey itself. **Cited** denotes an explicit author–year citation (including table citations); **mentioned** denotes a named discussion whose citation is supplied elsewhere. Parent-section entries cover introductory text; subsections without a new citation or named reference are retained in the outline.\n\n'
-    for sec in sections:
-        sid = sec['id']
-        if sid == '1':
-            text += '<a id="background-and-boundary-cases"></a>\n\n### Background and boundary cases — §§1–2\n\nPoly-encoders, ME-BERT, MVR, and MLR illustrate the wider multi-vector family. DPR, ANCE, and Contriever supply single-vector baselines. Their inclusion is background context, not a classification as core late interaction. Canonical methods cited in the introduction are listed separately below.\n\n'
-        level = '###' if '.' not in sid else '####'
-        text += f'<a id="section-{sid}"></a>\n\n{level} §{sid} {sec["title"]}\n\n'
-        selected = [p for p in papers if sid in p['discussed_in_sections']]
-        if not selected:
-            text += 'No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.\n\n'
-        for category, label in [('late-interaction-and-extensions', 'Late-interaction methods, systems, analyses, and extensions'), ('background-and-boundary', 'Background and boundary cases'), ('software', 'Software and infrastructure')]:
-            group = [p for p in selected if p['category'] == category]
-            if not group:
-                continue
-            text += f'**{label}**\n\n| Work / paper | Survey citation | Evidence |\n| --- | --- | --- |\n'
-            for p in group:
-                title = p['title'].replace('|', '\\|')
-                name = p['name'].replace('|', '\\|')
-                label = title if name.casefold() == title.casefold() else f'{name} — {title}'
-                evidence = 'Cited' if sid in p['cited_in_sections'] else 'Mentioned'
-                text += f'| [{label}]({p["url"]}) | {" / ".join(p["source_citations"])} · `{p["citation_key"]}` | {evidence} |\n'
-            text += '\n'
+    text += 'Download [references.bib](references.bib) for the literature, or [survey.bib](survey.bib) to cite the survey.\n\n'
+    display = json.loads((ROOT / 'data/reading-list-display.json').read_text())
+
+    def table(group):
+        result = '| Work | Year / venue or version | Paper | Main contribution / relevance |\n| --- | --- | --- | --- |\n'
+        for paper in sorted(group, key=lambda p: (p['year'] or 0, p['name'].casefold())):
+            extra = display.get(paper['citation_key'], {})
+            def cell(value):
+                return str(value).replace('|', r'\|').replace('\n', ' ')
+            name = cell(extra.get('name', paper['name']))
+            venue = extra.get('venue', paper.get('reference_venue_or_version', ''))
+            date = str(paper['year'] or 'n.d.') + (' · ' + venue if venue else '')
+            role = extra.get('role', paper.get('role', ''))
+            result += f"| {name} | {cell(date)} | [{cell(paper['title'])}]({paper['url']}) | {cell(role)} |\n"
+        return result + '\n'
+
+    for chapter in range(3, 12):
+        heading = next(sec['title'] for sec in sections if sec['id'] == str(chapter))
+        text += f'<a id="section-{chapter}"></a>\n\n### Section {chapter}: {heading}\n\n'
+        group = [p for p in papers if p['category'] != 'background-and-boundary' and any(s.split('.')[0] == str(chapter) for s in p['discussed_in_sections'])]
+        text += table(group)
+    text += '<a id="background-and-boundary-cases"></a>\n\n### Background and Boundary Cases\n\n'
+    text += 'These works provide background, wider multi-vector designs, comparison methods, and evaluation context. Poly-encoders, ME-BERT, MVR, and MLR illustrate the wider multi-vector family; DPR, ANCE, and Contriever are single-vector baselines. COIL and XTR remain in their substantive chapters because the survey discusses their modified forms of late interaction in detail.\n\n'
+    text += table([p for p in papers if p['category'] == 'background-and-boundary'])
     text += '## Citation' + readme.split('## Citation', 1)[1]
-    text = text.replace('The initial release follows the survey\'s component-based organization.', 'The reading lists follow the survey\'s numbered subsections with many-to-many paper placement.')
+    text = text.replace("The reading lists follow the survey's numbered subsections with many-to-many paper placement.", "The reading lists follow the survey's chapters, with background and boundary cases collected separately.")
     bib = '% Literature cited by the survey; cite the survey itself using survey.bib.\n% Author initials and publication years follow the surveyed reference version.\n\n'
     for p in papers:
         def esc(value):

@@ -8,7 +8,7 @@ Companion resources for **[A Survey of Late-Interaction Neural Retrieval: Paradi
 
 Late interaction retains independently encoded local representations and performs fine-grained matching at scoring time. This survey organizes the field around the components of the retrieval pipeline, connecting model design to representation storage, candidate generation, final scoring, and deployment.
 
-The collection contains **120 distinct bibliography records** from the August 2026 survey snapshot, including background work and software. Reading lists follow the actual numbered subsections; the same paper can appear wherever it is cited or discussed. See [coverage and provenance](docs/coverage.md) and the [citation audit](docs/citation-audit.md).
+The collection contains **120 distinct bibliography records** from the August 2026 survey snapshot, including background work and software. Papers are grouped by survey chapter; a work may appear in multiple relevant chapters. Background and boundary cases are collected at the end. See [coverage and provenance](docs/coverage.md).
 
 ## Start Here
 
@@ -53,1079 +53,249 @@ Three distinctions guide this repository:
 
 ## Reading Lists
 
-Download [references.bib](references.bib) for the cited literature; use [survey.bib](survey.bib) to cite the survey itself. **Cited** denotes an explicit author–year citation (including table citations); **mentioned** denotes a named discussion whose citation is supplied elsewhere. Parent-section entries cover introductory text; subsections without a new citation or named reference are retained in the outline.
-
-<a id="background-and-boundary-cases"></a>
-
-### Background and boundary cases — §§1–2
-
-Poly-encoders, ME-BERT, MVR, and MLR illustrate the wider multi-vector family. DPR, ANCE, and Contriever supply single-vector baselines. Their inclusion is background context, not a classification as core late interaction. Canonical methods cited in the introduction are listed separately below.
-
-<a id="section-1"></a>
-
-### §1 Introduction
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Argus-Retriever — Argus-Retriever: Vision-LLM Late-Interaction Retrieval with Region-Aware Query-Conditioned MoE for Visual Document Retrieval](https://arxiv.org/abs/2606.04300) | Abdallah et al., 2026 · `abdallah2026` | Cited |
-| [ColPali — ColPali: Efficient Document Retrieval with Vision Language Models](https://openreview.net/forum?id=ogjBpZ8uSi) | Faysse et al., 2025 · `faysse2025` | Cited |
-| [SPLATE — SPLATE: Sparse Late Interaction Retrieval](https://doi.org/10.1145/3626772.3657968) | Formal et al., 2024 · `formal2024` | Cited |
-| [Hydra — Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model](https://arxiv.org/abs/2603.28554) | Georgiou, 2026 · `georgiou2026` | Cited |
-| [Single-stage sparse coding — No More K-Means: Single-Stage Sparse Coding for Efficient Multi-Vector Retrieval](https://arxiv.org/abs/2605.30120) | Guo et al., 2026 · `guo2026` | Cited |
-| [LEMUR — LEMUR: Learned Multi-Vector Retrieval](https://arxiv.org/abs/2601.21853) | Jääsaari et al., 2026 · `jaasaari2026` | Cited |
-| [Voronoi pruning — A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models](https://doi.org/10.1145/3805712.3809726) | Kankanampati et al., 2026 · `kankanampati2026` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Cited |
-| [Signed MaxSim — Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models](https://arxiv.org/abs/2607.05803) | Killingback et al., 2026a / Killingback et al., 2026b · `killingback2026a` | Cited |
-| [LITTA — LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval](https://arxiv.org/abs/2603.26683) | Kim, 2026 · `kim2026litta` | Cited |
-| [Nemotron ColEmbed V2 — Nemotron ColEmbed V2: Top-Performing Late Interaction Embedding Models for Visual Document Retrieval](https://arxiv.org/abs/2602.03992) | Moreira et al., 2026 · `moreira2026` | Cited |
-| [Flash-MaxSim — FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval](https://arxiv.org/abs/2605.29517) | Pony et al., 2026a · `pony2026a` | Cited |
-| [Col-Bandit — Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Pony et al., 2026b · `pony2026b` | Cited |
-| [Video-ColBERT — Video-colbert: Contextualized late interaction for text-to-video retrieval](https://openaccess.thecvf.com/content/CVPR2025/html/Reddy_Video-ColBERT_Contextualized_Late_Interaction_for_Text-to-Video_Retrieval_CVPR_2025_paper.html) | Reddy et al., 2025 · `reddy2025` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Cited |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Cited |
-| [TileMaxSim — TileMaxSim: IO-Aware GPU MaxSim Scoring with Dimension Tiling and Fused Product Quantization](https://arxiv.org/abs/2606.26439) | Sharma, 2026 · `sharma2026` | Cited |
-| [LateOn / mLateOn — DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search](https://arxiv.org/abs/2607.27178) | Sourty et al., 2026 · `sourty2026` | Cited |
-| [GEM — GEM: A Native Graph-Based Index for Multi-Vector Retrieval](https://arxiv.org/abs/2603.20336) | Tian et al., 2026 · `tian2026` | Cited |
-| [Early ColBERT-PRF — Pseudo-Relevance Feedback for Multiple Representation Dense Retrieval](https://doi.org/10.1145/3471158.3472250) | Wang et al., 2021 · `wang2021` | Cited |
-| [ColBERT-PRF — ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval](https://doi.org/10.1145/3572405) | Wang et al., 2023b · `wang2023b` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Lir: The first workshop on late interaction and multi vector retrieval@ ecir 2026](https://doi.org/10.1007/978-3-032-21324-2_11) | Clavié et al., 2026 · `clavie2026` | Cited |
-| [SPLADE: sparse lexical and expansion model for first stage ranking](https://doi.org/10.1145/3404835.3463098) | Formal et al., 2021a · `formal2021a` | Cited |
-| [DPR — Dense passage retrieval for open-domain question answering](https://doi.org/10.18653/V1/2020.EMNLP-MAIN.550) | Karpukhin et al., 2020 · `karpukhin2020` | Cited |
-| [Unsupervised dense retrieval with relevance-aware contrastive pre-training](https://aclanthology.org/2023.findings-acl.695/) | Lei et al., 2023 · `lei2023` | Cited |
-| [Pretrained Transformers for Text Ranking: BERT and Beyond](https://doi.org/10.2200/S01123ED1V01Y202108HLT053) | Lin et al., 2021 · `lin2021book` | Cited |
-| [ME-BERT — Sparse, dense, and attentional representations for text retrieval](https://arxiv.org/abs/2005.00181) | Luan et al., 2020 · `luan2020` | Cited |
-| [CEDR: contextualized embeddings for document ranking](https://doi.org/10.1145/3331184.3331317) | MacAvaney et al., 2019 · `macavaney2019` | Cited |
-| [Large dual encoders are generalizable retrievers](https://aclanthology.org/2022.emnlp-main.669/) | Ni et al., 2022 · `ni2022` | Cited |
-| [Multi-Stage Document Ranking with BERT](https://arxiv.org/abs/1910.14424) | Nogueira et al., 2019 · `nogueira2019multi` | Cited |
-| [Okapi at TREC-3](http://trec.nist.gov/pubs/trec3/papers/city.ps.gz) | Robertson et al., 1994 · `robertson1994` | Cited |
-| [BEIR: A heterogenous benchmark for zero-shot evaluation of information retrieval models](https://arxiv.org/abs/2104.08663) | Thakur et al., 2021 · `thakur2021` | Cited |
-| [Multi-view document representation learning for open-domain dense retrieval](https://aclanthology.org/2022.acl-long.414/) | Zhang et al., 2022 · `zhang2022` | Cited |
-
-**Software and infrastructure**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [PyLate — Pylate: Flexible training and retrieval for late interaction models](https://arxiv.org/abs/2508.03555) | Chaffin and Sourty, 2025 · `chaffin2025` | Cited |
-
-<a id="section-2"></a>
-
-### §2 Defining Late Interaction
-
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-2.1"></a>
-
-#### §2.1 Formal definition and structural properties
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-
-<a id="section-2.2"></a>
-
-#### §2.2 Independent encoding and delayed matching
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [DPR — Dense passage retrieval for open-domain question answering](https://doi.org/10.18653/V1/2020.EMNLP-MAIN.550) | Karpukhin et al., 2020 · `karpukhin2020` | Cited |
-| [CEDR: contextualized embeddings for document ranking](https://doi.org/10.1145/3331184.3331317) | MacAvaney et al., 2019 · `macavaney2019` | Cited |
-| [Passage re-ranking with BERT](https://arxiv.org/abs/1901.04085) | Nogueira and Cho, 2019 · `nogueira2019mono` | Cited |
-| [ANCE — Approximate nearest neighbor negative contrastive learning for dense text retrieval](https://openreview.net/forum?id=zeFrfgyZln) | Xiong et al., 2021 · `xiong2021` | Cited |
-
-<a id="section-2.3"></a>
-
-#### §2.3 Late interaction retrieval versus multi-vector retrieval
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Cited |
-| [ALIGNER — Multi-vector retrieval as sparse alignment](https://arxiv.org/abs/2211.01267) | Qian et al., 2022 · `qian2022` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Cited |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Lir: The first workshop on late interaction and multi vector retrieval@ ecir 2026](https://doi.org/10.1007/978-3-032-21324-2_11) | Clavié et al., 2026 · `clavie2026` | Cited |
-| [Poly-encoders — Poly-encoders: Architectures and pre-training strategies for fast and accurate multi-sentence scoring](https://openreview.net/forum?id=SkxgnnNFvH) | Humeau et al., 2020 · `humeau2020` | Cited |
-| [ME-BERT — Sparse, dense, and attentional representations for text retrieval](https://arxiv.org/abs/2005.00181) | Luan et al., 2020 · `luan2020` | Cited |
-| [MVR — Improving document representations by generating pseudo query embeddings for dense retrieval](https://doi.org/10.18653/v1/2021.acl-long.392) | Tang et al., 2021 · `tang2021` | Cited |
-| [MLR — Investigating multi-layer representations for dense passage retrieval](https://aclanthology.org/2025.findings-emnlp.1333/) | Xie and Lukasiewicz, 2025 · `xie2025` | Cited |
-
-<a id="section-2.4"></a>
-
-#### §2.4 MaxSim and its retrieval-theoretic interpretation
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [White-box analysis — A White Box Analysis of ColBERT](https://doi.org/10.1007/978-3-030-72240-1_23) | Formal et al., 2021b · `formal2021b` | Cited |
-| [TRIAL — TRIAL: Token Relations and Importance Aware Late-Interaction for Accurate Text Retrieval](https://aclanthology.org/2025.emnlp-main.854/) | Kang et al., 2025 · `kang2025` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Cited |
-| [Token pruning study — A Study on Token Pruning for ColBERT](https://arxiv.org/abs/2112.06540) | Lassance et al., 2021 · `lassance2021` | Cited |
-| [Learned token pruning — Learned Token Pruning in Contextualized Late Interaction over BERT (ColBERT)](https://doi.org/10.1145/3477495.3531835) | Lassance et al., 2022 · `lassance2022` | Cited |
-| [Matching and pruning analysis — An Analysis on Matching Mechanisms and Token Pruning for Late-Interaction Models](https://doi.org/10.1145/3639818) | Liu et al., 2024 · `liu2024` | Cited |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Cited |
-| [Dominance-based pruning — Towards Lossless Token Pruning in Late-Interaction Retrieval Models](https://doi.org/10.1145/3726302.3730100) | Zong and Piwowarski, 2025 · `zong2025` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Multi-view document representation learning for open-domain dense retrieval](https://aclanthology.org/2022.acl-long.414/) | Zhang et al., 2022 · `zhang2022` | Cited |
-
-<a id="section-2.5"></a>
-
-#### §2.5 Scope, boundaries, and edge cases
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ELK-Multi — Multi-Vector Biomedical Dense Retrieval with Knowledge-Enhanced Entity-Type Clustering](https://doi.org/10.1145/3785368) | Deng et al., 2026 · `deng2026` | Cited |
-| [SPLATE — SPLATE: Sparse Late Interaction Retrieval](https://doi.org/10.1145/3626772.3657968) | Formal et al., 2024 · `formal2024` | Cited |
-| [COIL — COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List](https://aclanthology.org/2021.naacl-main.241/) | Gao et al., 2021 · `gao2021` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Cited |
-| [Learned token pruning — Learned Token Pruning in Contextualized Late Interaction over BERT (ColBERT)](https://doi.org/10.1145/3477495.3531835) | Lassance et al., 2022 · `lassance2022` | Cited |
-| [XTR — Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Lee et al., 2023 · `lee2023` | Cited |
-| [SLIM — SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted Indexes](https://doi.org/10.1145/3539618.3591977) | Li et al., 2023a · `li2023a` | Cited |
-| [ColBERT-XM — ColBERT-XM: A Modular Multi-Vector Representation Model for Zero-Shot Multilingual Information Retrieval](https://aclanthology.org/2025.coling-main.295/) | Louis et al., 2025 · `louis2025` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Cited |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [SPLADE: sparse lexical and expansion model for first stage ranking](https://doi.org/10.1145/3404835.3463098) | Formal et al., 2021a · `formal2021a` | Cited |
-| [Contriever — Unsupervised dense information retrieval with contrastive learning](https://openreview.net/forum?id=jKN1pXi7b0) | Izacard et al., 2022 · `izacard2022` | Cited |
-| [DPR — Dense passage retrieval for open-domain question answering](https://doi.org/10.18653/V1/2020.EMNLP-MAIN.550) | Karpukhin et al., 2020 · `karpukhin2020` | Cited |
-| [A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques](https://arxiv.org/abs/2106.14807) | Lin and Ma, 2021 · `lin2021notes` | Cited |
-| [CEDR: contextualized embeddings for document ranking](https://doi.org/10.1145/3331184.3331317) | MacAvaney et al., 2019 · `macavaney2019` | Cited |
-| [The expando-mono-duo design pattern for text ranking with pretrained sequence-to-sequence models](https://arxiv.org/abs/2101.05667) | Pradeep et al., 2021 · `pradeep2021` | Cited |
-| [Okapi at TREC-3](http://trec.nist.gov/pubs/trec3/papers/city.ps.gz) | Robertson et al., 1994 · `robertson1994` | Cited |
-| [ANCE — Approximate nearest neighbor negative contrastive learning for dense text retrieval](https://openreview.net/forum?id=zeFrfgyZln) | Xiong et al., 2021 · `xiong2021` | Cited |
+Download [references.bib](references.bib) for the literature, or [survey.bib](survey.bib) to cite the survey.
 
 <a id="section-3"></a>
 
-### §3 ColBERT as a Prototype Late-Interaction Pipeline
+### Section 3: ColBERT as a Prototype Late-Interaction Pipeline
 
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-
-<a id="section-3.1"></a>
-
-#### §3.1 The modular ColBERT prototype
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Cited |
-
-<a id="section-3.2"></a>
-
-#### §3.2 How later work modifies the prototype
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| ColBERT | 2020 · SIGIR | [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Independent token encoding and MaxSim establish the prototype pipeline. |
 
 <a id="section-4"></a>
 
-### §4 Scoring and Matching Variants
+### Section 4: Scoring and Matching Variants
 
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-
-<a id="section-4.1"></a>
-
-#### §4.1 Learned Token Importance, Relations, and Signed Evidence
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT-AW — ColBERT-AW: Enhancing Late Interaction Retrieval with Attribute-Aware Query Token Weighting](https://doi.org/10.1109/ACCESS.2026.3672116) | An and Lee, 2026 · `an2026` | Cited |
-| [token-importance — Incorporating token importance in multi-vector retrieval](https://doi.org/10.1609/aaai.v40i39.40566) | Archish et al., 2026 · `archish2026` | Cited |
-| [TRIAL — TRIAL: Token Relations and Importance Aware Late-Interaction for Accurate Text Retrieval](https://aclanthology.org/2025.emnlp-main.854/) | Kang et al., 2025 · `kang2025` | Cited |
-| [Signed MaxSim — Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models](https://arxiv.org/abs/2607.05803) | Killingback et al., 2026a / Killingback et al., 2026b · `killingback2026a` | Cited |
-| [ColBERT-Att — ColBERT-Att: Late-Interaction Meets Attention for Enhanced Retrieval](https://arxiv.org/abs/2603.25248) | Patel and Dutta, 2026 · `patel2026` | Mentioned |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Okapi at TREC-3](http://trec.nist.gov/pubs/trec3/papers/city.ps.gz) | Robertson et al., 1994 · `robertson1994` | Cited |
-| [A probabilistic model of information retrieval: development and comparative experiments: Part 2](https://www.sciencedirect.com/science/article/abs/pii/S0306457300000169) | Spärck Jones et al., 2000 · `sparckjones2000` | Cited |
-
-<a id="section-4.2"></a>
-
-#### §4.2 Attention-Derived Match Weighting
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [ColBERT-Att — ColBERT-Att: Late-Interaction Meets Attention for Enhanced Retrieval](https://arxiv.org/abs/2603.25248) | Patel and Dutta, 2026 · `patel2026` | Cited |
-
-<a id="section-4.3"></a>
-
-#### §4.3 Hard-Max Pooling and Smoother Alternatives
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Spike Hijacking — Spike Hijacking in Late-Interaction Retrieval](https://arxiv.org/abs/2604.05253) | Suresh et al., 2026 · `suresh2026` | Cited |
-
-<a id="section-4.4"></a>
-
-#### §4.4 Discussion and Takeaways
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [EXCISE — EXCISE: Query-Side Exclusion for Late-Interaction Retrieval](https://arxiv.org/abs/2608.05497) | Ali et al., 2026 · `ali2026` | Cited |
-| [ColBERT-AW — ColBERT-AW: Enhancing Late Interaction Retrieval with Attribute-Aware Query Token Weighting](https://doi.org/10.1109/ACCESS.2026.3672116) | An and Lee, 2026 · `an2026` | Cited |
-| [token-importance — Incorporating token importance in multi-vector retrieval](https://doi.org/10.1609/aaai.v40i39.40566) | Archish et al., 2026 · `archish2026` | Cited |
-| [Late interaction dynamics — Working notes on late interaction dynamics: Analyzing targeted behaviors of late interaction models](https://arxiv.org/abs/2603.26259) | Edy et al., 2026 · `edy2026` | Cited |
-| [TRIAL — TRIAL: Token Relations and Importance Aware Late-Interaction for Accurate Text Retrieval](https://aclanthology.org/2025.emnlp-main.854/) | Kang et al., 2025 · `kang2025` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Cited |
-| [Signed MaxSim — Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models](https://arxiv.org/abs/2607.05803) | Killingback et al., 2026a / Killingback et al., 2026b · `killingback2026a` | Cited |
-| [ColBERT-Att — ColBERT-Att: Late-Interaction Meets Attention for Enhanced Retrieval](https://arxiv.org/abs/2603.25248) | Patel and Dutta, 2026 · `patel2026` | Cited |
-| [Col-Bandit — Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Pony et al., 2026b · `pony2026b` | Cited |
-| [Spike Hijacking — Spike Hijacking in Late-Interaction Retrieval](https://arxiv.org/abs/2604.05253) | Suresh et al., 2026 · `suresh2026` | Cited |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| ColBERT | 2020 · SIGIR | [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Independent token encoding and MaxSim establish the prototype pipeline. |
+| TRIAL | 2025 · EMNLP | [TRIAL: Token Relations and Importance Aware Late-Interaction for Accurate Text Retrieval](https://aclanthology.org/2025.emnlp-main.854/) | Adds token importance and relation-aware matching. |
+| Col-Bandit | 2026 · arXiv | [Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Adaptively allocates MaxSim evaluations during top-k reranking. |
+| ColBERT-Att | 2026 · arXiv | [ColBERT-Att: Late-Interaction Meets Attention for Enhanced Retrieval](https://arxiv.org/abs/2603.25248) | Uses attention-derived weights for selected matches. |
+| ColBERT-AW | 2026 · IEEE Access | [ColBERT-AW: Enhancing Late Interaction Retrieval with Attribute-Aware Query Token Weighting](https://doi.org/10.1109/ACCESS.2026.3672116) | Weights query-token contributions. |
+| EXCISE | 2026 · arXiv | [EXCISE: Query-Side Exclusion for Late-Interaction Retrieval](https://arxiv.org/abs/2608.05497) | Diagnoses exclusion inversion; the remedy adds candidate-stage processing. |
+| Late interaction dynamics | 2026 · LIR Workshop | [Working notes on late interaction dynamics: Analyzing targeted behaviors of late interaction models](https://arxiv.org/abs/2603.26259) | Analyzes length bias and similarities beyond the strongest token match. |
+| Signed MaxSim | 2026 · arXiv | [Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models](https://arxiv.org/abs/2607.05803) | Studies representational capacity and introduces signed contributions. |
+| Spike Hijacking | 2026 · arXiv / LIR Workshop | [Spike Hijacking in Late-Interaction Retrieval](https://arxiv.org/abs/2604.05253) | Examines hard-max concentration and alternative pooling rules. |
+| Token importance | 2026 · AAAI | [Incorporating token importance in multi-vector retrieval](https://doi.org/10.1609/aaai.v40i39.40566) | Incorporates token importance into multi-vector retrieval. |
 
 <a id="section-5"></a>
 
-### §5 Lightweight Document Representations
+### Section 5: Lightweight Document Representations
 
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-
-<a id="section-5.1"></a>
-
-#### §5.1 Residual and Code-Based Compression
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Cited |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Cited |
-| [ColBERTSaR — ColBERTSaR: Sparsified ColBERT Index via Product Quantization](https://arxiv.org/abs/2606.05568) | Yang et al., 2026c · `yang2026c` | Cited |
-| [Contextual Quantization — Compact Token Representations with Contextual Quantization for Efficient Document Re-ranking](https://aclanthology.org/2022.acl-long.51/) | Yang et al., 2022 · `yang2022` | Cited |
-
-<a id="section-5.2"></a>
-
-#### §5.2 Dimensionality Reduction
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [colberter — Introducing neural bag of whole-words with colberter: Contextualized late interactions using enhanced reduction](https://doi.org/10.1145/3511808.3557367) | Hofstätter et al., 2022 · `hofstatter2022` | Cited |
-| [Jina-ColBERT-v2 — Jina-colbert-v2: A general-purpose multilingual late interaction retriever](https://aclanthology.org/2024.mrl-1.11/) | Jha et al., 2024 · `jha2024` | Cited |
-
-<a id="section-5.3"></a>
-
-#### §5.3 Reducing the Number or Granularity of Local Units
-
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-5.3.1"></a>
-
-#### §5.3.1 Heuristic and Learned Document-Token Pruning
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Static pruning — Static Pruning for Multi-Representation Dense Retrieval](https://doi.org/10.1145/3573128.3604896) | Acquavia et al., 2023 · `acquavia2023` | Cited |
-| [LeapMV — Token pruning optimization for efficient multi-vector dense retrieval](https://doi.org/10.1007/978-3-031-88708-6_7) | He et al., 2025 · `he2025` | Cited |
-| [Voronoi pruning — A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models](https://doi.org/10.1145/3805712.3809726) | Kankanampati et al., 2026 · `kankanampati2026` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [Token pruning study — A Study on Token Pruning for ColBERT](https://arxiv.org/abs/2112.06540) | Lassance et al., 2021 · `lassance2021` | Cited |
-| [Learned token pruning — Learned Token Pruning in Contextualized Late Interaction over BERT (ColBERT)](https://doi.org/10.1145/3477495.3531835) | Lassance et al., 2022 · `lassance2022` | Cited |
-| [Matching and pruning analysis — An Analysis on Matching Mechanisms and Token Pruning for Late-Interaction Models](https://doi.org/10.1145/3639818) | Liu et al., 2024 · `liu2024` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-| [Pruning comparison — Comparing Token Pruning Approaches for Multi-Vector Retrieval](https://doi.org/10.1145/3805712.3808564) | Schlatt et al., 2026 · `schlatt2026` | Cited |
-
-<a id="section-5.3.2"></a>
-
-#### §5.3.2 Dominance-Based Near-Lossless Pruning
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [Dominance-based pruning — Towards Lossless Token Pruning in Late-Interaction Retrieval Models](https://doi.org/10.1145/3726302.3730100) | Zong and Piwowarski, 2025 · `zong2025` | Cited |
-
-<a id="section-5.3.3"></a>
-
-#### §5.3.3 Pooling, Span Compression, and Fixed Budgets
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Token pooling — Reducing the Footprint of Multi-Vector Retrieval with Minimal Performance Impact via Token Pooling](https://arxiv.org/abs/2409.14683) | Clavié et al., 2024 · `clavie2024` | Cited |
-| [ColPali — ColPali: Efficient Document Retrieval with Vision Language Models](https://openreview.net/forum?id=ogjBpZ8uSi) | Faysse et al., 2025 · `faysse2025` | Mentioned |
-| [Compression comparison — A Brief Comparison of Training-Free Multi-Vector Sequence Compression Methods](https://arxiv.org/abs/2603.22434) | Jha et al., 2026b · `jha2026b` | Cited |
-| [Learn to Pool — Learn to Pool: Lightweight Fine-Tuning for Flexible Multi-Vector Compression](https://arxiv.org/abs/2607.06036) | Josef, 2026 · `josef2026` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [Light-ColPali / Light-ColQwen2 — Towards storage-efficient visual document retrieval: An empirical study on reducing patch-level embeddings](https://aclanthology.org/2025.findings-acl.1003/) | Ma et al., 2025 · `ma2025` | Cited |
-| [ConstBERT — Efficient constant-space multi-vector retrieval](https://doi.org/10.1007/978-3-031-88714-7_22) | MacAvaney et al., 2025 · `macavaney2025` | Cited |
-| [MarginMerge — Coverage Matters: MarginMerge for Compressing Multi-Vector Visual Document Retrievers](https://arxiv.org/abs/2608.02969) | Mahdizadeh et al., 2026 · `mahdizadeh2026` | Cited |
-| [SCV — SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors](https://aclanthology.org/2025.coling-industry.63/) | Park et al., 2025 · `park2025` | Cited |
-| [Compression across modalities — Multi-Vector Index Compression in Any Modality](https://arxiv.org/abs/2602.21202) | Qin et al., 2026 · `qin2026` | Cited |
-| [Prune-then-merge — Sculpting the Vector Space: Towards Efficient Multi-Vector Visual Document Retrieval via Prune-then-Merge Framework](https://aclanthology.org/2026.findings-acl.1247/) | Yan et al., 2026b · `yan2026b` | Cited |
-
-<a id="section-5.4"></a>
-
-#### §5.4 Reported Footprints and Comparison Limits
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [LeapMV — Token pruning optimization for efficient multi-vector dense retrieval](https://doi.org/10.1007/978-3-031-88708-6_7) | He et al., 2025 · `he2025` | Mentioned |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [ConstBERT — Efficient constant-space multi-vector retrieval](https://doi.org/10.1007/978-3-031-88714-7_22) | MacAvaney et al., 2025 · `macavaney2025` | Mentioned |
-| [SCV — SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors](https://aclanthology.org/2025.coling-industry.63/) | Park et al., 2025 · `park2025` | Mentioned |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-
-<a id="section-5.5"></a>
-
-#### §5.5 Discussion and Takeaways
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [LeapMV — Token pruning optimization for efficient multi-vector dense retrieval](https://doi.org/10.1007/978-3-031-88708-6_7) | He et al., 2025 · `he2025` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [Matching and pruning analysis — An Analysis on Matching Mechanisms and Token Pruning for Late-Interaction Models](https://doi.org/10.1145/3639818) | Liu et al., 2024 · `liu2024` | Cited |
-| [ConstBERT — Efficient constant-space multi-vector retrieval](https://doi.org/10.1007/978-3-031-88714-7_22) | MacAvaney et al., 2025 · `macavaney2025` | Cited |
-| [SCV — SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors](https://aclanthology.org/2025.coling-industry.63/) | Park et al., 2025 · `park2025` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Cited |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| ColBERT | 2020 · SIGIR | [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Independent token encoding and MaxSim establish the prototype pipeline. |
+| Token pruning study | 2021 · arXiv | [A Study on Token Pruning for ColBERT](https://arxiv.org/abs/2112.06540) | Studies offline removal of document-token vectors. |
+| ColBERTer | 2022 · CIKM | [Introducing neural bag of whole-words with colberter: Contextualized late interactions using enhanced reduction](https://doi.org/10.1145/3511808.3557367) | Combines whole-word representations, dimensionality reduction, and learned pruning. |
+| ColBERTv2 | 2022 · NAACL | [ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Residual compression reduces vector storage; denoised supervision is a separate training contribution. |
+| Contextual Quantization | 2022 · ACL | [Compact Token Representations with Contextual Quantization for Efficient Document Re-ranking](https://aclanthology.org/2022.acl-long.51/) | Compresses contextual document-token representations for reranking. |
+| Learned token pruning | 2022 · SIGIR | [Learned Token Pruning in Contextualized Late Interaction over BERT (ColBERT)](https://doi.org/10.1145/3477495.3531835) | Learns document-token selection before indexing. |
+| PLAID | 2022 · CIKM | [PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Prunes with centroid-level scores before residual reconstruction and final scoring. |
+| Static pruning | 2023 · DocEng | [Static Pruning for Multi-Representation Dense Retrieval](https://doi.org/10.1145/3573128.3604896) | Transfers lexical importance estimates to offline embedding pruning. |
+| Jina-ColBERT-v2 | 2024 · MRL Workshop | [Jina-colbert-v2: A general-purpose multilingual late interaction retriever](https://aclanthology.org/2024.mrl-1.11/) | Supports multilingual late interaction and reduced embedding dimensionality. |
+| Matching and pruning analysis | 2024 · TOIS | [An Analysis on Matching Mechanisms and Token Pruning for Late-Interaction Models](https://doi.org/10.1145/3639818) | Studies document- and query-token pruning with different system effects. |
+| Token pooling | 2024 · arXiv | [Reducing the Footprint of Multi-Vector Retrieval with Minimal Performance Impact via Token Pooling](https://arxiv.org/abs/2409.14683) | Merges groups of document vectors into pooled representatives. |
+| ColPali | 2025 · ICLR | [ColPali: Efficient Document Retrieval with Vision Language Models](https://openreview.net/forum?id=ogjBpZ8uSi) | Matches query-token embeddings with visual document-page representations. |
+| ConstBERT | 2025 · ECIR | [Efficient constant-space multi-vector retrieval](https://doi.org/10.1007/978-3-031-88714-7_22) | Uses a fixed vector budget for constant-space document representations. |
+| Dominance-based pruning | 2025 · SIGIR | [Towards Lossless Token Pruning in Late-Interaction Retrieval Models](https://doi.org/10.1145/3726302.3730100) | Separates exact dominance conditions from approximate practical pruning. |
+| LeapMV | 2025 · ECIR | [Token pruning optimization for efficient multi-vector dense retrieval](https://doi.org/10.1007/978-3-031-88708-6_7) | Optimizes token pruning for efficient multi-vector dense retrieval. |
+| Light-ColPali / Light-ColQwen2 | 2025 · ACL Findings | [Towards storage-efficient visual document retrieval: An empirical study on reducing patch-level embeddings](https://aclanthology.org/2025.findings-acl.1003/) | Studies storage reduction through fewer patch-level embeddings. |
+| SCV | 2025 · COLING Industry | [SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors](https://aclanthology.org/2025.coling-industry.63/) | Constructs span representations; also uses coarse-to-fine retrieval. |
+| ColBERTSaR | 2026 · arXiv | [ColBERTSaR: Sparsified ColBERT Index via Product Quantization](https://arxiv.org/abs/2606.05568) | Uses residual-free codeword identifiers and inverted lists; also reduces storage. |
+| Compression across modalities | 2026 · arXiv | [Multi-Vector Index Compression in Any Modality](https://arxiv.org/abs/2602.21202) | Examines compression across different multi-vector inputs. |
+| Compression comparison | 2026 · arXiv | [A Brief Comparison of Training-Free Multi-Vector Sequence Compression Methods](https://arxiv.org/abs/2603.22434) | Compares training-free sequence compression methods. |
+| Learn to Pool | 2026 · arXiv | [Learn to Pool: Lightweight Fine-Tuning for Flexible Multi-Vector Compression](https://arxiv.org/abs/2607.06036) | Learns pooling for flexible vector budgets. |
+| MarginMerge | 2026 · arXiv | [Coverage Matters: MarginMerge for Compressing Multi-Vector Visual Document Retrievers](https://arxiv.org/abs/2608.02969) | Studies evidence coverage when compressing visual multi-vectors. |
+| Prune-then-merge | 2026 · ACL Findings | [Sculpting the Vector Space: Towards Efficient Multi-Vector Visual Document Retrieval via Prune-then-Merge Framework](https://aclanthology.org/2026.findings-acl.1247/) | Combines visual-token pruning and merging. |
+| Pruning comparison | 2026 · SIGIR | [Comparing Token Pruning Approaches for Multi-Vector Retrieval](https://doi.org/10.1145/3805712.3808564) | Compares pruning under a common evaluation setting. |
+| Voronoi pruning | 2026 · SIGIR | [A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models](https://doi.org/10.1145/3805712.3809726) | Uses document-vector geometry to reason about retained local evidence. |
 
 <a id="section-6"></a>
 
-### §6 Efficient Late-Interaction Retrieval
+### Section 6: Efficient Late-Interaction Retrieval
 
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-6.1"></a>
-
-#### §6.1 Online Retrieval Costs
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [IGP — Igp: Efficient multi-vector retrieval via proximity graph index](https://doi.org/10.1145/3726302.3730004) | Bian et al., 2025 · `bian2025` | Mentioned |
-| [MUVERA — MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings](https://arxiv.org/abs/2405.19504) | Dhulipala et al., 2024 · `dhulipala2024` | Mentioned |
-| [LEMUR — LEMUR: Learned Multi-Vector Retrieval](https://arxiv.org/abs/2601.21853) | Jääsaari et al., 2026 · `jaasaari2026` | Mentioned |
-| [XTR — Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Lee et al., 2023 · `lee2023` | Mentioned |
-| [TACHIOM — Efficient Multivector Retrieval with Token-Aware Clustering and Hierarchical Indexing](https://arxiv.org/abs/2604.28142) | Martinico et al., 2026 · `martinico2026` | Mentioned |
-| [EMVB — Efficient Multi-Vector Dense Retrieval Using Bit Vectors](https://arxiv.org/abs/2404.02805) | Nardini et al., 2024 · `nardini2024` | Mentioned |
-| [SCV — SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors](https://aclanthology.org/2025.coling-industry.63/) | Park et al., 2025 · `park2025` | Mentioned |
-| [Col-Bandit — Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Pony et al., 2026b · `pony2026b` | Mentioned |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-| [WARP — WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Scheerer et al., 2025 · `scheerer2025` | Mentioned |
-
-<a id="section-6.2"></a>
-
-#### §6.2 Multi-Stage Late-Interaction Retrieval
-
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-6.2.1"></a>
-
-#### §6.2.1 PLAID: Centroid Filtering and Residual Scoring
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [PLAID reproduction — A Reproducibility Study of PLAID](https://doi.org/10.1145/3626772.3657856) | MacAvaney and Tonellotto, 2024 · `macavaney2024` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Cited |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-
-<a id="section-6.2.2"></a>
-
-#### §6.2.2 Bit-Vector, Graph, and Coarse-to-Fine Retrieval
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [IGP — Igp: Efficient multi-vector retrieval via proximity graph index](https://doi.org/10.1145/3726302.3730004) | Bian et al., 2025 · `bian2025` | Cited |
-| [TACHIOM — Efficient Multivector Retrieval with Token-Aware Clustering and Hierarchical Indexing](https://arxiv.org/abs/2604.28142) | Martinico et al., 2026 · `martinico2026` | Cited |
-| [EMVB — Efficient Multi-Vector Dense Retrieval Using Bit Vectors](https://arxiv.org/abs/2404.02805) | Nardini et al., 2024 · `nardini2024` | Cited |
-| [SCV — SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors](https://aclanthology.org/2025.coling-industry.63/) | Park et al., 2025 · `park2025` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-
-<a id="section-6.3"></a>
-
-#### §6.3 Vector-Set Indexes and Single-Vector Candidate Search
-
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-6.3.1"></a>
-
-#### §6.3.1 DESSERT: Retrieval Tables for Vector Sets
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [DESSERT — Dessert: an efficient algorithm for vector set search with vector set queries](https://arxiv.org/abs/2210.15748) | Engels et al., 2023 · `engels2023` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-
-<a id="section-6.3.2"></a>
-
-#### §6.3.2 Native Multi-Vector Graph Indexes
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [GEM — GEM: A Native Graph-Based Index for Multi-Vector Retrieval](https://arxiv.org/abs/2603.20336) | Tian et al., 2026 · `tian2026` | Cited |
-| [MV-HNSW — Unified and Efficient Approach for Multi-Vector Similarity Search](https://arxiv.org/abs/2604.02815) | Yang et al., 2026a · `yang2026a` | Cited |
-
-<a id="section-6.3.3"></a>
-
-#### §6.3.3 MUVERA and LEMUR: Single-Vector Candidate Search
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [MUVERA — MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings](https://arxiv.org/abs/2405.19504) | Dhulipala et al., 2024 · `dhulipala2024` | Cited |
-| [LEMUR — LEMUR: Learned Multi-Vector Retrieval](https://arxiv.org/abs/2601.21853) | Jääsaari et al., 2026 · `jaasaari2026` | Cited |
-
-<a id="section-6.4"></a>
-
-#### §6.4 Retrieval and Scoring Co-Design
-
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-6.4.1"></a>
-
-#### §6.4.1 XTR: Training for Token Retrieval and Scoring
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [XTR replicability — A Replicability Study of XTR](https://arxiv.org/abs/2605.00646) | Jha et al., 2026a · `jha2026a` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [XTR — Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Lee et al., 2023 · `lee2023` | Cited |
-
-<a id="section-6.4.2"></a>
-
-#### §6.4.2 WARP: Efficient XTR Retrieval
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [XTR — Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Lee et al., 2023 · `lee2023` | Mentioned |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-| [WARP — WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Scheerer et al., 2025 · `scheerer2025` | Cited |
-
-<a id="section-6.5"></a>
-
-#### §6.5 Query-Time Pruning and Adaptive Scoring
-
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-6.5.1"></a>
-
-#### §6.5.1 Query-Token Pruning
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Matching and pruning analysis — An Analysis on Matching Mechanisms and Token Pruning for Late-Interaction Models](https://doi.org/10.1145/3639818) | Liu et al., 2024 · `liu2024` | Cited |
-| [Query embedding pruning — Query Embedding Pruning for Dense Retrieval](https://doi.org/10.1145/3459637.3482162) | Tonellotto and Macdonald, 2021 · `tonellotto2021` | Cited |
-
-<a id="section-6.5.2"></a>
-
-#### §6.5.2 Adaptive Score Evaluation
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Col-Bandit — Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Pony et al., 2026b · `pony2026b` | Cited |
-
-<a id="section-6.6"></a>
-
-#### §6.6 Deployment Requirements and Evaluation
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [IGP — Igp: Efficient multi-vector retrieval via proximity graph index](https://doi.org/10.1145/3726302.3730004) | Bian et al., 2025 · `bian2025` | Mentioned |
-| [MUVERA — MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings](https://arxiv.org/abs/2405.19504) | Dhulipala et al., 2024 · `dhulipala2024` | Mentioned |
-| [DESSERT — Dessert: an efficient algorithm for vector set search with vector set queries](https://arxiv.org/abs/2210.15748) | Engels et al., 2023 · `engels2023` | Mentioned |
-| [LEMUR — LEMUR: Learned Multi-Vector Retrieval](https://arxiv.org/abs/2601.21853) | Jääsaari et al., 2026 · `jaasaari2026` | Mentioned |
-| [XTR — Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Lee et al., 2023 · `lee2023` | Mentioned |
-| [TACHIOM — Efficient Multivector Retrieval with Token-Aware Clustering and Hierarchical Indexing](https://arxiv.org/abs/2604.28142) | Martinico et al., 2026 · `martinico2026` | Mentioned |
-| [EMVB — Efficient Multi-Vector Dense Retrieval Using Bit Vectors](https://arxiv.org/abs/2404.02805) | Nardini et al., 2024 · `nardini2024` | Mentioned |
-| [SCV — SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors](https://aclanthology.org/2025.coling-industry.63/) | Park et al., 2025 · `park2025` | Mentioned |
-| [Col-Bandit — Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Pony et al., 2026b · `pony2026b` | Mentioned |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-| [WARP — WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Scheerer et al., 2025 · `scheerer2025` | Mentioned |
-| [GEM — GEM: A Native Graph-Based Index for Multi-Vector Retrieval](https://arxiv.org/abs/2603.20336) | Tian et al., 2026 · `tian2026` | Mentioned |
-| [MV-HNSW — Unified and Efficient Approach for Multi-Vector Similarity Search](https://arxiv.org/abs/2604.02815) | Yang et al., 2026a · `yang2026a` | Mentioned |
-
-<a id="section-6.7"></a>
-
-#### §6.7 Discussion and Takeaways
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [MUVERA — MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings](https://arxiv.org/abs/2405.19504) | Dhulipala et al., 2024 · `dhulipala2024` | Mentioned |
-| [LEMUR — LEMUR: Learned Multi-Vector Retrieval](https://arxiv.org/abs/2601.21853) | Jääsaari et al., 2026 · `jaasaari2026` | Mentioned |
-| [XTR — Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Lee et al., 2023 · `lee2023` | Mentioned |
-| [Col-Bandit — Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Pony et al., 2026b · `pony2026b` | Mentioned |
-| [WARP — WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Scheerer et al., 2025 · `scheerer2025` | Mentioned |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| ColBERT | 2020 · SIGIR | [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Independent token encoding and MaxSim establish the prototype pipeline. |
+| Query embedding pruning | 2021 · CIKM | [Query Embedding Pruning for Dense Retrieval](https://doi.org/10.1145/3459637.3482162) | Prunes query probes during candidate generation while retaining full-query final scoring. |
+| ColBERTv2 | 2022 · NAACL | [ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Residual compression reduces vector storage; denoised supervision is a separate training contribution. |
+| PLAID | 2022 · CIKM | [PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Prunes with centroid-level scores before residual reconstruction and final scoring. |
+| DESSERT | 2023 · NeurIPS | [Dessert: an efficient algorithm for vector set search with vector set queries](https://arxiv.org/abs/2210.15748) | Uses retrieval tables for vector-set search. |
+| XTR | 2023 · NeurIPS | [Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Co-designs token retrieval, training, and missing-similarity scoring. |
+| EMVB | 2024 · arXiv | [Efficient Multi-Vector Dense Retrieval Using Bit Vectors](https://arxiv.org/abs/2404.02805) | Uses bit-vector prefiltering and quantized, SIMD-oriented execution. |
+| Matching and pruning analysis | 2024 · TOIS | [An Analysis on Matching Mechanisms and Token Pruning for Late-Interaction Models](https://doi.org/10.1145/3639818) | Studies document- and query-token pruning with different system effects. |
+| MUVERA | 2024 · arXiv | [MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings](https://arxiv.org/abs/2405.19504) | Maps vector sets to fixed-dimensional proxies for candidate search. |
+| PLAID reproduction | 2024 · SIGIR | [A Reproducibility Study of PLAID](https://doi.org/10.1145/3626772.3657856) | Examines implementation and configuration effects on retrieval trade-offs. |
+| IGP | 2025 · SIGIR | [Igp: Efficient multi-vector retrieval via proximity graph index](https://doi.org/10.1145/3726302.3730004) | Uses a proximity graph for efficient multi-vector retrieval. |
+| SCV | 2025 · COLING Industry | [SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors](https://aclanthology.org/2025.coling-industry.63/) | Constructs span representations; also uses coarse-to-fine retrieval. |
+| WARP | 2025 · SIGIR | [WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Accelerates XTR-trained retrieval with imputation and efficient score reduction. |
+| Col-Bandit | 2026 · arXiv | [Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Adaptively allocates MaxSim evaluations during top-k reranking. |
+| GEM | 2026 · arXiv | [GEM: A Native Graph-Based Index for Multi-Vector Retrieval](https://arxiv.org/abs/2603.20336) | Constructs a native graph over vector sets. |
+| LEMUR | 2026 · arXiv | [LEMUR: Learned Multi-Vector Retrieval](https://arxiv.org/abs/2601.21853) | Learns corpus-specific fixed-dimensional reductions. |
+| MV-HNSW | 2026 · arXiv | [Unified and Efficient Approach for Multi-Vector Similarity Search](https://arxiv.org/abs/2604.02815) | Adapts hierarchical graph search to multi-vector objects. |
+| TACHIOM | 2026 · arXiv | [Efficient Multivector Retrieval with Token-Aware Clustering and Hierarchical Indexing](https://arxiv.org/abs/2604.28142) | Combines token-aware clustering and hierarchical candidate search. |
+| XTR replicability | 2026 · arXiv | [A Replicability Study of XTR](https://arxiv.org/abs/2605.00646) | Separates token-retrieval behavior from final effectiveness claims. |
 
 <a id="section-7"></a>
 
-### §7 Sparse and Hybrid Retrieval for Late Interaction
+### Section 7: Sparse and Hybrid Retrieval for Late Interaction
 
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-
-<a id="section-7.1"></a>
-
-#### §7.1 Scope and Boundaries of Sparse Late Interaction
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [SPLATE — SPLATE: Sparse Late Interaction Retrieval](https://doi.org/10.1145/3626772.3657968) | Formal et al., 2024 · `formal2024` | Mentioned |
-| [COIL — COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List](https://aclanthology.org/2021.naacl-main.241/) | Gao et al., 2021 · `gao2021` | Cited |
-| [Single-stage sparse coding — No More K-Means: Single-Stage Sparse Coding for Efficient Multi-Vector Retrieval](https://arxiv.org/abs/2605.30120) | Guo et al., 2026 · `guo2026` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [SLIM — SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted Indexes](https://doi.org/10.1145/3539618.3591977) | Li et al., 2023a · `li2023a` | Cited |
-| [CITADEL — CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval](https://aclanthology.org/2023.acl-long.663/) | Li et al., 2023b · `li2023b` | Cited |
-| [ALIGNER — Multi-vector retrieval as sparse alignment](https://arxiv.org/abs/2211.01267) | Qian et al., 2022 · `qian2022` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-| [ColBERTSaR — ColBERTSaR: Sparsified ColBERT Index via Product Quantization](https://arxiv.org/abs/2606.05568) | Yang et al., 2026c · `yang2026c` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [SPLADE: sparse lexical and expansion model for first stage ranking](https://doi.org/10.1145/3404835.3463098) | Formal et al., 2021a · `formal2021a` | Cited |
-
-<a id="section-7.2"></a>
-
-#### §7.2 Sparse Candidate Retrieval and Hybrid Scoring
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [SPLATE — SPLATE: Sparse Late Interaction Retrieval](https://doi.org/10.1145/3626772.3657968) | Formal et al., 2024 · `formal2024` | Cited |
-| [COIL — COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List](https://aclanthology.org/2021.naacl-main.241/) | Gao et al., 2021 · `gao2021` | Mentioned |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [SLIM — SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted Indexes](https://doi.org/10.1145/3539618.3591977) | Li et al., 2023a · `li2023a` | Mentioned |
-| [CITADEL — CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval](https://aclanthology.org/2023.acl-long.663/) | Li et al., 2023b · `li2023b` | Mentioned |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-| [ColBERTSaR — ColBERTSaR: Sparsified ColBERT Index via Product Quantization](https://arxiv.org/abs/2606.05568) | Yang et al., 2026c · `yang2026c` | Mentioned |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [M3-Embedding / BGE-M3 — M3-embedding: Multi-linguality, multi-functionality, multi-granularity text embeddings through self-knowledge distillation](https://doi.org/10.18653/V1/2024.FINDINGS-ACL.137) | Chen et al., 2024 · `chen2024` | Cited |
-
-<a id="section-7.3"></a>
-
-#### §7.3 Discussion and Takeaways
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-| [ColBERTSaR — ColBERTSaR: Sparsified ColBERT Index via Product Quantization](https://arxiv.org/abs/2606.05568) | Yang et al., 2026c · `yang2026c` | Mentioned |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| ColBERT | 2020 · SIGIR | [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Independent token encoding and MaxSim establish the prototype pipeline. |
+| COIL | 2021 · NAACL | [COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List](https://aclanthology.org/2021.naacl-main.241/) | Lexically gates contextual token matching; a boundary case in the survey. |
+| ALIGNER | 2022 · arXiv | [Multi-vector retrieval as sparse alignment](https://arxiv.org/abs/2211.01267) | Formulates multi-vector retrieval as sparse alignment. |
+| ColBERTv2 | 2022 · NAACL | [ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Residual compression reduces vector storage; denoised supervision is a separate training contribution. |
+| PLAID | 2022 · CIKM | [PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Prunes with centroid-level scores before residual reconstruction and final scoring. |
+| CITADEL | 2023 · ACL | [CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval](https://aclanthology.org/2023.acl-long.663/) | Learns lexical routing for local token interactions. |
+| SLIM | 2023 · SIGIR | [SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted Indexes](https://doi.org/10.1145/3539618.3591977) | Uses sparse local representations and inverted-index-compatible retrieval. |
+| SPLATE | 2024 · SIGIR | [SPLATE: Sparse Late Interaction Retrieval](https://doi.org/10.1145/3626772.3657968) | Learns sparse candidate retrieval over frozen ColBERTv2 features, followed by late-interaction reranking. |
+| ColBERTSaR | 2026 · arXiv | [ColBERTSaR: Sparsified ColBERT Index via Product Quantization](https://arxiv.org/abs/2606.05568) | Uses residual-free codeword identifiers and inverted lists; also reduces storage. |
+| Single-stage sparse coding | 2026 · arXiv | [No More K-Means: Single-Stage Sparse Coding for Efficient Multi-Vector Retrieval](https://arxiv.org/abs/2605.30120) | Uses sparse codes as the local retrieval substrate. |
 
 <a id="section-8"></a>
 
-### §8 Query-Side Enhancement with Pseudo-Relevance Feedback
+### Section 8: Query-Side Enhancement with Pseudo-Relevance Feedback
 
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [PLAID-PRF — PLAID-PRF: Pseudo-Relevance Feedback with Centroid-Like Tokens in PLAID](https://doi.org/10.1145/3805712.3809690) | Wang et al., 2026 · `wang2026` | Mentioned |
-| [CWPRF — Effective Contrastive Weighting for Dense Query Expansion](https://aclanthology.org/2023.acl-long.710/) | Wang et al., 2023a · `wang2023a` | Mentioned |
-| [ColBERT-PRF — ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval](https://doi.org/10.1145/3572405) | Wang et al., 2023b · `wang2023b` | Mentioned |
-
-<a id="section-8.1"></a>
-
-#### §8.1 A Framework for Token-Level Semantic Feedback
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [VectorPRF — Pseudo relevance feedback with deep language models and dense retrievers: Successes and pitfalls](https://arxiv.org/abs/2108.11044) | Li et al., 2021 · `li2021` | Cited |
-| [ANCE-PRF — Improving query representations for dense retrieval with pseudo relevance feedback](https://doi.org/10.1145/3459637.3482124) | Yu et al., 2021 · `yu2021` | Cited |
-
-<a id="section-8.2"></a>
-
-#### §8.2 Pseudo-Relevance Feedback for Late Interaction
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [PLAID-PRF — PLAID-PRF: Pseudo-Relevance Feedback with Centroid-Like Tokens in PLAID](https://doi.org/10.1145/3805712.3809690) | Wang et al., 2026 · `wang2026` | Mentioned |
-| [CWPRF — Effective Contrastive Weighting for Dense Query Expansion](https://aclanthology.org/2023.acl-long.710/) | Wang et al., 2023a · `wang2023a` | Mentioned |
-| [ColBERT-PRF — ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval](https://doi.org/10.1145/3572405) | Wang et al., 2023b · `wang2023b` | Mentioned |
-
-<a id="section-8.2.1"></a>
-
-#### §8.2.1 Runtime Clustering Feedback
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [Early ColBERT-PRF — Pseudo-Relevance Feedback for Multiple Representation Dense Retrieval](https://doi.org/10.1145/3471158.3472250) | Wang et al., 2021 · `wang2021` | Cited |
-| [ColBERT-PRF — ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval](https://doi.org/10.1145/3572405) | Wang et al., 2023b · `wang2023b` | Cited |
-
-<a id="section-8.2.2"></a>
-
-#### §8.2.2 Learned Feedback Weighting
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [CWPRF — Effective Contrastive Weighting for Dense Query Expansion](https://aclanthology.org/2023.acl-long.710/) | Wang et al., 2023a · `wang2023a` | Cited |
-| [ColBERT-PRF — ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval](https://doi.org/10.1145/3572405) | Wang et al., 2023b · `wang2023b` | Mentioned |
-
-<a id="section-8.2.3"></a>
-
-#### §8.2.3 Index-Aware Feedback Selection
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-| [PLAID-PRF — PLAID-PRF: Pseudo-Relevance Feedback with Centroid-Like Tokens in PLAID](https://doi.org/10.1145/3805712.3809690) | Wang et al., 2026 · `wang2026` | Cited |
-| [CWPRF — Effective Contrastive Weighting for Dense Query Expansion](https://aclanthology.org/2023.acl-long.710/) | Wang et al., 2023a · `wang2023a` | Cited |
-| [ColBERT-PRF — ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval](https://doi.org/10.1145/3572405) | Wang et al., 2023b · `wang2023b` | Cited |
-
-<a id="section-8.3"></a>
-
-#### §8.3 Discussion and Takeaways
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [LITTA — LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval](https://arxiv.org/abs/2603.26683) | Kim, 2026 · `kim2026litta` | Cited |
-| [PO / query decomposition — PO: Performance-Oriented Query Decomposer for Multi-Vector Retrieval](https://arxiv.org/abs/2505.19189) | Liu et al., 2025 · `liu2025` | Cited |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| ColBERT | 2020 · SIGIR | [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Independent token encoding and MaxSim establish the prototype pipeline. |
+| Early ColBERT-PRF | 2021 · ICTIR | [Pseudo-Relevance Feedback for Multiple Representation Dense Retrieval](https://doi.org/10.1145/3471158.3472250) | Introduces feedback expansion in the multi-vector representation space. |
+| ColBERTv2 | 2022 · NAACL | [ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Residual compression reduces vector storage; denoised supervision is a separate training contribution. |
+| PLAID | 2022 · CIKM | [PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Prunes with centroid-level scores before residual reconstruction and final scoring. |
+| ColBERT-PRF | 2023 · TWeb | [ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval](https://doi.org/10.1145/3572405) | Clusters feedback embeddings and selects semantic query expansions. |
+| CWPRF | 2023 · ACL | [Effective Contrastive Weighting for Dense Query Expansion](https://aclanthology.org/2023.acl-long.710/) | Learns the usefulness of contextual feedback embeddings. |
+| PO / query decomposition | 2025 · ICML | [PO: Performance-Oriented Query Decomposer for Multi-Vector Retrieval](https://arxiv.org/abs/2505.19189) | Optimizes query decomposition for retrieval performance. |
+| LITTA | 2026 · arXiv | [LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval](https://arxiv.org/abs/2603.26683) | Generates query variants and fuses rankings with a fixed page index. |
+| PLAID-PRF | 2026 · SIGIR | [PLAID-PRF: Pseudo-Relevance Feedback with Centroid-Like Tokens in PLAID](https://doi.org/10.1145/3805712.3809690) | Reuses index centroids for feedback expansion. |
 
 <a id="section-9"></a>
 
-### §9 Training and Methodological Infrastructure
+### Section 9: Training and Methodological Infrastructure
 
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-9.1"></a>
-
-#### §9.1 Training Late-Interaction Models
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-
-<a id="section-9.1.1"></a>
-
-#### §9.1.1 Supervised Training and Negative Sampling
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Cited |
-
-<a id="section-9.1.2"></a>
-
-#### §9.1.2 Distillation and Denoised Supervision
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Cited |
-
-<a id="section-9.1.3"></a>
-
-#### §9.1.3 Multi-Vector Pre-training and Model Adaptation
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT-Zero — ColBERT-Zero: To Pre-Train or Not to Pre-Train ColBERT Models?](https://arxiv.org/abs/2602.16609) | Chaffin et al., 2026 · `chaffin2026` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [XTR — Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Lee et al., 2023 · `lee2023` | Mentioned |
-| [LateOn / mLateOn — DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search](https://arxiv.org/abs/2607.27178) | Sourty et al., 2026 · `sourty2026` | Cited |
-
-<a id="section-9.2"></a>
-
-#### §9.2 Reproducibility and Evaluation Protocols
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Cross-backend reproduction — Reproduction Beyond Benchmarks: ConstBERT and ColBERT-v2 Across Backends and Query Distributions](https://doi.org/10.1145/3805712.3808561) | Ghosh et al., 2026 · `ghosh2026` | Cited |
-| [XTR replicability — A Replicability Study of XTR](https://arxiv.org/abs/2605.00646) | Jha et al., 2026a · `jha2026a` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [XTR — Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Lee et al., 2023 · `lee2023` | Mentioned |
-| [ConstBERT — Efficient constant-space multi-vector retrieval](https://doi.org/10.1007/978-3-031-88714-7_22) | MacAvaney et al., 2025 · `macavaney2025` | Mentioned |
-| [PLAID reproduction — A Reproducibility Study of PLAID](https://doi.org/10.1145/3626772.3657856) | MacAvaney and Tonellotto, 2024 · `macavaney2024` | Cited |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Cited |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-| [WARP — WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Scheerer et al., 2025 · `scheerer2025` | Mentioned |
-| [Col⋆ — Reproducibility, Replicability, and Insights into Dense Multi-Representation Retrieval Models: from ColBERT to Col⋆](https://doi.org/10.1145/3539618.3591916) | Wang et al., 2023c · `wang2023c` | Cited |
-
-<a id="section-9.3"></a>
-
-#### §9.3 Software and Serving Infrastructure
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Cited |
-| [WARP — WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Scheerer et al., 2025 · `scheerer2025` | Cited |
-| [RoutIR — RoutIR: Fast Serving of Retrieval Pipelines for Retrieval-Augmented Generation](https://arxiv.org/abs/2601.10644) | Yang et al., 2026b · `yang2026b` | Cited |
-
-**Software and infrastructure**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Ragatouille: Simple colbert training and retrieval for rag](https://github.com/AnswerDotAI/RAGatouille) | Answer.AI, 2024 · `answerai2024` | Cited |
-| [PyLate — Pylate: Flexible training and retrieval for late interaction models](https://arxiv.org/abs/2508.03555) | Chaffin and Sourty, 2025 · `chaffin2025` | Cited |
-| [Pyterrier: Declarative experimentation in python from BM25 to dense retrieval](https://doi.org/10.1145/3459637.3482013) | Macdonald et al., 2021 · `macdonald2021` | Cited |
-| [qdrant/qdrant: Qdrant vector database and vector search engine](https://github.com/qdrant/qdrant) | Qdrant Team, n.d. · `qdrantteamnd` | Cited |
-
-<a id="section-9.4"></a>
-
-#### §9.4 Diagnostics and Failure Analysis
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [beneath-mask — Beneath the [mask]: An analysis of structural query tokens in colbert](https://doi.org/10.1007/978-3-031-56063-7_35) | Giacalone et al., 2024 · `giacalone2024` | Cited |
-| [ColBERTv2 — ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Santhanam et al., 2022b · `santhanam2022b` | Mentioned |
-| [Spike Hijacking — Spike Hijacking in Late-Interaction Retrieval](https://arxiv.org/abs/2604.05253) | Suresh et al., 2026 · `suresh2026` | Cited |
-| [NevIR — Nevir: Negation in neural information retrieval](https://aclanthology.org/2024.eacl-long.139/) | Weller et al., 2024 · `weller2024` | Cited |
-
-<a id="section-9.5"></a>
-
-#### §9.5 Interpretation of Local Evidence
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Counterfactual explanations — A Counterfactual Explanation Framework for Retrieval Models](https://arxiv.org/abs/2409.00860) | Chandna and Sen, 2024 · `chandna2024` | Cited |
-| [White-box analysis — A White Box Analysis of ColBERT](https://doi.org/10.1007/978-3-030-72240-1_23) | Formal et al., 2021b · `formal2021b` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [Diagnosable ColBERT — Diagnosable ColBERT: Debugging Late-Interaction Retrieval Models Using a Learned Latent Space as Reference](https://arxiv.org/abs/2604.19566) | Remy, 2026 · `remy2026` | Cited |
-
-<a id="section-9.6"></a>
-
-#### §9.6 Discussion and Takeaways
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [PLAID — PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Santhanam et al., 2022a · `santhanam2022a` | Mentioned |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| Qdrant | n.d. · Software | [qdrant/qdrant: Qdrant vector database and vector search engine](https://github.com/qdrant/qdrant) | Provides vector database infrastructure with multi-vector search support. |
+| ColBERT | 2020 · SIGIR | [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Independent token encoding and MaxSim establish the prototype pipeline. |
+| PyTerrier | 2021 · CIKM | [Pyterrier: Declarative experimentation in python from BM25 to dense retrieval](https://doi.org/10.1145/3459637.3482013) | Supports declarative retrieval experiments and pipeline evaluation. |
+| White-box analysis | 2021 · ECIR | [A White Box Analysis of ColBERT](https://doi.org/10.1007/978-3-030-72240-1_23) | Examines lexical and semantic contributions to local matching. |
+| ColBERTv2 | 2022 · NAACL | [ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://aclanthology.org/2022.naacl-main.272/) | Residual compression reduces vector storage; denoised supervision is a separate training contribution. |
+| PLAID | 2022 · CIKM | [PLAID: An Efficient Engine for Late Interaction Retrieval](https://doi.org/10.1145/3511808.3557325) | Prunes with centroid-level scores before residual reconstruction and final scoring. |
+| Col⋆ | 2023 · SIGIR | [Reproducibility, Replicability, and Insights into Dense Multi-Representation Retrieval Models: from ColBERT to Col⋆](https://doi.org/10.1145/3539618.3591916) | Studies reproducibility and replicability of dense multi-representation retrieval. |
+| XTR | 2023 · NeurIPS | [Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html) | Co-designs token retrieval, training, and missing-similarity scoring. |
+| Beneath [MASK] | 2024 · ECIR | [Beneath the [mask]: An analysis of structural query tokens in colbert](https://doi.org/10.1007/978-3-031-56063-7_35) | Analyzes the role of structural query tokens in ColBERT. |
+| Counterfactual explanations | 2024 · arXiv | [A Counterfactual Explanation Framework for Retrieval Models](https://arxiv.org/abs/2409.00860) | Provides a diagnostic perspective on retrieval decisions. |
+| NevIR | 2024 · EACL | [Nevir: Negation in neural information retrieval](https://aclanthology.org/2024.eacl-long.139/) | Evaluates sensitivity to negation in neural retrieval. |
+| PLAID reproduction | 2024 · SIGIR | [A Reproducibility Study of PLAID](https://doi.org/10.1145/3626772.3657856) | Examines implementation and configuration effects on retrieval trade-offs. |
+| RAGatouille | 2024 · Software | [Ragatouille: Simple colbert training and retrieval for rag](https://github.com/AnswerDotAI/RAGatouille) | Provides accessible ColBERT training and retrieval tooling. |
+| ConstBERT | 2025 · ECIR | [Efficient constant-space multi-vector retrieval](https://doi.org/10.1007/978-3-031-88714-7_22) | Uses a fixed vector budget for constant-space document representations. |
+| PyLate | 2025 · CIKM | [Pylate: Flexible training and retrieval for late interaction models](https://arxiv.org/abs/2508.03555) | Supports flexible training and retrieval for late-interaction models. |
+| WARP | 2025 · SIGIR | [WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Accelerates XTR-trained retrieval with imputation and efficient score reduction. |
+| ColBERT-Zero | 2026 · arXiv | [ColBERT-Zero: To Pre-Train or Not to Pre-Train ColBERT Models?](https://arxiv.org/abs/2602.16609) | Studies pre-training choices for late-interaction models. |
+| Cross-backend reproduction | 2026 · SIGIR | [Reproduction Beyond Benchmarks: ConstBERT and ColBERT-v2 Across Backends and Query Distributions](https://doi.org/10.1145/3805712.3808561) | Examines reproducibility across retrieval backends and query distributions. |
+| Diagnosable ColBERT | 2026 · arXiv | [Diagnosable ColBERT: Debugging Late-Interaction Retrieval Models Using a Learned Latent Space as Reference](https://arxiv.org/abs/2604.19566) | Uses a learned reference space for diagnostic interpretation. |
+| LateOn / mLateOn | 2026 · arXiv | [DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search](https://arxiv.org/abs/2607.27178) | Studies open training and transfer across languages and retrieval settings. |
+| RoutIR | 2026 · arXiv | [RoutIR: Fast Serving of Retrieval Pipelines for Retrieval-Augmented Generation](https://arxiv.org/abs/2601.10644) | Addresses serving and execution of retrieval pipelines. |
+| Spike Hijacking | 2026 · arXiv / LIR Workshop | [Spike Hijacking in Late-Interaction Retrieval](https://arxiv.org/abs/2604.05253) | Examines hard-max concentration and alternative pooling rules. |
+| XTR replicability | 2026 · arXiv | [A Replicability Study of XTR](https://arxiv.org/abs/2605.00646) | Separates token-retrieval behavior from final effectiveness claims. |
 
 <a id="section-10"></a>
 
-### §10 Extensions Beyond Standard Ad Hoc Text Retrieval
+### Section 10: Extensions Beyond Standard Ad Hoc Text Retrieval
 
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
-
-<a id="section-10.1"></a>
-
-#### §10.1 Multilingual and Cross-Lingual Retrieval
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [JaColBERTv2.5 — Jacolbertv2.5: Optimising multi-vector retrievers to create state-of-the-art japanese retrievers with constrained resources](https://www.jstage.jst.go.jp/article/jnlp/32/1/32_176/_article/-char/en/) | Clavié, 2025 · `clavie2025` | Cited |
-| [Jina-ColBERT-v2 — Jina-colbert-v2: A general-purpose multilingual late interaction retriever](https://aclanthology.org/2024.mrl-1.11/) | Jha et al., 2024 · `jha2024` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-| [ColBERT-XM — ColBERT-XM: A Modular Multi-Vector Representation Model for Zero-Shot Multilingual Information Retrieval](https://aclanthology.org/2025.coling-main.295/) | Louis et al., 2025 · `louis2025` | Cited |
-| [ColBERT-X — Transfer Learning Approaches for Building Cross-Language Dense Retrieval Models](https://doi.org/10.1007/978-3-030-99736-6_26) | Nair et al., 2022 · `nair2022` | Cited |
-| [LateOn / mLateOn — DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search](https://arxiv.org/abs/2607.27178) | Sourty et al., 2026 · `sourty2026` | Cited |
-
-<a id="section-10.2"></a>
-
-#### §10.2 Multimodal and Visually Rich Document Retrieval
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Argus-Retriever — Argus-Retriever: Vision-LLM Late-Interaction Retrieval with Region-Aware Query-Conditioned MoE for Visual Document Retrieval](https://arxiv.org/abs/2606.04300) | Abdallah et al., 2026 · `abdallah2026` | Cited |
-| [ColPali — ColPali: Efficient Document Retrieval with Vision Language Models](https://openreview.net/forum?id=ogjBpZ8uSi) | Faysse et al., 2025 · `faysse2025` | Cited |
-| [Hydra — Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model](https://arxiv.org/abs/2603.28554) | Georgiou, 2026 · `georgiou2026` | Cited |
-| [LITTA — LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval](https://arxiv.org/abs/2603.26683) | Kim, 2026 · `kim2026litta` | Cited |
-| [ColMate — ColMate: Contrastive Late Interaction and Masked Text for Multimodal Document Retrieval](https://aclanthology.org/2025.emnlp-industry.145/) | Masry et al., 2025 · `masry2025` | Cited |
-| [Nemotron ColEmbed V2 — Nemotron ColEmbed V2: Top-Performing Late Interaction Embedding Models for Visual Document Retrieval](https://arxiv.org/abs/2602.03992) | Moreira et al., 2026 · `moreira2026` | Cited |
-| [Video-ColBERT — Video-colbert: Contextualized late interaction for text-to-video retrieval](https://openaccess.thecvf.com/content/CVPR2025/html/Reddy_Video-ColBERT_Contextualized_Late_Interaction_for_Text-to-Video_Retrieval_CVPR_2025_paper.html) | Reddy et al., 2025 · `reddy2025` | Cited |
-| [CLaMR — CLaMR: Contextualized Late-Interaction for Multimodal Content Retrieval](https://arxiv.org/abs/2506.06144) | Wan et al., 2025 · `wan2025` | Cited |
-| [ColChunk — Visual Late Chunking: An Empirical Study of Contextual Chunking for Efficient Visual Document Retrieval](https://arxiv.org/abs/2604.10167) | Yan et al., 2026a · `yan2026a` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ViDoRe V3 — ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios](https://arxiv.org/abs/2601.08620) | Loison et al., 2026 · `loison2026` | Mentioned |
-
-<a id="section-10.3"></a>
-
-#### §10.3 Specialised Domains and Retrieval Capabilities
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ELK-Multi — Multi-Vector Biomedical Dense Retrieval with Knowledge-Enhanced Entity-Type Clustering](https://doi.org/10.1145/3785368) | Deng et al., 2026 · `deng2026` | Cited |
-| [NumColBERT — NumColBERT: Non-Intrusive Numeracy Injection for Late-Interaction Retrieval Models](https://arxiv.org/abs/2605.10109) | Fujimaki and Kato, 2026 · `fujimaki2026` | Cited |
-| [ColBERT — ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Khattab and Zaharia, 2020 · `khattab2020` | Mentioned |
-
-<a id="section-10.4"></a>
-
-#### §10.4 Iterative and Multi-Hop Retrieval
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Baleen / FLIPR — Baleen: Robust Multi-Hop Reasoning at Scale via Condensed Retrieval](https://arxiv.org/abs/2101.00436) | Khattab et al., 2021 · `khattab2021` | Cited |
-
-<a id="section-10.5"></a>
-
-#### §10.5 Discussion and Takeaways
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Argus-Retriever — Argus-Retriever: Vision-LLM Late-Interaction Retrieval with Region-Aware Query-Conditioned MoE for Visual Document Retrieval](https://arxiv.org/abs/2606.04300) | Abdallah et al., 2026 · `abdallah2026` | Cited |
-| [JaColBERTv2.5 — Jacolbertv2.5: Optimising multi-vector retrievers to create state-of-the-art japanese retrievers with constrained resources](https://www.jstage.jst.go.jp/article/jnlp/32/1/32_176/_article/-char/en/) | Clavié, 2025 · `clavie2025` | Cited |
-| [ELK-Multi — Multi-Vector Biomedical Dense Retrieval with Knowledge-Enhanced Entity-Type Clustering](https://doi.org/10.1145/3785368) | Deng et al., 2026 · `deng2026` | Cited |
-| [ColPali — ColPali: Efficient Document Retrieval with Vision Language Models](https://openreview.net/forum?id=ogjBpZ8uSi) | Faysse et al., 2025 · `faysse2025` | Cited |
-| [NumColBERT — NumColBERT: Non-Intrusive Numeracy Injection for Late-Interaction Retrieval Models](https://arxiv.org/abs/2605.10109) | Fujimaki and Kato, 2026 · `fujimaki2026` | Cited |
-| [Hydra — Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model](https://arxiv.org/abs/2603.28554) | Georgiou, 2026 · `georgiou2026` | Cited |
-| [Jina-ColBERT-v2 — Jina-colbert-v2: A general-purpose multilingual late interaction retriever](https://aclanthology.org/2024.mrl-1.11/) | Jha et al., 2024 · `jha2024` | Cited |
-| [Baleen / FLIPR — Baleen: Robust Multi-Hop Reasoning at Scale via Condensed Retrieval](https://arxiv.org/abs/2101.00436) | Khattab et al., 2021 · `khattab2021` | Cited |
-| [LITTA — LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval](https://arxiv.org/abs/2603.26683) | Kim, 2026 · `kim2026litta` | Cited |
-| [ColBERT-XM — ColBERT-XM: A Modular Multi-Vector Representation Model for Zero-Shot Multilingual Information Retrieval](https://aclanthology.org/2025.coling-main.295/) | Louis et al., 2025 · `louis2025` | Cited |
-| [ColMate — ColMate: Contrastive Late Interaction and Masked Text for Multimodal Document Retrieval](https://aclanthology.org/2025.emnlp-industry.145/) | Masry et al., 2025 · `masry2025` | Cited |
-| [Nemotron ColEmbed V2 — Nemotron ColEmbed V2: Top-Performing Late Interaction Embedding Models for Visual Document Retrieval](https://arxiv.org/abs/2602.03992) | Moreira et al., 2026 · `moreira2026` | Cited |
-| [ColBERT-X — Transfer Learning Approaches for Building Cross-Language Dense Retrieval Models](https://doi.org/10.1007/978-3-030-99736-6_26) | Nair et al., 2022 · `nair2022` | Cited |
-| [Video-ColBERT — Video-colbert: Contextualized late interaction for text-to-video retrieval](https://openaccess.thecvf.com/content/CVPR2025/html/Reddy_Video-ColBERT_Contextualized_Late_Interaction_for_Text-to-Video_Retrieval_CVPR_2025_paper.html) | Reddy et al., 2025 · `reddy2025` | Cited |
-| [LateOn / mLateOn — DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search](https://arxiv.org/abs/2607.27178) | Sourty et al., 2026 · `sourty2026` | Cited |
-| [CLaMR — CLaMR: Contextualized Late-Interaction for Multimodal Content Retrieval](https://arxiv.org/abs/2506.06144) | Wan et al., 2025 · `wan2025` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ViDoRe V3 — ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios](https://arxiv.org/abs/2601.08620) | Loison et al., 2026 · `loison2026` | Mentioned |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| ColBERT | 2020 · SIGIR | [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://doi.org/10.1145/3397271.3401075) | Independent token encoding and MaxSim establish the prototype pipeline. |
+| Baleen / FLIPR | 2021 · NeurIPS | [Baleen: Robust Multi-Hop Reasoning at Scale via Condensed Retrieval](https://arxiv.org/abs/2101.00436) | Combines focused late interaction with iterative retrieval and fact condensation. |
+| ColBERT-X | 2022 · ECIR | [Transfer Learning Approaches for Building Cross-Language Dense Retrieval Models](https://doi.org/10.1007/978-3-030-99736-6_26) | Studies cross-language transfer with multilingual encoders. |
+| Jina-ColBERT-v2 | 2024 · MRL Workshop | [Jina-colbert-v2: A general-purpose multilingual late interaction retriever](https://aclanthology.org/2024.mrl-1.11/) | Supports multilingual late interaction and reduced embedding dimensionality. |
+| CLaMR | 2025 · arXiv | [CLaMR: Contextualized Late-Interaction for Multimodal Content Retrieval](https://arxiv.org/abs/2506.06144) | Represents visual, speech, text, and metadata evidence for video retrieval. |
+| ColBERT-XM | 2025 · COLING | [ColBERT-XM: A Modular Multi-Vector Representation Model for Zero-Shot Multilingual Information Retrieval](https://aclanthology.org/2025.coling-main.295/) | Uses modular language adaptation for multilingual retrieval. |
+| ColMate | 2025 · EMNLP Industry | [ColMate: Contrastive Late Interaction and Masked Text for Multimodal Document Retrieval](https://aclanthology.org/2025.emnlp-industry.145/) | Adds OCR-based pre-training and masked contrastive learning. |
+| ColPali | 2025 · ICLR | [ColPali: Efficient Document Retrieval with Vision Language Models](https://openreview.net/forum?id=ogjBpZ8uSi) | Matches query-token embeddings with visual document-page representations. |
+| JaColBERTv2.5 | 2025 · Journal of Natural Language Processing | [Jacolbertv2.5: Optimising multi-vector retrievers to create state-of-the-art japanese retrievers with constrained resources](https://www.jstage.jst.go.jp/article/jnlp/32/1/32_176/_article/-char/en/) | Studies training and inference improvements for Japanese multi-vector retrieval. |
+| Video-ColBERT | 2025 · CVPR | [Video-colbert: Contextualized late interaction for text-to-video retrieval](https://openaccess.thecvf.com/content/CVPR2025/html/Reddy_Video-ColBERT_Contextualized_Late_Interaction_for_Text-to-Video_Retrieval_CVPR_2025_paper.html) | Extends contextualized late interaction to text-to-video retrieval. |
+| Argus-Retriever | 2026 · arXiv | [Argus-Retriever: Vision-LLM Late-Interaction Retrieval with Region-Aware Query-Conditioned MoE for Visual Document Retrieval](https://arxiv.org/abs/2606.04300) | Refines cached document features conditioned on the query for shortlisted candidates. |
+| ColChunk | 2026 · arXiv | [Visual Late Chunking: An Empirical Study of Contextual Chunking for Efficient Visual Document Retrieval](https://arxiv.org/abs/2604.10167) | Combines contextual patch clustering with a spatial prior. |
+| ELK-Multi | 2026 · TKDD | [Multi-Vector Biomedical Dense Retrieval with Knowledge-Enhanced Entity-Type Clustering](https://doi.org/10.1145/3785368) | A neighboring multi-vector design organized around biomedical entity clusters. |
+| Hydra | 2026 · arXiv | [Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model](https://arxiv.org/abs/2603.28554) | Shares a vision-language model between retrieval and generation modes. |
+| LateOn / mLateOn | 2026 · arXiv | [DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search](https://arxiv.org/abs/2607.27178) | Studies open training and transfer across languages and retrieval settings. |
+| LITTA | 2026 · arXiv | [LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval](https://arxiv.org/abs/2603.26683) | Generates query variants and fuses rankings with a fixed page index. |
+| Nemotron ColEmbed V2 | 2026 · arXiv | [Nemotron ColEmbed V2: Top-Performing Late Interaction Embedding Models for Visual Document Retrieval](https://arxiv.org/abs/2602.03992) | Scales visual late-interaction representation learning. |
+| NumColBERT | 2026 · arXiv | [NumColBERT: Non-Intrusive Numeracy Injection for Late-Interaction Retrieval Models](https://arxiv.org/abs/2605.10109) | Adds query-side numerical gating while retaining the document index and MaxSim interface. |
 
 <a id="section-11"></a>
 
-### §11 Open Challenges and Future Directions
+### Section 11: Open Challenges and Future Directions
 
-No additional explicit citation or identified named-paper discussion in this subsection; see the surrounding subsections.
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| Baleen / FLIPR | 2021 · NeurIPS | [Baleen: Robust Multi-Hop Reasoning at Scale via Condensed Retrieval](https://arxiv.org/abs/2101.00436) | Combines focused late interaction with iterative retrieval and fact condensation. |
+| CITADEL | 2023 · ACL | [CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval](https://aclanthology.org/2023.acl-long.663/) | Learns lexical routing for local token interactions. |
+| Counterfactual explanations | 2024 · arXiv | [A Counterfactual Explanation Framework for Retrieval Models](https://arxiv.org/abs/2409.00860) | Provides a diagnostic perspective on retrieval decisions. |
+| MUVERA | 2024 · arXiv | [MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings](https://arxiv.org/abs/2405.19504) | Maps vector sets to fixed-dimensional proxies for candidate search. |
+| SPLATE | 2024 · SIGIR | [SPLATE: Sparse Late Interaction Retrieval](https://doi.org/10.1145/3626772.3657968) | Learns sparse candidate retrieval over frozen ColBERTv2 features, followed by late-interaction reranking. |
+| AGREE | 2025 · arXiv | [Attention grounded enhancement for visual document retrieval](https://arxiv.org/abs/2511.13415) | Uses attention-derived region signals for visual retrieval supervision. |
+| ColPali | 2025 · ICLR | [ColPali: Efficient Document Retrieval with Vision Language Models](https://openreview.net/forum?id=ogjBpZ8uSi) | Matches query-token embeddings with visual document-page representations. |
+| Light-ColPali / Light-ColQwen2 | 2025 · ACL Findings | [Towards storage-efficient visual document retrieval: An empirical study on reducing patch-level embeddings](https://aclanthology.org/2025.findings-acl.1003/) | Studies storage reduction through fewer patch-level embeddings. |
+| PO / query decomposition | 2025 · ICML | [PO: Performance-Oriented Query Decomposer for Multi-Vector Retrieval](https://arxiv.org/abs/2505.19189) | Optimizes query decomposition for retrieval performance. |
+| TRIAL | 2025 · EMNLP | [TRIAL: Token Relations and Importance Aware Late-Interaction for Accurate Text Retrieval](https://aclanthology.org/2025.emnlp-main.854/) | Adds token importance and relation-aware matching. |
+| WARP | 2025 · SIGIR | [WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Accelerates XTR-trained retrieval with imputation and efficient score reduction. |
+| Argus-Retriever | 2026 · arXiv | [Argus-Retriever: Vision-LLM Late-Interaction Retrieval with Region-Aware Query-Conditioned MoE for Visual Document Retrieval](https://arxiv.org/abs/2606.04300) | Refines cached document features conditioned on the query for shortlisted candidates. |
+| Col-Bandit | 2026 · arXiv | [Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Adaptively allocates MaxSim evaluations during top-k reranking. |
+| Flash-MaxSim | 2026 · arXiv | [FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval](https://arxiv.org/abs/2605.29517) | Fuses scoring operations to reduce memory traffic. |
+| GEM | 2026 · arXiv | [GEM: A Native Graph-Based Index for Multi-Vector Retrieval](https://arxiv.org/abs/2603.20336) | Constructs a native graph over vector sets. |
+| H+ Embedding | 2026 · arXiv | [H+ Embedding: Harmonizing Global and Token-Level Retrieval with Context-Dependent Phrases](https://arxiv.org/abs/2608.00065) | Motivates learned interaction units beyond fixed token segmentation. |
+| HEAVEN / ViMDOC | 2026 · ACL Findings | [Hybrid-vector retrieval for visually rich documents: Combining single-vector efficiency and multi-vector accuracy](https://aclanthology.org/2026.findings-acl.54/) | Combines single-vector efficiency with multi-vector matching for visually rich documents. |
+| Hydra | 2026 · arXiv | [Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model](https://arxiv.org/abs/2603.28554) | Shares a vision-language model between retrieval and generation modes. |
+| LEMUR | 2026 · arXiv | [LEMUR: Learned Multi-Vector Retrieval](https://arxiv.org/abs/2601.21853) | Learns corpus-specific fixed-dimensional reductions. |
+| MV-HNSW | 2026 · arXiv | [Unified and Efficient Approach for Multi-Vector Similarity Search](https://arxiv.org/abs/2604.02815) | Adapts hierarchical graph search to multi-vector objects. |
+| NumColBERT | 2026 · arXiv | [NumColBERT: Non-Intrusive Numeracy Injection for Late-Interaction Retrieval Models](https://arxiv.org/abs/2605.10109) | Adds query-side numerical gating while retaining the document index and MaxSim interface. |
+| SaMer | 2026 · arXiv | [Do All Visual Tokens Matter Equally? Object-Evidence Preserving Token Merging for Vision-Language Retrieval](https://arxiv.org/abs/2607.04605) | Targets preservation of object-level visual evidence during merging. |
+| Signed MaxSim | 2026 · arXiv | [Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models](https://arxiv.org/abs/2607.05803) | Studies representational capacity and introduces signed contributions. |
+| Single-stage sparse coding | 2026 · arXiv | [No More K-Means: Single-Stage Sparse Coding for Efficient Multi-Vector Retrieval](https://arxiv.org/abs/2605.30120) | Uses sparse codes as the local retrieval substrate. |
+| Spike Hijacking | 2026 · arXiv / LIR Workshop | [Spike Hijacking in Late-Interaction Retrieval](https://arxiv.org/abs/2604.05253) | Examines hard-max concentration and alternative pooling rules. |
+| TileMaxSim | 2026 · arXiv | [TileMaxSim: IO-Aware GPU MaxSim Scoring with Dimension Tiling and Fused Product Quantization](https://arxiv.org/abs/2606.26439) | Uses tiled GPU scoring and fused quantization operations. |
+| Voronoi pruning | 2026 · SIGIR | [A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models](https://doi.org/10.1145/3805712.3809726) | Uses document-vector geometry to reason about retained local evidence. |
 
-<a id="section-11.1"></a>
+<a id="background-and-boundary-cases"></a>
 
-#### §11.1 Learning the Units of Interaction
+### Background and Boundary Cases
 
-**Late-interaction methods, systems, analyses, and extensions**
+These works provide background, wider multi-vector designs, comparison methods, and evaluation context. Poly-encoders, ME-BERT, MVR, and MLR illustrate the wider multi-vector family; DPR, ANCE, and Contriever are single-vector baselines. COIL and XTR remain in their substantive chapters because the survey discusses their modified forms of late interaction in detail.
 
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Argus-Retriever — Argus-Retriever: Vision-LLM Late-Interaction Retrieval with Region-Aware Query-Conditioned MoE for Visual Document Retrieval](https://arxiv.org/abs/2606.04300) | Abdallah et al., 2026 · `abdallah2026` | Cited |
-| [SaMer — Do All Visual Tokens Matter Equally? Object-Evidence Preserving Token Merging for Vision-Language Retrieval](https://arxiv.org/abs/2607.04605) | Park et al., 2026 · `park2026` | Cited |
-| [H+ Embedding — H+ Embedding: Harmonizing Global and Token-Level Retrieval with Context-Dependent Phrases](https://arxiv.org/abs/2608.00065) | Zhang et al., 2026 · `zhang2026` | Cited |
-
-<a id="section-11.2"></a>
-
-#### §11.2 Composable, Updatable, and Hardware-Aware Retrieval Infrastructure
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [MUVERA — MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings](https://arxiv.org/abs/2405.19504) | Dhulipala et al., 2024 · `dhulipala2024` | Cited |
-| [SPLATE — SPLATE: Sparse Late Interaction Retrieval](https://doi.org/10.1145/3626772.3657968) | Formal et al., 2024 · `formal2024` | Cited |
-| [Single-stage sparse coding — No More K-Means: Single-Stage Sparse Coding for Efficient Multi-Vector Retrieval](https://arxiv.org/abs/2605.30120) | Guo et al., 2026 · `guo2026` | Cited |
-| [LEMUR — LEMUR: Learned Multi-Vector Retrieval](https://arxiv.org/abs/2601.21853) | Jääsaari et al., 2026 · `jaasaari2026` | Cited |
-| [CITADEL — CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval](https://aclanthology.org/2023.acl-long.663/) | Li et al., 2023b · `li2023b` | Cited |
-| [Flash-MaxSim — FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval](https://arxiv.org/abs/2605.29517) | Pony et al., 2026a · `pony2026a` | Cited |
-| [TileMaxSim — TileMaxSim: IO-Aware GPU MaxSim Scoring with Dimension Tiling and Fused Product Quantization](https://arxiv.org/abs/2606.26439) | Sharma, 2026 · `sharma2026` | Cited |
-| [GEM — GEM: A Native Graph-Based Index for Multi-Vector Retrieval](https://arxiv.org/abs/2603.20336) | Tian et al., 2026 · `tian2026` | Cited |
-| [MV-HNSW — Unified and Efficient Approach for Multi-Vector Similarity Search](https://arxiv.org/abs/2604.02815) | Yang et al., 2026a · `yang2026a` | Cited |
-
-<a id="section-11.3"></a>
-
-#### §11.3 Risk-Aware and Query-Adaptive Late Interaction
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [HEAVEN / ViMDOC — Hybrid-vector retrieval for visually rich documents: Combining single-vector efficiency and multi-vector accuracy](https://aclanthology.org/2026.findings-acl.54/) | Kim et al., 2026 · `kim2026heaven` | Cited |
-| [PO / query decomposition — PO: Performance-Oriented Query Decomposer for Multi-Vector Retrieval](https://arxiv.org/abs/2505.19189) | Liu et al., 2025 · `liu2025` | Cited |
-| [Col-Bandit — Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval](https://arxiv.org/abs/2602.02827) | Pony et al., 2026b · `pony2026b` | Cited |
-| [WARP — WARP: An Efficient Engine for Multi-Vector Retrieval](https://doi.org/10.1145/3726302.3729904) | Scheerer et al., 2025 · `scheerer2025` | Cited |
-
-<a id="section-11.4"></a>
-
-#### §11.4 Learning and Approximation with Explicit Preservation Targets
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [AGREE — Attention grounded enhancement for visual document retrieval](https://arxiv.org/abs/2511.13415) | Cui et al., 2025 · `cui2025` | Cited |
-| [TRIAL — TRIAL: Token Relations and Importance Aware Late-Interaction for Accurate Text Retrieval](https://aclanthology.org/2025.emnlp-main.854/) | Kang et al., 2025 · `kang2025` | Cited |
-| [Voronoi pruning — A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models](https://doi.org/10.1145/3805712.3809726) | Kankanampati et al., 2026 · `kankanampati2026` | Cited |
-| [Signed MaxSim — Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models](https://arxiv.org/abs/2607.05803) | Killingback et al., 2026a / Killingback et al., 2026b · `killingback2026a` | Cited |
-
-<a id="section-11.5"></a>
-
-#### §11.5 Stateful Late Interaction for RAG and Agentic Search
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Hydra — Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model](https://arxiv.org/abs/2603.28554) | Georgiou, 2026 · `georgiou2026` | Cited |
-| [Baleen / FLIPR — Baleen: Robust Multi-Hop Reasoning at Scale via Condensed Retrieval](https://arxiv.org/abs/2101.00436) | Khattab et al., 2021 · `khattab2021` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [AgentIR — AgentIR: Reasoning-Aware Retrieval for Deep Research Agents](https://arxiv.org/abs/2603.04384) | Chen et al., 2026a · `chen2026a` | Cited |
-| [Agentic-R — Agentic-R: Learning to Retrieve for Agentic Search](https://aclanthology.org/2026.findings-acl.785/) | Liu et al., 2026 · `liu2026` | Cited |
-
-<a id="section-11.6"></a>
-
-#### §11.6 Causal Diagnosis, Robustness, and Control of Local Evidence
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [Counterfactual explanations — A Counterfactual Explanation Framework for Retrieval Models](https://arxiv.org/abs/2409.00860) | Chandna and Sen, 2024 · `chandna2024` | Cited |
-| [AGREE — Attention grounded enhancement for visual document retrieval](https://arxiv.org/abs/2511.13415) | Cui et al., 2025 · `cui2025` | Cited |
-| [Spike Hijacking — Spike Hijacking in Late-Interaction Retrieval](https://arxiv.org/abs/2604.05253) | Suresh et al., 2026 · `suresh2026` | Cited |
-
-<a id="section-11.7"></a>
-
-#### §11.7 Evaluation under Heterogeneous and Changing Conditions
-
-**Late-interaction methods, systems, analyses, and extensions**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [ColPali — ColPali: Efficient Document Retrieval with Vision Language Models](https://openreview.net/forum?id=ogjBpZ8uSi) | Faysse et al., 2025 · `faysse2025` | Cited |
-| [NumColBERT — NumColBERT: Non-Intrusive Numeracy Injection for Late-Interaction Retrieval Models](https://arxiv.org/abs/2605.10109) | Fujimaki and Kato, 2026 · `fujimaki2026` | Cited |
-| [HEAVEN / ViMDOC — Hybrid-vector retrieval for visually rich documents: Combining single-vector efficiency and multi-vector accuracy](https://aclanthology.org/2026.findings-acl.54/) | Kim et al., 2026 · `kim2026heaven` | Cited |
-| [Light-ColPali / Light-ColQwen2 — Towards storage-efficient visual document retrieval: An empirical study on reducing patch-level embeddings](https://aclanthology.org/2025.findings-acl.1003/) | Ma et al., 2025 · `ma2025` | Cited |
-
-**Background and boundary cases**
-
-| Work / paper | Survey citation | Evidence |
-| --- | --- | --- |
-| [BrowseComp-Plus — BrowseComp-Plus: A Fair and Disentangled Evaluation Benchmark for Deep Search Agents](https://aclanthology.org/2026.acl-long.1023/) | Chen et al., 2026b · `chen2026b` | Cited |
-| [ViDoRe V3 — ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios](https://arxiv.org/abs/2601.08620) | Loison et al., 2026 · `loison2026` | Cited |
+| Work | Year / venue or version | Paper | Main contribution / relevance |
+| --- | --- | --- | --- |
+| Okapi / BM25 | 1994 · TREC | [Okapi at TREC-3](http://trec.nist.gov/pubs/trec3/papers/city.ps.gz) | Provides the classical lexical retrieval baseline. |
+| Probabilistic retrieval model | 2000 · Information Processing & Management | [A probabilistic model of information retrieval: development and comparative experiments: Part 2](https://www.sciencedirect.com/science/article/abs/pii/S0306457300000169) | Provides the probabilistic lexical retrieval foundations. |
+| CEDR | 2019 · SIGIR | [CEDR: contextualized embeddings for document ranking](https://doi.org/10.1145/3331184.3331317) | Provides a contextualized joint-encoding ranking comparison. |
+| Multi-stage BERT ranking | 2019 · arXiv | [Multi-Stage Document Ranking with BERT](https://arxiv.org/abs/1910.14424) | Provides background on multi-stage neural ranking pipelines. |
+| BERT passage reranking | 2019 · arXiv | [Passage re-ranking with BERT](https://arxiv.org/abs/1901.04085) | Provides a cross-encoder passage reranking comparison. |
+| DPR | 2020 · EMNLP | [Dense passage retrieval for open-domain question answering](https://doi.org/10.18653/V1/2020.EMNLP-MAIN.550) | Provides a supervised single-vector dense passage retrieval baseline. |
+| ME-BERT | 2020 · arXiv | [Sparse, dense, and attentional representations for text retrieval](https://arxiv.org/abs/2005.00181) | Uses a fixed number of document vectors as a wider multi-vector design. |
+| Poly-encoders | 2020 · ICLR | [Poly-encoders: Architectures and pre-training strategies for fast and accurate multi-sentence scoring](https://openreview.net/forum?id=SkxgnnNFvH) | Uses learned attention codes as a boundary example of multi-vector representation. |
+| DeepImpact / COIL conceptual notes | 2021 · arXiv | [A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques](https://arxiv.org/abs/2106.14807) | Clarifies relationships between contextualized lexical and other retrieval approaches. |
+| ANCE | 2021 · ICLR | [Approximate nearest neighbor negative contrastive learning for dense text retrieval](https://openreview.net/forum?id=zeFrfgyZln) | Provides a single-vector baseline trained with approximate-neighbor hard negatives. |
+| ANCE-PRF | 2021 · CIKM | [Improving query representations for dense retrieval with pseudo relevance feedback](https://doi.org/10.1145/3459637.3482124) | Studies pseudo-relevance feedback for single-vector dense retrieval. |
+| BEIR | 2021 · arXiv | [BEIR: A heterogenous benchmark for zero-shot evaluation of information retrieval models](https://arxiv.org/abs/2104.08663) | Provides heterogeneous datasets for zero-shot retrieval evaluation. |
+| MVR | 2021 · ACL | [Improving document representations by generating pseudo query embeddings for dense retrieval](https://doi.org/10.18653/v1/2021.acl-long.392) | Generates multiple pseudo-query embeddings to represent document relevance views. |
+| Pretrained Transformers for Text Ranking | 2021 · Book | [Pretrained Transformers for Text Ranking: BERT and Beyond](https://doi.org/10.2200/S01123ED1V01Y202108HLT053) | Provides background on transformer-based ranking architectures. |
+| SPLADE | 2021 · SIGIR | [SPLADE: sparse lexical and expansion model for first stage ranking](https://doi.org/10.1145/3404835.3463098) | Supplies a learned sparse lexical retrieval comparison. |
+| Expando–Mono–Duo | 2021 · arXiv | [The expando-mono-duo design pattern for text ranking with pretrained sequence-to-sequence models](https://arxiv.org/abs/2101.05667) | Describes expansion and sequence-to-sequence reranking pipelines. |
+| VectorPRF | 2021 · arXiv | [Pseudo relevance feedback with deep language models and dense retrievers: Successes and pitfalls](https://arxiv.org/abs/2108.11044) | Studies the benefits and pitfalls of feedback for dense retrievers. |
+| Contriever | 2022 · TMLR | [Unsupervised dense information retrieval with contrastive learning](https://openreview.net/forum?id=jKN1pXi7b0) | Provides an unsupervised single-vector dense retrieval baseline. |
+| Large dual encoders | 2022 · EMNLP | [Large dual encoders are generalizable retrievers](https://aclanthology.org/2022.emnlp-main.669/) | Studies generalization of single-vector dual-encoder retrieval. |
+| Multi-view document representation | 2022 · ACL | [Multi-view document representation learning for open-domain dense retrieval](https://aclanthology.org/2022.acl-long.414/) | Learns multiple document views for open-domain dense retrieval. |
+| MLR | 2023 · EMNLP Findings | [Investigating multi-layer representations for dense passage retrieval](https://aclanthology.org/2025.findings-emnlp.1333/) | Constructs document representations from multiple encoder layers. |
+| Relevance-aware contrastive pre-training | 2023 · ACL Findings | [Unsupervised dense retrieval with relevance-aware contrastive pre-training](https://aclanthology.org/2023.findings-acl.695/) | Provides background on unsupervised dense retriever pre-training. |
+| M3-Embedding / BGE-M3 | 2024 · ACL Findings | [M3-embedding: Multi-linguality, multi-functionality, multi-granularity text embeddings through self-knowledge distillation](https://doi.org/10.18653/V1/2024.FINDINGS-ACL.137) | Combines multilingual, dense, sparse, and multi-vector retrieval capabilities. |
+| Agentic-R | 2026 · ACL Findings | [Agentic-R: Learning to Retrieve for Agentic Search](https://aclanthology.org/2026.findings-acl.785/) | Context for agent-retriever learning and downstream evaluation. |
+| AgentIR | 2026 · arXiv | [AgentIR: Reasoning-Aware Retrieval for Deep Research Agents](https://arxiv.org/abs/2603.04384) | Context for reasoning-aware retrieval; not automatically a canonical late-interaction model. |
+| BrowseComp-Plus | 2026 · ACL | [BrowseComp-Plus: A Fair and Disentangled Evaluation Benchmark for Deep Search Agents](https://aclanthology.org/2026.acl-long.1023/) | Context for evaluating retrieval separately from agent behavior. |
+| LIR Workshop | 2026 · ECIR | [Lir: The first workshop on late interaction and multi vector retrieval@ ecir 2026](https://doi.org/10.1007/978-3-032-21324-2_11) | Provides context for the late-interaction and multi-vector retrieval research community. |
+| ViDoRe V3 | 2026 · arXiv | [ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios](https://arxiv.org/abs/2601.08620) | Motivates realistic visual-document evaluation. |
 
 ## Citation
 
@@ -1148,6 +318,6 @@ Download [survey.bib](survey.bib). GitHub's **Cite this repository** control use
 
 ## Updates and Contributions
 
-The reading lists follow the survey's numbered subsections with many-to-many paper placement. Subsequent additions should identify whether they are already discussed in the survey or are post-survey updates. See [CONTRIBUTING.md](CONTRIBUTING.md) and [CHANGELOG.md](CHANGELOG.md).
+The reading lists follow the survey's chapters, with background and boundary cases collected separately. Subsequent additions should identify whether they are already discussed in the survey or are post-survey updates. See [CONTRIBUTING.md](CONTRIBUTING.md) and [CHANGELOG.md](CHANGELOG.md).
 
 Please cite individual papers when relying on their methods or findings. Linked papers, models, datasets, and software retain their respective authorship and licenses.

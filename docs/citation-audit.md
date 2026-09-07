@@ -10,11 +10,15 @@ The reconciliation records **261 explicit citation occurrences** (including tabl
 | --- | --- | --- |
 | Body citation / named discussion | [citation-occurrences.json](../data/citation-occurrences.json) | Subsection, citation or method name, extraction line; PDF page for explicit citations |
 | Literature record | [papers.json](../data/papers.json) | Stable ID/key, authors, source reference, aliases, category, cited and discussed subsections |
-| Export and list | [references.bib](../references.bib), [README](../README.md#reading-lists) | One bibliography entry per work; repeated placement across subsections |
+| Export and list | [references.bib](../references.bib), [README](../README.md#reading-lists) | One bibliography entry per work; chapter tables derived from the subsection mappings |
 
 Extraction lines refer to the reviewed text extraction, not universal PDF line numbers. Pages count front matter. Floating tables are associated with the preceding subsection in PDF reading order; named mentions can additionally place a paper in its substantive discussion subsection. A section cross-reference alone does not imply that every paper in the target section is discussed again.
 
 The record-driven author–year scan was checked against an independent scan for unmatched author–year strings. Shorthand years (`2022b,a`, `2021, 2022`), line-broken surnames, and the undated attribution were resolved. “Workshop … ECIR 2026” is an event name, not an additional citation.
+
+## README presentation
+
+The README uses one table per chapter (§§3–11), with background and boundary cases in a final table. The detailed subsection evidence remains in the data files. Each chapter table is the union of its mapped subsection records, with one row per work. Background-classified records appear in the final table; COIL and XTR retain their substantive chapter placements. Display metadata is maintained separately in `data/reading-list-display.json`.
 
 ## Corrections
 
@@ -32,6 +36,6 @@ python scripts/build_reading_lists.py
 python scripts/validate_references.py
 ```
 
-Validation checks evidence-to-record resolution, aliases, exact cited/discussed subsection sets, one-to-one BibTeX keys, separation of the survey citation, and actual rows under each README subsection. It deliberately permits cross-subsection repetition.
+Validation checks evidence-to-record resolution, aliases, exact cited/discussed subsection sets, one-to-one BibTeX keys, separation of the survey citation, and actual rows in each README chapter and the final background/boundary table. It deliberately permits cross-subsection repetition.
 
 This validates the curated snapshot correspondence, not an unseen revised PDF. For a manuscript update, reread its body and bibliography and update the evidence manifest before regenerating. This audit does not independently revalidate every paper's scientific claims or promise continuous external-link availability.

@@ -6,11 +6,11 @@ Suggestions, corrections, and paper additions are welcome through issues or pull
 
 Provide the exact title, authors, year, primary paper URL, venue or preprint status, and all relevant survey subsections. Include one sentence explaining the intervention and, when available, a link to the authors' code or model. Mark the entry as **survey-covered** or **post-survey addition**, supported by a section reference or publication date.
 
-Place each work in every subsection where it is cited or substantively discussed. Keep one literature record with many-to-many subsection mappings. Separate explicit citations from named mentions, and keep background/boundary work and software labeled. Do not infer actual discussion locations solely from technical similarity.
+Record every subsection where a work is cited or substantively discussed. Keep one literature record with many-to-many subsection mappings and distinguish explicit citations from named mentions. README displays these records in chapter tables, deduplicated within each chapter, with background/boundary work collected at the end. Do not infer actual discussion locations solely from technical similarity.
 
 Prefer DOI landing pages, ACL Anthology, publisher proceedings, OpenReview, or arXiv. Do not infer a DOI or code URL from a naming pattern. A preprint and its conference version should normally share one entry; an extended journal study may have a separate entry when its contribution warrants it.
 
-Update `data/papers.json` and `data/citation-occurrences.json` with source evidence; preserve source aliases when deduplicating. Update `data/sections.json` if the manuscript outline changes. Run `python scripts/build_reading_lists.py` and `python scripts/validate_references.py` to regenerate and check `README.md` and `references.bib`. Keep `survey.bib` reserved for citing the survey. Add a note to `CHANGELOG.md` for substantive changes. The validator checks the curated evidence; a new manuscript requires a fresh body citation audit.
+Update `data/papers.json` and `data/citation-occurrences.json` with source evidence; preserve source aliases when deduplicating. Update `data/sections.json` if the manuscript outline changes. Run `python scripts/build_reading_lists.py` and `python scripts/validate_references.py` to regenerate and check `README.md` and `references.bib`. Use `data/reading-list-display.json` for concise display names, venue labels, and contribution summaries without changing the source citation records. Keep `survey.bib` reserved for citing the survey. Add a note to `CHANGELOG.md` for substantive changes. The validator checks the curated evidence; a new manuscript requires a fresh body citation audit.
 
 ## Claims and measurements
 

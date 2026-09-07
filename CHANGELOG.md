@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-07 — Simplified chapter reading lists
+
+- Restored one paper table per chapter, with within-chapter deduplication and cross-chapter repetition.
+- Collected background and boundary cases at the end; retained COIL and XTR in their substantive chapters.
+- Restored concise work/year/paper/contribution columns; kept detailed citation evidence in the audit data.
+- Updated generation and validation to check chapter-level display against subsection-level evidence.
+
 ## 2026-09-07 — Subsection citation reconciliation
 
 - Expanded 76 selected entries to 120 distinct bibliography records from the manuscript snapshot.
