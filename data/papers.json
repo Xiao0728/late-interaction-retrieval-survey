@@ -1,838 +1,3834 @@
 [
   {
-    "id": "colbert",
-    "primary_survey_section": 3,
-    "name": "ColBERT",
-    "year": 2020,
-    "reference_venue_or_version": "SIGIR",
-    "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
-    "url": "https://doi.org/10.1145/3397271.3401075",
-    "role": "Independent token encoding and MaxSim establish the prototype pipeline.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "colbertv2",
-    "primary_survey_section": 5,
-    "name": "ColBERTv2",
-    "year": 2022,
-    "reference_venue_or_version": "NAACL",
-    "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
-    "url": "https://aclanthology.org/2022.naacl-main.272/",
-    "role": "Residual compression reduces vector storage; denoised supervision is a separate training contribution.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "trial",
-    "primary_survey_section": 4,
-    "name": "TRIAL",
-    "year": 2025,
-    "reference_venue_or_version": "EMNLP",
-    "title": "TRIAL: Token Relations and Importance Aware Late-Interaction for Accurate Text Retrieval",
-    "url": "https://aclanthology.org/2025.emnlp-main.854/",
-    "role": "Adds token importance and relation-aware matching.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "aw",
-    "primary_survey_section": 4,
-    "name": "ColBERT-AW",
-    "year": 2026,
-    "reference_venue_or_version": "IEEE Access",
-    "title": "ColBERT-AW: Enhancing Late Interaction Retrieval with Attribute-Aware Query Token Weighting",
-    "url": "https://doi.org/10.1109/ACCESS.2026.3672116",
-    "role": "Weights query-token contributions.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "signed",
-    "primary_survey_section": 4,
-    "name": "Signed MaxSim",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models",
-    "url": "https://arxiv.org/abs/2607.05803",
-    "role": "Studies representational capacity and introduces signed contributions.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "att",
-    "primary_survey_section": 4,
-    "name": "ColBERT-Att",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "ColBERT-Att: Late-Interaction Meets Attention for Enhanced Retrieval",
-    "url": "https://arxiv.org/abs/2603.25248",
-    "role": "Uses attention-derived weights for selected matches.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "spike",
-    "primary_survey_section": 4,
-    "name": "Spike Hijacking",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv / LIR Workshop",
-    "title": "Spike Hijacking in Late-Interaction Retrieval",
-    "url": "https://arxiv.org/abs/2604.05253",
-    "role": "Examines hard-max concentration and alternative pooling rules.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "excise",
-    "primary_survey_section": 4,
-    "name": "EXCISE",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "EXCISE: Query-Side Exclusion for Late-Interaction Retrieval",
-    "url": "https://arxiv.org/abs/2608.05497",
-    "role": "Diagnoses exclusion inversion; the remedy adds candidate-stage processing.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "pruneearly",
-    "primary_survey_section": 5,
-    "name": "Token pruning study",
-    "year": 2021,
-    "reference_venue_or_version": "arXiv",
-    "title": "A Study on Token Pruning for ColBERT",
-    "url": "https://arxiv.org/abs/2112.06540",
-    "role": "Studies offline removal of document-token vectors.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "prunelearn",
-    "primary_survey_section": 5,
-    "name": "Learned token pruning",
-    "year": 2022,
-    "reference_venue_or_version": "SIGIR",
-    "title": "Learned Token Pruning in Contextualized Late Interaction over BERT (ColBERT)",
-    "url": "https://doi.org/10.1145/3477495.3531835",
-    "role": "Learns document-token selection before indexing.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "colberter",
-    "primary_survey_section": 5,
-    "name": "ColBERTer",
-    "year": 2022,
-    "reference_venue_or_version": "CIKM",
-    "title": "Introducing Neural Bag of Whole-Words with ColBERTer",
-    "url": "https://doi.org/10.1145/3511808.3557367",
-    "role": "Combines whole-word representations, low-dimensional vectors, and learned pruning.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "static",
-    "primary_survey_section": 5,
-    "name": "Static pruning",
-    "year": 2023,
-    "reference_venue_or_version": "DocEng",
-    "title": "Static Pruning for Multi-Representation Dense Retrieval",
-    "url": "https://doi.org/10.1145/3573128.3604896",
-    "role": "Transfers lexical importance estimates to offline embedding pruning.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "pool",
-    "primary_survey_section": 5,
-    "name": "Token pooling",
-    "year": 2024,
-    "reference_venue_or_version": "arXiv",
-    "title": "Reducing the Footprint of Multi-Vector Retrieval with Minimal Performance Impact via Token Pooling",
-    "url": "https://arxiv.org/abs/2409.14683",
-    "role": "Merges groups of document vectors into pooled representatives.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "lossless",
-    "primary_survey_section": 5,
-    "name": "Dominance-based pruning",
-    "year": 2025,
-    "reference_venue_or_version": "SIGIR",
-    "title": "Towards Lossless Token Pruning in Late-Interaction Retrieval Models",
-    "url": "https://doi.org/10.1145/3726302.3730100",
-    "role": "Separates exact dominance conditions from approximate practical pruning.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "scv",
-    "primary_survey_section": 5,
-    "name": "SCV",
-    "year": 2025,
-    "reference_venue_or_version": "COLING Industry",
-    "title": "SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors",
-    "url": "https://aclanthology.org/2025.coling-industry.63/",
-    "role": "Constructs span representations; also uses coarse-to-fine retrieval.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "voronoi",
-    "primary_survey_section": 5,
-    "name": "Voronoi pruning",
-    "year": 2026,
-    "reference_venue_or_version": "SIGIR",
-    "title": "A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models",
-    "url": "https://doi.org/10.1145/3805712.3809726",
-    "role": "Uses document-vector geometry to reason about retained local evidence.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "anymod",
-    "primary_survey_section": 5,
-    "name": "Compression across modalities",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Multi-Vector Index Compression in Any Modality",
-    "url": "https://arxiv.org/abs/2602.21202",
-    "role": "Examines compression across different multi-vector inputs.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "comparecompression",
-    "primary_survey_section": 5,
-    "name": "Compression comparison",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "A Brief Comparison of Training-Free Multi-Vector Sequence Compression Methods",
-    "url": "https://arxiv.org/abs/2603.22434",
-    "role": "Compares training-free sequence compression methods.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "learnpool",
-    "primary_survey_section": 5,
-    "name": "Learn to Pool",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Learn to Pool: Lightweight Fine-Tuning for Flexible Multi-Vector Compression",
-    "url": "https://arxiv.org/abs/2607.06036",
-    "role": "Learns pooling for flexible vector budgets.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "colchunk",
-    "primary_survey_section": 5,
-    "name": "ColChunk",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Visual Late Chunking: An Empirical Study of Contextual Chunking for Efficient Visual Document Retrieval",
-    "url": "https://arxiv.org/abs/2604.10167",
-    "role": "Combines contextual patch clustering with a spatial prior.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "sculpt",
-    "primary_survey_section": 5,
-    "name": "Prune-then-merge",
-    "year": 2026,
-    "reference_venue_or_version": "ACL Findings",
-    "title": "Sculpting the Vector Space: Towards Efficient Multi-Vector Visual Document Retrieval via Prune-then-Merge Framework",
-    "url": "https://aclanthology.org/2026.findings-acl.1247/",
-    "role": "Combines visual-token pruning and merging.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "samer",
-    "primary_survey_section": 5,
-    "name": "SaMer",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Do All Visual Tokens Matter Equally? Object-Evidence Preserving Token Merging for Vision-Language Retrieval",
-    "url": "https://arxiv.org/abs/2607.04605",
-    "role": "Targets preservation of object-level visual evidence during merging.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "marginmerge",
-    "primary_survey_section": 5,
-    "name": "MarginMerge",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Coverage Matters: MarginMerge for Compressing Multi-Vector Visual Document Retrievers",
-    "url": "https://arxiv.org/abs/2608.02969",
-    "role": "Studies evidence coverage when compressing visual multi-vectors.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "plaid",
-    "primary_survey_section": 6,
-    "name": "PLAID",
-    "year": 2022,
-    "reference_venue_or_version": "CIKM",
-    "title": "PLAID: An Efficient Engine for Late Interaction Retrieval",
-    "url": "https://doi.org/10.1145/3511808.3557325",
-    "role": "Prunes with centroid-level scores before residual reconstruction and final scoring.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "xtr",
-    "primary_survey_section": 6,
-    "name": "XTR",
-    "year": 2023,
-    "reference_venue_or_version": "NeurIPS",
-    "title": "Rethinking the Role of Token Retrieval in Multi-Vector Retrieval",
-    "url": "https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html",
-    "role": "Co-designs token retrieval, training, and missing-similarity scoring.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "emvb",
-    "primary_survey_section": 6,
-    "name": "EMVB",
-    "year": 2024,
-    "reference_venue_or_version": "arXiv",
-    "title": "Efficient Multi-Vector Dense Retrieval Using Bit Vectors",
-    "url": "https://arxiv.org/abs/2404.02805",
-    "role": "Uses bit-vector prefiltering and quantized, SIMD-oriented execution.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "muvera",
-    "primary_survey_section": 6,
-    "name": "MUVERA",
-    "year": 2024,
-    "reference_venue_or_version": "arXiv",
-    "title": "MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings",
-    "url": "https://arxiv.org/abs/2405.19504",
-    "role": "Maps vector sets to fixed-dimensional proxies for candidate search.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "warp",
-    "primary_survey_section": 6,
-    "name": "WARP",
-    "year": 2025,
-    "reference_venue_or_version": "SIGIR",
-    "title": "WARP: An Efficient Engine for Multi-Vector Retrieval",
-    "url": "https://doi.org/10.1145/3726302.3729904",
-    "role": "Accelerates XTR-trained retrieval with imputation and efficient score reduction.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "qprune",
-    "primary_survey_section": 6,
-    "name": "Query embedding pruning",
-    "year": 2021,
-    "reference_venue_or_version": "CIKM",
-    "title": "Query Embedding Pruning for Dense Retrieval",
-    "url": "https://doi.org/10.1145/3459637.3482162",
-    "role": "Prunes query probes during candidate generation while retaining full-query final scoring.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "po",
-    "primary_survey_section": 6,
-    "name": "PO / query decomposition",
-    "year": 2025,
-    "reference_venue_or_version": "ICML",
-    "title": "PO: Performance-Oriented Query Decomposer for Multi-Vector Retrieval",
-    "url": "https://arxiv.org/abs/2505.19189",
-    "role": "Optimizes query decomposition for retrieval performance.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "lemur",
-    "primary_survey_section": 6,
-    "name": "LEMUR",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "LEMUR: Learned Multi-Vector Retrieval",
-    "url": "https://arxiv.org/abs/2601.21853",
-    "role": "Learns corpus-specific fixed-dimensional reductions.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "gem",
-    "primary_survey_section": 6,
-    "name": "GEM",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "GEM: A Native Graph-Based Index for Multi-Vector Retrieval",
-    "url": "https://arxiv.org/abs/2603.20336",
-    "role": "Constructs a native graph over vector sets.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "mvhnsw",
-    "primary_survey_section": 6,
-    "name": "MV-HNSW",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Unified and Efficient Approach for Multi-Vector Similarity Search",
-    "url": "https://arxiv.org/abs/2604.02815",
-    "role": "Adapts hierarchical graph search to multi-vector objects.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "hierarchy",
-    "primary_survey_section": 6,
-    "name": "Token-aware hierarchical indexing",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Efficient Multivector Retrieval with Token-Aware Clustering and Hierarchical Indexing",
-    "url": "https://arxiv.org/abs/2604.28142",
-    "role": "Combines token-aware clustering and hierarchical candidate search.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "bandit",
-    "primary_survey_section": 6,
-    "name": "Col-Bandit",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval",
-    "url": "https://arxiv.org/abs/2602.02827",
-    "role": "Adaptively allocates MaxSim evaluations during top-k reranking.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "flash",
-    "primary_survey_section": 6,
-    "name": "Flash-MaxSim",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval",
-    "url": "https://arxiv.org/abs/2605.29517",
-    "role": "Fuses scoring operations to reduce memory traffic.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "tile",
-    "primary_survey_section": 6,
-    "name": "TileMaxSim",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "TileMaxSim: IO-Aware GPU MaxSim Scoring with Dimension Tiling and Fused Product Quantization",
-    "url": "https://arxiv.org/abs/2606.26439",
-    "role": "Uses tiled GPU scoring and fused quantization operations.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "coil",
-    "primary_survey_section": 7,
-    "name": "COIL",
-    "year": 2021,
-    "reference_venue_or_version": "NAACL",
-    "title": "COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List",
-    "url": "https://aclanthology.org/2021.naacl-main.241/",
-    "role": "Lexically gates contextual token matching; a boundary case in the survey.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "slim",
-    "primary_survey_section": 7,
-    "name": "SLIM",
-    "year": 2023,
-    "reference_venue_or_version": "SIGIR",
-    "title": "SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted Indexes",
-    "url": "https://doi.org/10.1145/3539618.3591977",
-    "role": "Uses sparse local representations and inverted-index-compatible retrieval.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "citadel",
-    "primary_survey_section": 7,
-    "name": "CITADEL",
-    "year": 2023,
-    "reference_venue_or_version": "ACL",
-    "title": "CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval",
-    "url": "https://aclanthology.org/2023.acl-long.663/",
-    "role": "Learns lexical routing for local token interactions.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "sar",
-    "primary_survey_section": 7,
-    "name": "ColBERTSaR",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "ColBERTSaR: Sparsified ColBERT Index via Product Quantization",
-    "url": "https://arxiv.org/abs/2606.05568",
-    "role": "Uses residual-free codeword identifiers and inverted lists; also reduces storage.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "sparsecode",
-    "primary_survey_section": 7,
-    "name": "Single-stage sparse coding",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "No More K-Means: Single-Stage Sparse Coding for Efficient Multi-Vector Retrieval",
-    "url": "https://arxiv.org/abs/2605.30120",
-    "role": "Uses sparse codes as the local retrieval substrate.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "prf2021",
-    "primary_survey_section": 8,
-    "name": "Early ColBERT-PRF",
-    "year": 2021,
-    "reference_venue_or_version": "ICTIR",
-    "title": "Pseudo-Relevance Feedback for Multiple Representation Dense Retrieval",
-    "url": "https://doi.org/10.1145/3471158.3472250",
-    "role": "Introduces feedback expansion in the multi-vector representation space.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "prf",
-    "primary_survey_section": 8,
-    "name": "ColBERT-PRF",
-    "year": 2023,
-    "reference_venue_or_version": "TWeb",
-    "title": "ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval",
-    "url": "https://doi.org/10.1145/3572405",
-    "role": "Clusters feedback embeddings and selects semantic query expansions.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "cwprf",
-    "primary_survey_section": 8,
-    "name": "CWPRF",
-    "year": 2023,
-    "reference_venue_or_version": "ACL",
-    "title": "Effective Contrastive Weighting for Dense Query Expansion",
-    "url": "https://aclanthology.org/2023.acl-long.710/",
-    "role": "Learns the usefulness of contextual feedback embeddings.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "plaidprf",
-    "primary_survey_section": 8,
-    "name": "PLAID-PRF",
-    "year": 2026,
-    "reference_venue_or_version": "SIGIR",
-    "title": "PLAID-PRF: Pseudo-Relevance Feedback with Centroid-Like Tokens in PLAID",
-    "url": "https://doi.org/10.1145/3805712.3809690",
-    "role": "Reuses index centroids for feedback expansion.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "whitebox",
-    "primary_survey_section": 9,
-    "name": "White-box analysis",
-    "year": 2021,
-    "reference_venue_or_version": "ECIR",
-    "title": "A White Box Analysis of ColBERT",
-    "url": "https://doi.org/10.1007/978-3-030-72240-1_23",
-    "role": "Examines lexical and semantic contributions to local matching.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "matching",
-    "primary_survey_section": 9,
-    "name": "Matching and pruning analysis",
-    "year": 2024,
-    "reference_venue_or_version": "TOIS",
-    "title": "An Analysis on Matching Mechanisms and Token Pruning for Late-Interaction Models",
-    "url": "https://doi.org/10.1145/3639818",
-    "role": "Studies document- and query-token pruning with different system effects.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "plaidrepro",
-    "primary_survey_section": 9,
-    "name": "PLAID reproduction",
-    "year": 2024,
-    "reference_venue_or_version": "SIGIR",
-    "title": "A Reproducibility Study of PLAID",
-    "url": "https://doi.org/10.1145/3626772.3657856",
-    "role": "Examines implementation and configuration effects on retrieval trade-offs.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "counterfactual",
-    "primary_survey_section": 9,
-    "name": "Counterfactual explanations",
-    "year": 2024,
-    "reference_venue_or_version": "arXiv",
-    "title": "A Counterfactual Explanation Framework for Retrieval Models",
-    "url": "https://arxiv.org/abs/2409.00860",
-    "role": "Provides a diagnostic perspective on retrieval decisions.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "zero",
-    "primary_survey_section": 9,
-    "name": "ColBERT-Zero",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "ColBERT-Zero: To Pre-Train or Not to Pre-Train ColBERT Models?",
-    "url": "https://arxiv.org/abs/2602.16609",
-    "role": "Studies pre-training choices for late-interaction models.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "xtrrepro",
-    "primary_survey_section": 9,
-    "name": "XTR replicability",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "A Replicability Study of XTR",
-    "url": "https://arxiv.org/abs/2605.00646",
-    "role": "Separates token-retrieval behavior from final effectiveness claims.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "backend",
-    "primary_survey_section": 9,
-    "name": "Cross-backend reproduction",
-    "year": 2026,
-    "reference_venue_or_version": "SIGIR",
-    "title": "Reproduction Beyond Benchmarks: ConstBERT and ColBERT-v2 Across Backends and Query Distributions",
-    "url": "https://doi.org/10.1145/3805712.3808561",
-    "role": "Examines reproducibility across retrieval backends and query distributions.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "prunecompare",
-    "primary_survey_section": 9,
-    "name": "Pruning comparison",
-    "year": 2026,
-    "reference_venue_or_version": "SIGIR",
-    "title": "Comparing Token Pruning Approaches for Multi-Vector Retrieval",
-    "url": "https://doi.org/10.1145/3805712.3808564",
-    "role": "Compares pruning under a common evaluation setting.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "diagnosable",
-    "primary_survey_section": 9,
-    "name": "Diagnosable ColBERT",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Diagnosable ColBERT: Debugging Late-Interaction Retrieval Models Using a Learned Latent Space as Reference",
-    "url": "https://arxiv.org/abs/2604.19566",
-    "role": "Uses a learned reference space for diagnostic interpretation.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "routir",
-    "primary_survey_section": 9,
-    "name": "RoutIR",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "RoutIR: Fast Serving of Retrieval Pipelines for Retrieval-Augmented Generation",
-    "url": "https://arxiv.org/abs/2601.10644",
-    "role": "Addresses serving and execution of retrieval pipelines.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "colbertx",
-    "primary_survey_section": 10,
-    "name": "ColBERT-X",
-    "year": 2022,
-    "reference_venue_or_version": "ECIR",
-    "title": "Transfer Learning Approaches for Building Cross-Language Dense Retrieval Models",
-    "url": "https://doi.org/10.1007/978-3-030-99736-6_26",
-    "role": "Studies cross-language transfer with multilingual encoders.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "colbertxm",
-    "primary_survey_section": 10,
-    "name": "ColBERT-XM",
-    "year": 2025,
-    "reference_venue_or_version": "COLING",
-    "title": "ColBERT-XM: A Modular Multi-Vector Representation Model for Zero-Shot Multilingual Information Retrieval",
-    "url": "https://aclanthology.org/2025.coling-main.295/",
-    "role": "Uses modular language adaptation for multilingual retrieval.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "lateon",
-    "primary_survey_section": 10,
-    "name": "LateOn / mLateOn",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search",
-    "url": "https://arxiv.org/abs/2607.27178",
-    "role": "Studies open training and transfer across languages and retrieval settings.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "colpali",
-    "primary_survey_section": 10,
-    "name": "ColPali",
-    "year": 2025,
-    "reference_venue_or_version": "ICLR",
-    "title": "ColPali: Efficient Document Retrieval with Vision Language Models",
-    "url": "https://openreview.net/forum?id=ogjBpZ8uSi",
-    "role": "Matches query-token embeddings with visual document-page representations.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "colmate",
-    "primary_survey_section": 10,
-    "name": "ColMate",
-    "year": 2025,
-    "reference_venue_or_version": "EMNLP Industry",
-    "title": "ColMate: Contrastive Late Interaction and Masked Text for Multimodal Document Retrieval",
-    "url": "https://aclanthology.org/2025.emnlp-industry.145/",
-    "role": "Adds OCR-based pre-training and masked contrastive learning.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "nemotron",
-    "primary_survey_section": 10,
-    "name": "Nemotron ColEmbed V2",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "Nemotron ColEmbed V2: Top-Performing Late Interaction Embedding Models for Visual Document Retrieval",
-    "url": "https://arxiv.org/abs/2602.03992",
-    "role": "Scales visual late-interaction representation learning.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "litta",
-    "primary_survey_section": 10,
-    "name": "LITTA",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval",
-    "url": "https://arxiv.org/abs/2603.26683",
-    "role": "Generates query variants and fuses rankings with a fixed page index.",
-    "coverage": "survey-snapshot"
-  },
-  {
     "id": "argus",
-    "primary_survey_section": 10,
     "name": "Argus-Retriever",
     "year": 2026,
     "reference_venue_or_version": "arXiv",
     "title": "Argus-Retriever: Vision-LLM Late-Interaction Retrieval with Region-Aware Query-Conditioned MoE for Visual Document Retrieval",
     "url": "https://arxiv.org/abs/2606.04300",
     "role": "Refines cached document features conditioned on the query for shortlisted candidates.",
-    "coverage": "survey-snapshot"
+    "coverage": "survey-snapshot",
+    "citation_key": "abdallah2026",
+    "source_citations": [
+      "Abdallah et al., 2026"
+    ],
+    "authors": [
+      "Abdallah, A.",
+      "Abdalla, M.",
+      "Ali, M.",
+      "Jatowt, A."
+    ],
+    "source_reference": "Abdallah, A., Abdalla, M., Ali, M., Jatowt, A., 2026. Argus-retriever: Vision-LLM late-interaction retrieval with region-aware query-conditioned MoE for visual document retrieval. URL: https://arxiv.org/abs/2606.04300, arXiv:2606.04300.",
+    "source_title": "Argus-retriever: Vision-LLM late-interaction retrieval with region-aware query-conditioned MoE for visual document retrieval",
+    "cited_in_sections": [
+      "1",
+      "10.2",
+      "10.5",
+      "11.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "10.2",
+      "10.5",
+      "11.1"
+    ]
   },
   {
-    "id": "hydra",
-    "primary_survey_section": 10,
-    "name": "Hydra",
+    "id": "static",
+    "name": "Static pruning",
+    "year": 2023,
+    "reference_venue_or_version": "DocEng",
+    "title": "Static Pruning for Multi-Representation Dense Retrieval",
+    "url": "https://doi.org/10.1145/3573128.3604896",
+    "role": "Transfers lexical importance estimates to offline embedding pruning.",
+    "coverage": "survey-snapshot",
+    "citation_key": "acquavia2023",
+    "source_citations": [
+      "Acquavia et al., 2023"
+    ],
+    "authors": [
+      "Acquavia, A.",
+      "Macdonald, C.",
+      "Tonellotto, N."
+    ],
+    "source_reference": "Acquavia, A., Macdonald, C., Tonellotto, N., 2023. Static pruning for multi-representation dense retrieval, in: Proceedings of the ACM Symposium on Document Engineering 2023, DocEng 2023, Limerick, Ireland, August 22-25, 2023, ACM. pp. 7:1–7:10. URL: https://doi.org/10. 1145/3573128.3604896, doi:10.1145/3573128.3604896.",
+    "source_title": "Static pruning for multi-representation dense retrieval",
+    "cited_in_sections": [
+      "5.3.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.1"
+    ]
+  },
+  {
+    "id": "excise",
+    "name": "EXCISE",
     "year": 2026,
     "reference_venue_or_version": "arXiv",
-    "title": "Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model",
-    "url": "https://arxiv.org/abs/2603.28554",
-    "role": "Shares a vision-language model between retrieval and generation modes.",
-    "coverage": "survey-snapshot"
+    "title": "EXCISE: Query-Side Exclusion for Late-Interaction Retrieval",
+    "url": "https://arxiv.org/abs/2608.05497",
+    "role": "Diagnoses exclusion inversion; the remedy adds candidate-stage processing.",
+    "coverage": "survey-snapshot",
+    "citation_key": "ali2026",
+    "source_citations": [
+      "Ali et al., 2026"
+    ],
+    "authors": [
+      "Ali, M.",
+      "Abdallah, A.",
+      "Jatowt, A."
+    ],
+    "source_reference": "Ali, M., Abdallah, A., Jatowt, A., 2026. EXCISE: Query-side exclusion for late-interaction retrieval. arXiv preprint arXiv:2608.05497 URL: https://arxiv.org/abs/2608.05497.",
+    "source_title": "EXCISE: Query-side exclusion for late-interaction retrieval",
+    "cited_in_sections": [
+      "4.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "4.4"
+    ]
   },
   {
-    "id": "clamr",
-    "primary_survey_section": 10,
-    "name": "CLaMR",
+    "id": "aw",
+    "name": "ColBERT-AW",
+    "year": 2026,
+    "reference_venue_or_version": "IEEE Access",
+    "title": "ColBERT-AW: Enhancing Late Interaction Retrieval with Attribute-Aware Query Token Weighting",
+    "url": "https://doi.org/10.1109/ACCESS.2026.3672116",
+    "role": "Weights query-token contributions.",
+    "coverage": "survey-snapshot",
+    "citation_key": "an2026",
+    "source_citations": [
+      "An and Lee, 2026"
+    ],
+    "authors": [
+      "An, G.T.",
+      "Lee, K.S."
+    ],
+    "source_reference": "An, G.T., Lee, K.S., 2026. Colbert-aw: Enhancing late interaction retrieval with attribute-aware query token weighting. IEEE Access 14, 43227– 43237. doi:10.1109/ACCESS.2026.3672116.",
+    "source_title": "Colbert-aw: Enhancing late interaction retrieval with attribute-aware query token weighting",
+    "cited_in_sections": [
+      "4.1",
+      "4.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "4.1",
+      "4.4"
+    ]
+  },
+  {
+    "id": "answerai2024",
+    "name": "Ragatouille: Simple colbert training and retrieval for rag",
+    "title": "Ragatouille: Simple colbert training and retrieval for rag",
+    "year": 2024,
+    "url": "https://github.com/AnswerDotAI/RAGatouille",
+    "coverage": "survey-snapshot",
+    "citation_key": "answerai2024",
+    "source_citations": [
+      "Answer.AI, 2024"
+    ],
+    "authors": [
+      "Answer.AI"
+    ],
+    "source_reference": "Answer.AI, 2024. Ragatouille: Simple colbert training and retrieval for rag. Software documentation. URL: https://github.com/ AnswerDotAI/RAGatouille.",
+    "source_title": "Ragatouille: Simple colbert training and retrieval for rag",
+    "cited_in_sections": [
+      "9.3"
+    ],
+    "category": "software",
+    "discussed_in_sections": [
+      "9.3"
+    ]
+  },
+  {
+    "id": "token-importance",
+    "name": "token-importance",
+    "title": "Incorporating token importance in multi-vector retrieval",
+    "year": 2026,
+    "url": "https://doi.org/10.1609/aaai.v40i39.40566",
+    "coverage": "survey-snapshot",
+    "citation_key": "archish2026",
+    "source_citations": [
+      "Archish et al., 2026"
+    ],
+    "authors": [
+      "Archish, S.",
+      "Garg, A.",
+      "Shiragur, K.",
+      "Kayal, N."
+    ],
+    "source_reference": "Archish, S., Garg, A., Shiragur, K., Kayal, N., 2026. Incorporating token importance in multi-vector retrieval, in: Proceedings of the AAAI Conference on Artificial Intelligence, pp. 32860–32866. URL: https://doi.org/10.1609/aaai.v40i39.40566, doi:10.1609/aaai. v40i39.40566.",
+    "source_title": "Incorporating token importance in multi-vector retrieval",
+    "cited_in_sections": [
+      "4.1",
+      "4.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "4.1",
+      "4.4"
+    ]
+  },
+  {
+    "id": "igp",
+    "name": "IGP",
+    "title": "Igp: Efficient multi-vector retrieval via proximity graph index",
     "year": 2025,
-    "reference_venue_or_version": "arXiv",
-    "title": "CLaMR: Contextualized Late-Interaction for Multimodal Content Retrieval",
-    "url": "https://arxiv.org/abs/2506.06144",
-    "role": "Represents visual, speech, text, and metadata evidence for video retrieval.",
-    "coverage": "survey-snapshot"
+    "url": "https://doi.org/10.1145/3726302.3730004",
+    "coverage": "survey-snapshot",
+    "citation_key": "bian2025",
+    "source_citations": [
+      "Bian et al., 2025"
+    ],
+    "authors": [
+      "Bian, Z.",
+      "Yiu, M.L.",
+      "Tang, B."
+    ],
+    "source_reference": "Bian, Z., Yiu, M.L., Tang, B., 2025. Igp: Efficient multi-vector retrieval via proximity graph index, in: Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 2524–2533.",
+    "source_title": "Igp: Efficient multi-vector retrieval via proximity graph index",
+    "cited_in_sections": [
+      "6.2.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.1",
+      "6.2.2",
+      "6.6"
+    ]
   },
   {
-    "id": "elk",
-    "primary_survey_section": 10,
-    "name": "ELK-Multi",
-    "year": 2026,
-    "reference_venue_or_version": "TKDD",
-    "title": "Multi-Vector Biomedical Dense Retrieval with Knowledge-Enhanced Entity-Type Clustering",
-    "url": "https://doi.org/10.1145/3785368",
-    "role": "A neighboring multi-vector design organized around biomedical entity clusters.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "num",
-    "primary_survey_section": 10,
-    "name": "NumColBERT",
+    "id": "zero",
+    "name": "ColBERT-Zero",
     "year": 2026,
     "reference_venue_or_version": "arXiv",
-    "title": "NumColBERT: Non-Intrusive Numeracy Injection for Late-Interaction Retrieval Models",
-    "url": "https://arxiv.org/abs/2605.10109",
-    "role": "Adds query-side numerical gating while retaining the document index and MaxSim interface.",
-    "coverage": "survey-snapshot"
+    "title": "ColBERT-Zero: To Pre-Train or Not to Pre-Train ColBERT Models?",
+    "url": "https://arxiv.org/abs/2602.16609",
+    "role": "Studies pre-training choices for late-interaction models.",
+    "coverage": "survey-snapshot",
+    "citation_key": "chaffin2026",
+    "source_citations": [
+      "Chaffin et al., 2026"
+    ],
+    "authors": [
+      "Chaffin, A.",
+      "Arnaboldi, L.",
+      "Chatelain, A.",
+      "Krzakala, F."
+    ],
+    "source_reference": "Chaffin, A., Arnaboldi, L., Chatelain, A., Krzakala, F., 2026. Colbert-zero: To pre-train or not to pre-train colbert models? arXiv preprint arXiv:2602.16609 .",
+    "source_title": "Colbert-zero: To pre-train or not to pre-train colbert models? arXiv preprint arXiv:2602.16609 ",
+    "cited_in_sections": [
+      "9.1.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "9.1.3"
+    ]
   },
   {
-    "id": "hplus",
-    "primary_survey_section": 11,
-    "name": "H+ Embedding",
-    "year": 2026,
+    "id": "pylate",
+    "name": "PyLate",
+    "title": "Pylate: Flexible training and retrieval for late interaction models",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2508.03555",
+    "coverage": "survey-snapshot",
+    "citation_key": "chaffin2025",
+    "source_citations": [
+      "Chaffin and Sourty, 2025"
+    ],
+    "authors": [
+      "Chaffin, A.",
+      "Sourty, R."
+    ],
+    "source_reference": "Chaffin, A., Sourty, R., 2025. Pylate: Flexible training and retrieval for late interaction models, in: Proceedings of the 34th ACM International Conference on Information and Knowledge Management, pp. 6334–6339.",
+    "source_title": "Pylate: Flexible training and retrieval for late interaction models",
+    "cited_in_sections": [
+      "1",
+      "9.3"
+    ],
+    "category": "software",
+    "discussed_in_sections": [
+      "1",
+      "9.3"
+    ]
+  },
+  {
+    "id": "counterfactual",
+    "name": "Counterfactual explanations",
+    "year": 2024,
     "reference_venue_or_version": "arXiv",
-    "title": "H+ Embedding: Harmonizing Global and Token-Level Retrieval with Context-Dependent Phrases",
-    "url": "https://arxiv.org/abs/2608.00065",
-    "role": "Motivates learned interaction units beyond fixed token segmentation.",
-    "coverage": "survey-snapshot"
+    "title": "A Counterfactual Explanation Framework for Retrieval Models",
+    "url": "https://arxiv.org/abs/2409.00860",
+    "role": "Provides a diagnostic perspective on retrieval decisions.",
+    "coverage": "survey-snapshot",
+    "citation_key": "chandna2024",
+    "source_citations": [
+      "Chandna and Sen, 2024"
+    ],
+    "authors": [
+      "Chandna, B.",
+      "Sen, P."
+    ],
+    "source_reference": "Chandna, B., Sen, P., 2024. A counterfactual explanation framework for retrieval models. arXiv preprint arXiv:2409.00860 .",
+    "source_title": "A counterfactual explanation framework for retrieval models",
+    "cited_in_sections": [
+      "9.5",
+      "11.6"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "9.5",
+      "11.6"
+    ]
+  },
+  {
+    "id": "bge-m3",
+    "name": "M3-Embedding / BGE-M3",
+    "title": "M3-embedding: Multi-linguality, multi-functionality, multi-granularity text embeddings through self-knowledge distillation",
+    "year": 2024,
+    "url": "https://doi.org/10.18653/V1/2024.FINDINGS-ACL.137",
+    "coverage": "survey-snapshot",
+    "citation_key": "chen2024",
+    "source_citations": [
+      "Chen et al., 2024"
+    ],
+    "authors": [
+      "Chen, J.",
+      "Xiao, S.",
+      "Zhang, P.",
+      "Luo, K.",
+      "Lian, D.",
+      "Liu, Z."
+    ],
+    "source_reference": "Chen, J., Xiao, S., Zhang, P., Luo, K., Lian, D., Liu, Z., 2024. M3-embedding: Multi-linguality, multi-functionality, multi-granularity text embeddings through self-knowledge distillation, in: Findings of the Association for Computational Linguistics, ACL 2024, Bangkok, Thailand and virtual meeting, August 11-16, 2024, Association for Computational Linguistics. pp. 2318–2335. URL: https://doi.org/10.18653/ v1/2024.findings-acl.137, doi:10.18653/V1/2024.FINDINGS-ACL.137.",
+    "source_title": "M3-embedding: Multi-linguality, multi-functionality, multi-granularity text embeddings through self-knowledge distillation",
+    "cited_in_sections": [
+      "7.2"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "7.2"
+    ]
   },
   {
     "id": "agentir",
-    "primary_survey_section": 11,
     "name": "AgentIR",
     "year": 2026,
     "reference_venue_or_version": "arXiv",
     "title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents",
     "url": "https://arxiv.org/abs/2603.04384",
     "role": "Context for reasoning-aware retrieval; not automatically a canonical late-interaction model.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "agenticr",
-    "primary_survey_section": 11,
-    "name": "Agentic-R",
-    "year": 2026,
-    "reference_venue_or_version": "ACL Findings",
-    "title": "Agentic-R: Learning to Retrieve for Agentic Search",
-    "url": "https://aclanthology.org/2026.findings-acl.785/",
-    "role": "Context for agent-retriever learning and downstream evaluation.",
-    "coverage": "survey-snapshot"
-  },
-  {
-    "id": "vidore3",
-    "primary_survey_section": 11,
-    "name": "ViDoRe V3",
-    "year": 2026,
-    "reference_venue_or_version": "arXiv",
-    "title": "ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios",
-    "url": "https://arxiv.org/abs/2601.08620",
-    "role": "Motivates realistic visual-document evaluation.",
-    "coverage": "survey-snapshot"
+    "coverage": "survey-snapshot",
+    "citation_key": "chen2026a",
+    "source_citations": [
+      "Chen et al., 2026a"
+    ],
+    "authors": [
+      "Chen, Z.",
+      "Ma, X.",
+      "Zhuang, S.",
+      "Lin, J.",
+      "Asai, A.",
+      "Zhong, V."
+    ],
+    "source_reference": "Chen, Z., Ma, X., Zhuang, S., Lin, J., Asai, A., Zhong, V., 2026a. AgentIR: Reasoning-aware retrieval for deep research agents. URL: https://arxiv.org/abs/2603.04384, arXiv:2603.04384.",
+    "source_title": "AgentIR: Reasoning-aware retrieval for deep research agents",
+    "cited_in_sections": [
+      "11.5"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "11.5"
+    ]
   },
   {
     "id": "browse",
-    "primary_survey_section": 11,
     "name": "BrowseComp-Plus",
     "year": 2026,
     "reference_venue_or_version": "ACL",
     "title": "BrowseComp-Plus: A Fair and Disentangled Evaluation Benchmark for Deep Search Agents",
     "url": "https://aclanthology.org/2026.acl-long.1023/",
     "role": "Context for evaluating retrieval separately from agent behavior.",
-    "coverage": "survey-snapshot"
+    "coverage": "survey-snapshot",
+    "citation_key": "chen2026b",
+    "source_citations": [
+      "Chen et al., 2026b"
+    ],
+    "authors": [
+      "Chen, Z.",
+      "Ma, X.",
+      "Zhuang, S.",
+      "Nie, P.",
+      "Zou, K.",
+      "Sharifymoghaddam, S.",
+      "Liu, A.",
+      "Green, J.",
+      "Patel, K.",
+      "Meng, R.",
+      "Su, M.",
+      "Li, Y.",
+      "Hong, H.",
+      "Shi, X.",
+      "Liu, X.",
+      "Oyarhoseini, H.",
+      "Thakur, N.",
+      "Zhang, C.",
+      "Gao, L.",
+      "Chen, W.",
+      "Lin, J."
+    ],
+    "source_reference": "Chen, Z., Ma, X., Zhuang, S., Nie, P., Zou, K., Sharifymoghaddam, S., Liu, A., Green, J., Patel, K., Meng, R., Su, M., Li, Y., Hong, H., Shi, X., Liu, X., Oyarhoseini, H., Thakur, N., Zhang, C., Gao, L., Chen, W., Lin, J., 2026b. BrowseComp-plus: A fair and disentangled evaluation benchmark for deep search agents, in: Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Association for Computational Linguistics. pp. 22349–22370. URL: https://aclanthology.org/2026.acl-long.1023/, doi:10.18653/v1/2026.acl-long.1023.",
+    "source_title": "BrowseComp-plus: A fair and disentangled evaluation benchmark for deep search agents",
+    "cited_in_sections": [
+      "11.7"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "11.7"
+    ]
   },
   {
-    "id": "cq",
-    "primary_survey_section": 5,
-    "name": "Contextual Quantization",
-    "year": 2022,
-    "reference_venue_or_version": "ACL",
-    "title": "Compact Token Representations with Contextual Quantization for Efficient Document Re-ranking",
-    "url": "https://aclanthology.org/2022.acl-long.51/",
-    "role": "Compresses contextual document-token representations for reranking.",
-    "coverage": "survey-snapshot"
+    "id": "jacolbertv2.5",
+    "name": "JaColBERTv2.5",
+    "title": "Jacolbertv2.5: Optimising multi-vector retrievers to create state-of-the-art japanese retrievers with constrained resources",
+    "year": 2025,
+    "url": "https://www.jstage.jst.go.jp/article/jnlp/32/1/32_176/_article/-char/en/",
+    "coverage": "survey-snapshot",
+    "citation_key": "clavie2025",
+    "source_citations": [
+      "Clavié, 2025"
+    ],
+    "authors": [
+      "Clavié, B."
+    ],
+    "source_reference": "Clavié, B., 2025. Jacolbertv2.5: Optimising multi-vector retrievers to create state-of-the-art japanese retrievers with constrained resources. Journal of Natural Language Processing 32, 176–214.",
+    "source_title": "Jacolbertv2.5: Optimising multi-vector retrievers to create state-of-the-art japanese retrievers with constrained resources",
+    "cited_in_sections": [
+      "10.1",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "10.1",
+      "10.5"
+    ]
+  },
+  {
+    "id": "pool",
+    "name": "Token pooling",
+    "year": 2024,
+    "reference_venue_or_version": "arXiv",
+    "title": "Reducing the Footprint of Multi-Vector Retrieval with Minimal Performance Impact via Token Pooling",
+    "url": "https://arxiv.org/abs/2409.14683",
+    "role": "Merges groups of document vectors into pooled representatives.",
+    "coverage": "survey-snapshot",
+    "citation_key": "clavie2024",
+    "source_citations": [
+      "Clavié et al., 2024"
+    ],
+    "authors": [
+      "Clavié, B.",
+      "Chaffin, A.",
+      "Adams, G."
+    ],
+    "source_reference": "Clavié, B., Chaffin, A., Adams, G., 2024. Reducing the footprint of multi-vector retrieval with minimal performance impact via token pooling. CoRR abs/2409.14683. URL: https://arxiv.org/abs/2409.14683, arXiv:2409.14683.",
+    "source_title": "Reducing the footprint of multi-vector retrieval with minimal performance impact via token pooling",
+    "cited_in_sections": [
+      "5.3.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3"
+    ]
+  },
+  {
+    "id": "clavie2026",
+    "name": "Lir: The first workshop on late interaction and multi vector retrieval@ ecir 2026",
+    "title": "Lir: The first workshop on late interaction and multi vector retrieval@ ecir 2026",
+    "year": 2026,
+    "url": "https://doi.org/10.1007/978-3-032-21324-2_11",
+    "coverage": "survey-snapshot",
+    "citation_key": "clavie2026",
+    "source_citations": [
+      "Clavié et al., 2026"
+    ],
+    "authors": [
+      "Clavié, B.",
+      "Li, X.",
+      "Chaffin, A.",
+      "Khattab, O.",
+      "Aarsen, T.",
+      "Faysse, M.",
+      "Li, J."
+    ],
+    "source_reference": "Clavié, B., Li, X., Chaffin, A., Khattab, O., Aarsen, T., Faysse, M., Li, J., 2026. Lir: The first workshop on late interaction and multi vector retrieval@ ecir 2026, in: European Conference on Information Retrieval, Springer. pp. 158–168.",
+    "source_title": "Lir: The first workshop on late interaction and multi vector retrieval@ ecir 2026",
+    "cited_in_sections": [
+      "1",
+      "2.3"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1",
+      "2.3"
+    ]
+  },
+  {
+    "id": "agree",
+    "name": "AGREE",
+    "title": "Attention grounded enhancement for visual document retrieval",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2511.13415",
+    "coverage": "survey-snapshot",
+    "citation_key": "cui2025",
+    "source_citations": [
+      "Cui et al., 2025"
+    ],
+    "authors": [
+      "Cui, W.",
+      "Huang, W.",
+      "Guo, Y.",
+      "Hu, Y.",
+      "Jin, M.",
+      "Ma, J.",
+      "Bi, K."
+    ],
+    "source_reference": "Cui, W., Huang, W., Guo, Y., Hu, Y., Jin, M., Ma, J., Bi, K., 2025. Attention grounded enhancement for visual document retrieval. arXiv preprint arXiv:2511.13415 .",
+    "source_title": "Attention grounded enhancement for visual document retrieval",
+    "cited_in_sections": [
+      "11.4",
+      "11.6"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "11.4",
+      "11.6"
+    ]
+  },
+  {
+    "id": "elk",
+    "name": "ELK-Multi",
+    "year": 2026,
+    "reference_venue_or_version": "TKDD",
+    "title": "Multi-Vector Biomedical Dense Retrieval with Knowledge-Enhanced Entity-Type Clustering",
+    "url": "https://doi.org/10.1145/3785368",
+    "role": "A neighboring multi-vector design organized around biomedical entity clusters.",
+    "coverage": "survey-snapshot",
+    "citation_key": "deng2026",
+    "source_citations": [
+      "Deng et al., 2026"
+    ],
+    "authors": [
+      "Deng, X.",
+      "Tan, J.",
+      "Zheng, X.",
+      "Dong, S."
+    ],
+    "source_reference": "Deng, X., Tan, J., Zheng, X., Dong, S., 2026. Multi-vector biomedical dense retrieval with knowledge-enhanced entity-type clustering. ACM Trans. Knowl. Discov. Data 20. URL: https://doi.org/10.1145/3785368, doi:10.1145/3785368.",
+    "source_title": "Multi-vector biomedical dense retrieval with knowledge-enhanced entity-type clustering",
+    "cited_in_sections": [
+      "2.5",
+      "10.3",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.5",
+      "10.3",
+      "10.5"
+    ]
+  },
+  {
+    "id": "muvera",
+    "name": "MUVERA",
+    "year": 2024,
+    "reference_venue_or_version": "arXiv",
+    "title": "MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings",
+    "url": "https://arxiv.org/abs/2405.19504",
+    "role": "Maps vector sets to fixed-dimensional proxies for candidate search.",
+    "coverage": "survey-snapshot",
+    "citation_key": "dhulipala2024",
+    "source_citations": [
+      "Dhulipala et al., 2024"
+    ],
+    "authors": [
+      "Dhulipala, L.",
+      "Hadian, M.",
+      "Jayaram, R.",
+      "Lee, J.",
+      "Mirrokni, V."
+    ],
+    "source_reference": "Dhulipala, L., Hadian, M., Jayaram, R., Lee, J., Mirrokni, V., 2024. Muvera: Multi-vector retrieval via fixed dimensional encodings. URL: https://arxiv.org/abs/2405.19504, arXiv:2405.19504.",
+    "source_title": "Muvera: Multi-vector retrieval via fixed dimensional encodings",
+    "cited_in_sections": [
+      "6.3.3",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.1",
+      "6.3.3",
+      "6.6",
+      "6.7",
+      "11.2"
+    ]
+  },
+  {
+    "id": "dynamics",
+    "name": "Late interaction dynamics",
+    "title": "Working notes on late interaction dynamics: Analyzing targeted behaviors of late interaction models",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2603.26259",
+    "coverage": "survey-snapshot",
+    "citation_key": "edy2026",
+    "source_citations": [
+      "Edy et al., 2026"
+    ],
+    "authors": [
+      "Edy, A.",
+      "Conti, M.",
+      "Macé, Q."
+    ],
+    "source_reference": "Edy, A., Conti, M., Macé, Q., 2026. Working notes on late interaction dynamics: Analyzing targeted behaviors of late interaction models, in: Accepted at the 1st Late Interaction Retrieval Workshop at ECIR 2026.",
+    "source_title": "Working notes on late interaction dynamics: Analyzing targeted behaviors of late interaction models",
+    "cited_in_sections": [
+      "4.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "4.4"
+    ]
+  },
+  {
+    "id": "dessert",
+    "name": "DESSERT",
+    "title": "Dessert: an efficient algorithm for vector set search with vector set queries",
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2210.15748",
+    "coverage": "survey-snapshot",
+    "citation_key": "engels2023",
+    "source_citations": [
+      "Engels et al., 2023"
+    ],
+    "authors": [
+      "Engels, J.",
+      "Coleman, B.",
+      "Lakshman, V.",
+      "Shrivastava, A."
+    ],
+    "source_reference": "Engels, J., Coleman, B., Lakshman, V., Shrivastava, A., 2023. Dessert: an efficient algorithm for vector set search with vector set queries. Advances in Neural Information Processing Systems 36, 67972–67992.",
+    "source_title": "Dessert: an efficient algorithm for vector set search with vector set queries",
+    "cited_in_sections": [
+      "6.3.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.3.1",
+      "6.6"
+    ]
+  },
+  {
+    "id": "colpali",
+    "name": "ColPali",
+    "year": 2025,
+    "reference_venue_or_version": "ICLR",
+    "title": "ColPali: Efficient Document Retrieval with Vision Language Models",
+    "url": "https://openreview.net/forum?id=ogjBpZ8uSi",
+    "role": "Matches query-token embeddings with visual document-page representations.",
+    "coverage": "survey-snapshot",
+    "citation_key": "faysse2025",
+    "source_citations": [
+      "Faysse et al., 2025"
+    ],
+    "authors": [
+      "Faysse, M.",
+      "Sibille, H.",
+      "Wu, T.",
+      "Omrani, B.",
+      "Viaud, G.",
+      "Hudelot, C.",
+      "Colombo, P."
+    ],
+    "source_reference": "Faysse, M., Sibille, H., Wu, T., Omrani, B., Viaud, G., Hudelot, C., Colombo, P., 2025. Colpali: Efficient document retrieval with vision language models, in: International Conference on Learning Representations, pp. 61424–61449.",
+    "source_title": "Colpali: Efficient document retrieval with vision language models",
+    "cited_in_sections": [
+      "1",
+      "10.2",
+      "10.5",
+      "11.7"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "5.3.3",
+      "10.2",
+      "10.5",
+      "11.7"
+    ]
   },
   {
     "id": "splate",
-    "primary_survey_section": 7,
     "name": "SPLATE",
     "year": 2024,
     "reference_venue_or_version": "SIGIR",
     "title": "SPLATE: Sparse Late Interaction Retrieval",
     "url": "https://doi.org/10.1145/3626772.3657968",
     "role": "Learns sparse candidate retrieval over frozen ColBERTv2 features, followed by late-interaction reranking.",
-    "coverage": "survey-snapshot"
+    "coverage": "survey-snapshot",
+    "citation_key": "formal2024",
+    "source_citations": [
+      "Formal et al., 2024"
+    ],
+    "authors": [
+      "Formal, T.",
+      "Clinchant, S.",
+      "Déjean, H.",
+      "Lassance, C."
+    ],
+    "source_reference": "Formal, T., Clinchant, S., Déjean, H., Lassance, C., 2024. Splate: Sparse late interaction retrieval, in: Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 2635–2640.",
+    "source_title": "Splate: Sparse late interaction retrieval",
+    "cited_in_sections": [
+      "1",
+      "2.5",
+      "7.2",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "2.5",
+      "7.1",
+      "7.2",
+      "11.2"
+    ]
+  },
+  {
+    "id": "formal2021a",
+    "name": "SPLADE: sparse lexical and expansion model for first stage ranking",
+    "title": "SPLADE: sparse lexical and expansion model for first stage ranking",
+    "year": 2021,
+    "url": "https://doi.org/10.1145/3404835.3463098",
+    "coverage": "survey-snapshot",
+    "citation_key": "formal2021a",
+    "source_citations": [
+      "Formal et al., 2021a"
+    ],
+    "authors": [
+      "Formal, T.",
+      "Piwowarski, B.",
+      "Clinchant, S."
+    ],
+    "source_reference": "Formal, T., Piwowarski, B., Clinchant, S., 2021a. SPLADE: sparse lexical and expansion model for first stage ranking, in: SIGIR ’21: The 44th International ACM SIGIR Conference on Research and Development in Information Retrieval, Virtual Event, Canada, July 11-15, 2021, ACM. pp. 2288–2292. URL: https://doi.org/10.1145/3404835.3463098, doi:10.1145/3404835.3463098.",
+    "source_title": "SPLADE: sparse lexical and expansion model for first stage ranking",
+    "cited_in_sections": [
+      "1",
+      "2.5",
+      "7.1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1",
+      "2.5",
+      "7.1"
+    ]
+  },
+  {
+    "id": "whitebox",
+    "name": "White-box analysis",
+    "year": 2021,
+    "reference_venue_or_version": "ECIR",
+    "title": "A White Box Analysis of ColBERT",
+    "url": "https://doi.org/10.1007/978-3-030-72240-1_23",
+    "role": "Examines lexical and semantic contributions to local matching.",
+    "coverage": "survey-snapshot",
+    "citation_key": "formal2021b",
+    "source_citations": [
+      "Formal et al., 2021b"
+    ],
+    "authors": [
+      "Formal, T.",
+      "Piwowarski, B.",
+      "Clinchant, S."
+    ],
+    "source_reference": "Formal, T., Piwowarski, B., Clinchant, S., 2021b. A white box analysis of colbert, in: Advances in Information Retrieval: 43rd European Conference on IR Research (ECIR 2021), Proceedings, Part II. doi:10.1007/978-3-030-72240-1_23.",
+    "source_title": "A white box analysis of colbert",
+    "cited_in_sections": [
+      "2.4",
+      "9.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.4",
+      "9.5"
+    ]
+  },
+  {
+    "id": "num",
+    "name": "NumColBERT",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "NumColBERT: Non-Intrusive Numeracy Injection for Late-Interaction Retrieval Models",
+    "url": "https://arxiv.org/abs/2605.10109",
+    "role": "Adds query-side numerical gating while retaining the document index and MaxSim interface.",
+    "coverage": "survey-snapshot",
+    "citation_key": "fujimaki2026",
+    "source_citations": [
+      "Fujimaki and Kato, 2026"
+    ],
+    "authors": [
+      "Fujimaki, H.",
+      "Kato, M.P."
+    ],
+    "source_reference": "Fujimaki, H., Kato, M.P., 2026. Numcolbert: Non-intrusive numeracy injection for late-interaction retrieval models. arXiv preprint arXiv:2605.10109 .",
+    "source_title": "Numcolbert: Non-intrusive numeracy injection for late-interaction retrieval models",
+    "cited_in_sections": [
+      "10.3",
+      "10.5",
+      "11.7"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "10.3",
+      "10.5",
+      "11.7"
+    ]
+  },
+  {
+    "id": "coil",
+    "name": "COIL",
+    "year": 2021,
+    "reference_venue_or_version": "NAACL",
+    "title": "COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List",
+    "url": "https://aclanthology.org/2021.naacl-main.241/",
+    "role": "Lexically gates contextual token matching; a boundary case in the survey.",
+    "coverage": "survey-snapshot",
+    "citation_key": "gao2021",
+    "source_citations": [
+      "Gao et al., 2021"
+    ],
+    "authors": [
+      "Gao, L.",
+      "Dai, Z.",
+      "Callan, J."
+    ],
+    "source_reference": "Gao, L., Dai, Z., Callan, J., 2021. COIL: revisit exact lexical match in information retrieval with contextualized inverted list, in: Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, NAACL-HLT 2021, Online, June 6-11, 2021, Association for Computational Linguistics. pp. 3030–3042. URL: https://doi.org/10.18653/v1/ 2021.naacl-main.241, doi:10.18653/V1/2021.NAACL-MAIN.241.",
+    "source_title": "COIL: revisit exact lexical match in information retrieval with contextualized inverted list",
+    "cited_in_sections": [
+      "2.5",
+      "7.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.5",
+      "7.1",
+      "7.2"
+    ]
+  },
+  {
+    "id": "hydra",
+    "name": "Hydra",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model",
+    "url": "https://arxiv.org/abs/2603.28554",
+    "role": "Shares a vision-language model between retrieval and generation modes.",
+    "coverage": "survey-snapshot",
+    "citation_key": "georgiou2026",
+    "source_citations": [
+      "Georgiou, 2026"
+    ],
+    "authors": [
+      "Georgiou, A."
+    ],
+    "source_reference": "Georgiou, A., 2026. Hydra: Unifying document retrieval and generation in a single vision-language model. URL: https://arxiv.org/abs/ 2603.28554, arXiv:2603.28554.",
+    "source_title": "Hydra: Unifying document retrieval and generation in a single vision-language model",
+    "cited_in_sections": [
+      "1",
+      "10.2",
+      "10.5",
+      "11.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "10.2",
+      "10.5",
+      "11.5"
+    ]
+  },
+  {
+    "id": "backend",
+    "name": "Cross-backend reproduction",
+    "year": 2026,
+    "reference_venue_or_version": "SIGIR",
+    "title": "Reproduction Beyond Benchmarks: ConstBERT and ColBERT-v2 Across Backends and Query Distributions",
+    "url": "https://doi.org/10.1145/3805712.3808561",
+    "role": "Examines reproducibility across retrieval backends and query distributions.",
+    "coverage": "survey-snapshot",
+    "citation_key": "ghosh2026",
+    "source_citations": [
+      "Ghosh et al., 2026"
+    ],
+    "authors": [
+      "Ghosh, U.K.",
+      "David, A.",
+      "Chatterjee, S."
+    ],
+    "source_reference": "Ghosh, U.K., David, A., Chatterjee, S., 2026. Reproduction beyond benchmarks: ConstBERT and ColBERT-v2 across backends and query distributions, in: Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval. doi:10.1145/3805712.3808561.",
+    "source_title": "Reproduction beyond benchmarks: ConstBERT and ColBERT-v2 across backends and query distributions",
+    "cited_in_sections": [
+      "9.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "9.2"
+    ]
+  },
+  {
+    "id": "beneath-mask",
+    "name": "beneath-mask",
+    "title": "Beneath the [mask]: An analysis of structural query tokens in colbert",
+    "year": 2024,
+    "url": "https://doi.org/10.1007/978-3-031-56063-7_35",
+    "coverage": "survey-snapshot",
+    "citation_key": "giacalone2024",
+    "source_citations": [
+      "Giacalone et al., 2024"
+    ],
+    "authors": [
+      "Giacalone, B.",
+      "Paiement, G.",
+      "Tucker, Q.",
+      "Zanibbi, R."
+    ],
+    "source_reference": "Giacalone, B., Paiement, G., Tucker, Q., Zanibbi, R., 2024. Beneath the [mask]: An analysis of structural query tokens in colbert, in: European Conference on Information Retrieval, Springer. pp. 431–439.",
+    "source_title": "Beneath the [mask]: An analysis of structural query tokens in colbert",
+    "cited_in_sections": [
+      "9.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "9.4"
+    ]
+  },
+  {
+    "id": "sparsecode",
+    "name": "Single-stage sparse coding",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "No More K-Means: Single-Stage Sparse Coding for Efficient Multi-Vector Retrieval",
+    "url": "https://arxiv.org/abs/2605.30120",
+    "role": "Uses sparse codes as the local retrieval substrate.",
+    "coverage": "survey-snapshot",
+    "citation_key": "guo2026",
+    "source_citations": [
+      "Guo et al., 2026"
+    ],
+    "authors": [
+      "Guo, L.",
+      "Wang, Y.",
+      "Wen, T.",
+      "Feng, A.",
+      "Jegelka, S.",
+      "You, C."
+    ],
+    "source_reference": "Guo, L., Wang, Y., Wen, T., Feng, A., Jegelka, S., You, C., 2026. No more k-means: Single-stage sparse coding for efficient multi-vector retrieval. arXiv preprint arXiv:2605.30120 URL: https://arxiv.org/abs/2605.30120.",
+    "source_title": "No more k-means: Single-stage sparse coding for efficient multi-vector retrieval",
+    "cited_in_sections": [
+      "1",
+      "7.1",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "7.1",
+      "11.2"
+    ]
+  },
+  {
+    "id": "leapmv",
+    "name": "LeapMV",
+    "title": "Token pruning optimization for efficient multi-vector dense retrieval",
+    "year": 2025,
+    "url": "https://doi.org/10.1007/978-3-031-88708-6_7",
+    "coverage": "survey-snapshot",
+    "citation_key": "he2025",
+    "source_citations": [
+      "He et al., 2025"
+    ],
+    "authors": [
+      "He, S.",
+      "Al-Darabsah, M.",
+      "Nair, S.",
+      "May, J.",
+      "Agarwal, T.",
+      "Yang, T.",
+      "Teo, C.H."
+    ],
+    "source_reference": "He, S., Al-Darabsah, M., Nair, S., May, J., Agarwal, T., Yang, T., Teo, C.H., 2025. Token pruning optimization for efficient multi-vector dense retrieval, in: European Conference on Information Retrieval, Springer. pp. 101–115.",
+    "source_title": "Token pruning optimization for efficient multi-vector dense retrieval",
+    "cited_in_sections": [
+      "5.3.1",
+      "5.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.1",
+      "5.4",
+      "5.5"
+    ]
+  },
+  {
+    "id": "colberter",
+    "name": "colberter",
+    "title": "Introducing neural bag of whole-words with colberter: Contextualized late interactions using enhanced reduction",
+    "year": 2022,
+    "url": "https://doi.org/10.1145/3511808.3557367",
+    "coverage": "survey-snapshot",
+    "citation_key": "hofstatter2022",
+    "source_citations": [
+      "Hofstätter et al., 2022"
+    ],
+    "authors": [
+      "Hofstätter, S.",
+      "Khattab, O.",
+      "Althammer, S.",
+      "Sertkan, M.",
+      "Hanbury, A."
+    ],
+    "source_reference": "Hofstätter, S., Khattab, O., Althammer, S., Sertkan, M., Hanbury, A., 2022. Introducing neural bag of whole-words with colberter: Contextualized late interactions using enhanced reduction, in: Proceedings of the 31st ACM International Conference on Information & Knowledge Management, pp. 737–747.",
+    "source_title": "Introducing neural bag of whole-words with colberter: Contextualized late interactions using enhanced reduction",
+    "cited_in_sections": [
+      "5.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.2"
+    ]
+  },
+  {
+    "id": "polyencoders",
+    "name": "Poly-encoders",
+    "title": "Poly-encoders: Architectures and pre-training strategies for fast and accurate multi-sentence scoring",
+    "year": 2020,
+    "url": "https://openreview.net/forum?id=SkxgnnNFvH",
+    "coverage": "survey-snapshot",
+    "citation_key": "humeau2020",
+    "source_citations": [
+      "Humeau et al., 2020"
+    ],
+    "authors": [
+      "Humeau, S.",
+      "Shuster, K.",
+      "Lachaux, M.A.",
+      "Weston, J."
+    ],
+    "source_reference": "Humeau, S., Shuster, K., Lachaux, M.A., Weston, J., 2020. Poly-encoders: Architectures and pre-training strategies for fast and accurate multi-sentence scoring, in: International Conference on Learning Representations.",
+    "source_title": "Poly-encoders: Architectures and pre-training strategies for fast and accurate multi-sentence scoring",
+    "cited_in_sections": [
+      "2.3"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "2.3"
+    ]
+  },
+  {
+    "id": "contriever",
+    "name": "Contriever",
+    "title": "Unsupervised dense information retrieval with contrastive learning",
+    "year": 2022,
+    "url": "https://openreview.net/forum?id=jKN1pXi7b0",
+    "coverage": "survey-snapshot",
+    "citation_key": "izacard2022",
+    "source_citations": [
+      "Izacard et al., 2022"
+    ],
+    "authors": [
+      "Izacard, G.",
+      "Caron, M.",
+      "Hosseini, L.",
+      "Riedel, S.",
+      "Bojanowski, P.",
+      "Joulin, A.",
+      "Grave, E."
+    ],
+    "source_reference": "Izacard, G., Caron, M., Hosseini, L., Riedel, S., Bojanowski, P., Joulin, A., Grave, E., 2022. Unsupervised dense information retrieval with contrastive learning. Transactions on Machine Learning Research .",
+    "source_title": "Unsupervised dense information retrieval with contrastive learning",
+    "cited_in_sections": [
+      "2.5"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "2.5"
+    ]
+  },
+  {
+    "id": "xtrrepro",
+    "name": "XTR replicability",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "A Replicability Study of XTR",
+    "url": "https://arxiv.org/abs/2605.00646",
+    "role": "Separates token-retrieval behavior from final effectiveness claims.",
+    "coverage": "survey-snapshot",
+    "citation_key": "jha2026a",
+    "source_citations": [
+      "Jha et al., 2026a"
+    ],
+    "authors": [
+      "Jha, R.",
+      "Kriz, R.",
+      "Van Durme, B."
+    ],
+    "source_reference": "Jha, R., Kriz, R., Van Durme, B., 2026a. A replicability study of XTR. arXiv preprint arXiv:2605.00646 URL: https://arxiv.org/abs/2605. 00646, arXiv:2605.00646.",
+    "source_title": "A replicability study of XTR",
+    "cited_in_sections": [
+      "6.4.1",
+      "9.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.4.1",
+      "9.2"
+    ]
+  },
+  {
+    "id": "jina-colbert-v2",
+    "name": "Jina-ColBERT-v2",
+    "title": "Jina-colbert-v2: A general-purpose multilingual late interaction retriever",
+    "year": 2024,
+    "url": "https://aclanthology.org/2024.mrl-1.11/",
+    "coverage": "survey-snapshot",
+    "citation_key": "jha2024",
+    "source_citations": [
+      "Jha et al., 2024"
+    ],
+    "authors": [
+      "Jha, R.",
+      "Wang, B.",
+      "Günther, M.",
+      "Mastrapas, G.",
+      "Sturua, S.",
+      "Mohr, I.",
+      "Koukounas, A.",
+      "Wang, M.K.A.",
+      "Wang, N.",
+      "Xiao, H."
+    ],
+    "source_reference": "Jha, R., Wang, B., Günther, M., Mastrapas, G., Sturua, S., Mohr, I., Koukounas, A., Wang, M.K.A., Wang, N., Xiao, H., 2024. Jina-colbert-v2: A general-purpose multilingual late interaction retriever, in: Proceedings of the Fourth Workshop on Multilingual Representation Learning, Association for Computational Linguistics. pp. 159–166.",
+    "source_title": "Jina-colbert-v2: A general-purpose multilingual late interaction retriever",
+    "cited_in_sections": [
+      "5.2",
+      "10.1",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.2",
+      "10.1",
+      "10.5"
+    ]
+  },
+  {
+    "id": "comparecompression",
+    "name": "Compression comparison",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "A Brief Comparison of Training-Free Multi-Vector Sequence Compression Methods",
+    "url": "https://arxiv.org/abs/2603.22434",
+    "role": "Compares training-free sequence compression methods.",
+    "coverage": "survey-snapshot",
+    "citation_key": "jha2026b",
+    "source_citations": [
+      "Jha et al., 2026b"
+    ],
+    "authors": [
+      "Jha, R.",
+      "Zuo, C.",
+      "Kriz, R.",
+      "Van Durme, B."
+    ],
+    "source_reference": "Jha, R., Zuo, C., Kriz, R., Durme, B.V., 2026b. A brief comparison of training-free multi-vector sequence compression methods. arXiv preprint arXiv:2603.22434 URL: https://arxiv.org/abs/2603.22434.",
+    "source_title": "A brief comparison of training-free multi-vector sequence compression methods",
+    "cited_in_sections": [
+      "5.3.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3"
+    ]
+  },
+  {
+    "id": "learnpool",
+    "name": "Learn to Pool",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Learn to Pool: Lightweight Fine-Tuning for Flexible Multi-Vector Compression",
+    "url": "https://arxiv.org/abs/2607.06036",
+    "role": "Learns pooling for flexible vector budgets.",
+    "coverage": "survey-snapshot",
+    "citation_key": "josef2026",
+    "source_citations": [
+      "Josef, 2026"
+    ],
+    "authors": [
+      "Josef, S."
+    ],
+    "source_reference": "Josef, S., 2026. Learn to pool: Lightweight fine-tuning for flexible multi-vector compression. arXiv preprint arXiv:2607.06036 URL: https: //arxiv.org/abs/2607.06036.",
+    "source_title": "Learn to pool: Lightweight fine-tuning for flexible multi-vector compression",
+    "cited_in_sections": [
+      "5.3.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3"
+    ]
+  },
+  {
+    "id": "lemur",
+    "name": "LEMUR",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "LEMUR: Learned Multi-Vector Retrieval",
+    "url": "https://arxiv.org/abs/2601.21853",
+    "role": "Learns corpus-specific fixed-dimensional reductions.",
+    "coverage": "survey-snapshot",
+    "citation_key": "jaasaari2026",
+    "source_citations": [
+      "Jääsaari et al., 2026"
+    ],
+    "authors": [
+      "Jääsaari, E.",
+      "Hyvönen, V.",
+      "Roos, T."
+    ],
+    "source_reference": "Jääsaari, E., Hyvönen, V., Roos, T., 2026. Lemur: Learned multi-vector retrieval. URL: https://arxiv.org/abs/2601.21853, arXiv:2601.21853.",
+    "source_title": "Lemur: Learned multi-vector retrieval",
+    "cited_in_sections": [
+      "1",
+      "6.3.3",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "6.1",
+      "6.3.3",
+      "6.6",
+      "6.7",
+      "11.2"
+    ]
+  },
+  {
+    "id": "trial",
+    "name": "TRIAL",
+    "year": 2025,
+    "reference_venue_or_version": "EMNLP",
+    "title": "TRIAL: Token Relations and Importance Aware Late-Interaction for Accurate Text Retrieval",
+    "url": "https://aclanthology.org/2025.emnlp-main.854/",
+    "role": "Adds token importance and relation-aware matching.",
+    "coverage": "survey-snapshot",
+    "citation_key": "kang2025",
+    "source_citations": [
+      "Kang et al., 2025"
+    ],
+    "authors": [
+      "Kang, H.",
+      "Kim, I.",
+      "Han, W.S."
+    ],
+    "source_reference": "Kang, H., Kim, I., Han, W.S., 2025. Trial: Token relations and importance aware late-interaction for accurate text retrieval, in: Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing, Association for Computational Linguistics. pp. 16864–16877. doi:10.18653/v1/2025.emnlp-main.854.",
+    "source_title": "Trial: Token relations and importance aware late-interaction for accurate text retrieval",
+    "cited_in_sections": [
+      "2.4",
+      "4.1",
+      "4.4",
+      "11.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.4",
+      "4.1",
+      "4.4",
+      "11.4"
+    ]
+  },
+  {
+    "id": "voronoi",
+    "name": "Voronoi pruning",
+    "year": 2026,
+    "reference_venue_or_version": "SIGIR",
+    "title": "A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models",
+    "url": "https://doi.org/10.1145/3805712.3809726",
+    "role": "Uses document-vector geometry to reason about retained local evidence.",
+    "coverage": "survey-snapshot",
+    "citation_key": "kankanampati2026",
+    "source_citations": [
+      "Kankanampati et al., 2026"
+    ],
+    "authors": [
+      "Kankanampati, Y.",
+      "Zong, Y.",
+      "Tomeh, N.",
+      "Piwowarski, B.",
+      "Le Roux, J."
+    ],
+    "source_reference": "Kankanampati, Y., Zong, Y., Tomeh, N., Piwowarski, B., Roux, J.L., 2026. A voronoi cell formulation for principled token pruning in late-interaction retrieval models, in: Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, Association for Computing Machinery. URL: https://doi.org/10.1145/3805712.3809726, doi:10.1145/3805712.3809726.",
+    "source_title": "A voronoi cell formulation for principled token pruning in late-interaction retrieval models",
+    "cited_in_sections": [
+      "1",
+      "5.3.1",
+      "11.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "5.3.1",
+      "11.4"
+    ]
+  },
+  {
+    "id": "dpr",
+    "name": "DPR",
+    "title": "Dense passage retrieval for open-domain question answering",
+    "year": 2020,
+    "url": "https://doi.org/10.18653/V1/2020.EMNLP-MAIN.550",
+    "coverage": "survey-snapshot",
+    "citation_key": "karpukhin2020",
+    "source_citations": [
+      "Karpukhin et al., 2020"
+    ],
+    "authors": [
+      "Karpukhin, V.",
+      "Oguz, B.",
+      "Min, S.",
+      "Lewis, P.",
+      "Wu, L.",
+      "Edunov, S.",
+      "Chen, D.",
+      "Yih, W."
+    ],
+    "source_reference": "Karpukhin, V., Oguz, B., Min, S., Lewis, P., Wu, L., Edunov, S., Chen, D., Yih, W., 2020. Dense passage retrieval for open-domain question answering, in: Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing, EMNLP 2020, Online, November 16-20, 2020, Association for Computational Linguistics. pp. 6769–6781. URL: https://doi.org/10.18653/v1/2020.emnlp-main.550, doi:10.18653/V1/2020.EMNLP-MAIN.550.",
+    "source_title": "Dense passage retrieval for open-domain question answering",
+    "cited_in_sections": [
+      "1",
+      "2.2",
+      "2.5"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1",
+      "2.2",
+      "2.5"
+    ]
   },
   {
     "id": "baleen",
-    "primary_survey_section": 10,
     "name": "Baleen / FLIPR",
     "year": 2021,
     "reference_venue_or_version": "NeurIPS",
     "title": "Baleen: Robust Multi-Hop Reasoning at Scale via Condensed Retrieval",
     "url": "https://arxiv.org/abs/2101.00436",
     "role": "Combines focused late interaction with iterative retrieval and fact condensation.",
-    "coverage": "survey-snapshot"
+    "coverage": "survey-snapshot",
+    "citation_key": "khattab2021",
+    "source_citations": [
+      "Khattab et al., 2021"
+    ],
+    "authors": [
+      "Khattab, O.",
+      "Potts, C.",
+      "Zaharia, M."
+    ],
+    "source_reference": "Khattab, O., Potts, C., Zaharia, M., 2021. Baleen: Robust multi-hop reasoning at scale via condensed retrieval. Advances in Neural Information Processing Systems 34, 27670–27682.",
+    "source_title": "Baleen: Robust multi-hop reasoning at scale via condensed retrieval",
+    "cited_in_sections": [
+      "10.4",
+      "10.5",
+      "11.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "10.4",
+      "10.5",
+      "11.5"
+    ]
+  },
+  {
+    "id": "colbert",
+    "name": "ColBERT",
+    "year": 2020,
+    "reference_venue_or_version": "SIGIR",
+    "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+    "url": "https://doi.org/10.1145/3397271.3401075",
+    "role": "Independent token encoding and MaxSim establish the prototype pipeline.",
+    "coverage": "survey-snapshot",
+    "citation_key": "khattab2020",
+    "source_citations": [
+      "Khattab and Zaharia, 2020"
+    ],
+    "authors": [
+      "Khattab, O.",
+      "Zaharia, M."
+    ],
+    "source_reference": "Khattab, O., Zaharia, M., 2020. Colbert: Efficient and effective passage search via contextualized late interaction over BERT, in: Proceedings of the 43rd International ACM SIGIR conference on research and development in Information Retrieval, SIGIR 2020, Virtual Event, China, July 25-30, 2020, ACM. pp. 39–48. URL: https://doi.org/10.1145/3397271.3401075, doi:10.1145/3397271.3401075.",
+    "source_title": "Colbert: Efficient and effective passage search via contextualized late interaction over BERT",
+    "cited_in_sections": [
+      "1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "3.1",
+      "4.4",
+      "9.1.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "3",
+      "3.1",
+      "3.2",
+      "4",
+      "4.2",
+      "4.4",
+      "5",
+      "5.1",
+      "5.3.1",
+      "5.3.2",
+      "5.3.3",
+      "5.4",
+      "5.5",
+      "6.3.1",
+      "6.4.1",
+      "7",
+      "7.1",
+      "7.2",
+      "8.2.1",
+      "9.1",
+      "9.1.1",
+      "9.1.2",
+      "9.1.3",
+      "9.2",
+      "9.3",
+      "9.5",
+      "10.1",
+      "10.3"
+    ]
+  },
+  {
+    "id": "signed",
+    "name": "Signed MaxSim",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models",
+    "url": "https://arxiv.org/abs/2607.05803",
+    "role": "Studies representational capacity and introduces signed contributions.",
+    "coverage": "survey-snapshot",
+    "citation_key": "killingback2026a",
+    "source_citations": [
+      "Killingback et al., 2026a",
+      "Killingback et al., 2026b"
+    ],
+    "authors": [
+      "Killingback, J.",
+      "Ingale, V.",
+      "Zamani, H.",
+      "Musco, C."
+    ],
+    "source_reference": "Killingback, J., Ingale, V., Zamani, H., Musco, C., 2026a. Quantifying and expanding the theoretical capacity of late-interaction retrieval models. URL: https://arxiv.org/abs/2607.05803, arXiv:2607.05803.",
+    "source_title": "Quantifying and expanding the theoretical capacity of late-interaction retrieval models",
+    "cited_in_sections": [
+      "1",
+      "4.1",
+      "4.4",
+      "11.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "4.1",
+      "4.4",
+      "11.4"
+    ]
+  },
+  {
+    "id": "kim2026",
+    "name": "HEAVEN / ViMDOC",
+    "title": "Hybrid-vector retrieval for visually rich documents: Combining single-vector efficiency and multi-vector accuracy",
+    "year": 2026,
+    "url": "https://aclanthology.org/2026.findings-acl.54/",
+    "coverage": "survey-snapshot",
+    "citation_key": "kim2026heaven",
+    "source_citations": [
+      "Kim et al., 2026"
+    ],
+    "authors": [
+      "Kim, J.",
+      "Lee, G.",
+      "Choi, D.",
+      "Kim, T.",
+      "Shin, K."
+    ],
+    "source_reference": "Kim, J., Lee, G., Choi, D., Kim, T., Shin, K., 2026. Hybrid-vector retrieval for visually rich documents: Combining single-vector efficiency and multi-vector accuracy, in: Findings of the Association for Computational Linguistics: ACL 2026, pp. 1073–1089.",
+    "source_title": "Hybrid-vector retrieval for visually rich documents: Combining single-vector efficiency and multi-vector accuracy",
+    "cited_in_sections": [
+      "11.3",
+      "11.7"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "11.3",
+      "11.7"
+    ]
+  },
+  {
+    "id": "litta",
+    "name": "LITTA",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval",
+    "url": "https://arxiv.org/abs/2603.26683",
+    "role": "Generates query variants and fuses rankings with a fixed page index.",
+    "coverage": "survey-snapshot",
+    "citation_key": "kim2026litta",
+    "source_citations": [
+      "Kim, 2026"
+    ],
+    "authors": [
+      "Kim, S."
+    ],
+    "source_reference": "Kim, S., 2026. Litta: Late-interaction and test-time alignment for visually-grounded multimodal retrieval. arXiv preprint arXiv:2603.26683 .",
+    "source_title": "Litta: Late-interaction and test-time alignment for visually-grounded multimodal retrieval",
+    "cited_in_sections": [
+      "1",
+      "8.3",
+      "10.2",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "8.3",
+      "10.2",
+      "10.5"
+    ]
+  },
+  {
+    "id": "pruneearly",
+    "name": "Token pruning study",
+    "year": 2021,
+    "reference_venue_or_version": "arXiv",
+    "title": "A Study on Token Pruning for ColBERT",
+    "url": "https://arxiv.org/abs/2112.06540",
+    "role": "Studies offline removal of document-token vectors.",
+    "coverage": "survey-snapshot",
+    "citation_key": "lassance2021",
+    "source_citations": [
+      "Lassance et al., 2021"
+    ],
+    "authors": [
+      "Lassance, C.",
+      "Maachou, M.",
+      "Park, J.",
+      "Clinchant, S."
+    ],
+    "source_reference": "Lassance, C., Maachou, M., Park, J., Clinchant, S., 2021. A study on token pruning for colbert. CoRR abs/2112.06540. URL: https: //arxiv.org/abs/2112.06540, arXiv:2112.06540.",
+    "source_title": "A study on token pruning for colbert",
+    "cited_in_sections": [
+      "2.4",
+      "5.3.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.4",
+      "5.3.1"
+    ]
+  },
+  {
+    "id": "prunelearn",
+    "name": "Learned token pruning",
+    "year": 2022,
+    "reference_venue_or_version": "SIGIR",
+    "title": "Learned Token Pruning in Contextualized Late Interaction over BERT (ColBERT)",
+    "url": "https://doi.org/10.1145/3477495.3531835",
+    "role": "Learns document-token selection before indexing.",
+    "coverage": "survey-snapshot",
+    "citation_key": "lassance2022",
+    "source_citations": [
+      "Lassance et al., 2022"
+    ],
+    "authors": [
+      "Lassance, C.",
+      "Maachou, M.",
+      "Park, J.",
+      "Clinchant, S."
+    ],
+    "source_reference": "Lassance, C., Maachou, M., Park, J., Clinchant, S., 2022. Learned token pruning in contextualized late interaction over BERT (colbert), in: SIGIR ’22: The 45th International ACM SIGIR Conference on Research and Development in Information Retrieval, Madrid, Spain, July 11 - 15, 2022, ACM. pp. 2232–2236. URL: https://doi.org/10.1145/3477495.3531835, doi:10.1145/3477495.3531835.",
+    "source_title": "Learned token pruning in contextualized late interaction over BERT (colbert)",
+    "cited_in_sections": [
+      "2.4",
+      "2.5",
+      "5.3.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.4",
+      "2.5",
+      "5.3.1"
+    ]
+  },
+  {
+    "id": "xtr",
+    "name": "XTR",
+    "year": 2023,
+    "reference_venue_or_version": "NeurIPS",
+    "title": "Rethinking the Role of Token Retrieval in Multi-Vector Retrieval",
+    "url": "https://papers.nips.cc/paper_files/paper/2023/hash/31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html",
+    "role": "Co-designs token retrieval, training, and missing-similarity scoring.",
+    "coverage": "survey-snapshot",
+    "citation_key": "lee2023",
+    "source_citations": [
+      "Lee et al., 2023"
+    ],
+    "authors": [
+      "Lee, J.",
+      "Dai, Z.",
+      "Duddu, S.M.K.",
+      "Lei, T.",
+      "Naim, I.",
+      "Chang, M.",
+      "Zhao, V."
+    ],
+    "source_reference": "Lee, J., Dai, Z., Duddu, S.M.K., Lei, T., Naim, I., Chang, M., Zhao, V., 2023. Rethinking the role of token retrieval in multi-vector retrieval, in: Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10 - 16, 2023. URL: http://papers.nips.cc/paper_files/paper/2023/hash/ 31d997278ee9069d6721bc194174bb4c-Abstract-Conference.html.",
+    "source_title": "Rethinking the role of token retrieval in multi-vector retrieval",
+    "cited_in_sections": [
+      "2.5",
+      "6.4.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.5",
+      "6.1",
+      "6.4.1",
+      "6.4.2",
+      "6.6",
+      "6.7",
+      "9.1.3",
+      "9.2"
+    ]
+  },
+  {
+    "id": "lei2023",
+    "name": "Unsupervised dense retrieval with relevance-aware contrastive pre-training",
+    "title": "Unsupervised dense retrieval with relevance-aware contrastive pre-training",
+    "year": 2023,
+    "url": "https://aclanthology.org/2023.findings-acl.695/",
+    "coverage": "survey-snapshot",
+    "citation_key": "lei2023",
+    "source_citations": [
+      "Lei et al., 2023"
+    ],
+    "authors": [
+      "Lei, Y.",
+      "Ding, L.",
+      "Cao, Y.",
+      "Zan, C.",
+      "Yates, A.",
+      "Tao, D."
+    ],
+    "source_reference": "Lei, Y., Ding, L., Cao, Y., Zan, C., Yates, A., Tao, D., 2023. Unsupervised dense retrieval with relevance-aware contrastive pre-training, in: Findings of the Association for Computational Linguistics: ACL 2023, pp. 10932–10940.",
+    "source_title": "Unsupervised dense retrieval with relevance-aware contrastive pre-training",
+    "cited_in_sections": [
+      "1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1"
+    ]
+  },
+  {
+    "id": "vectorprf",
+    "name": "VectorPRF",
+    "title": "Pseudo relevance feedback with deep language models and dense retrievers: Successes and pitfalls",
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2108.11044",
+    "coverage": "survey-snapshot",
+    "citation_key": "li2021",
+    "source_citations": [
+      "Li et al., 2021"
+    ],
+    "authors": [
+      "Li, H.",
+      "Mourad, A.",
+      "Zhuang, S.",
+      "Koopman, B.",
+      "Zuccon, G."
+    ],
+    "source_reference": "Li, H., Mourad, A., Zhuang, S., Koopman, B., Zuccon, G., 2021. Pseudo relevance feedback with deep language models and dense retrievers: Successes and pitfalls. CoRR abs/2108.11044. URL: https://arxiv.org/abs/2108.11044, arXiv:2108.11044.",
+    "source_title": "Pseudo relevance feedback with deep language models and dense retrievers: Successes and pitfalls",
+    "cited_in_sections": [
+      "8.1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "8.1"
+    ]
+  },
+  {
+    "id": "slim",
+    "name": "SLIM",
+    "year": 2023,
+    "reference_venue_or_version": "SIGIR",
+    "title": "SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted Indexes",
+    "url": "https://doi.org/10.1145/3539618.3591977",
+    "role": "Uses sparse local representations and inverted-index-compatible retrieval.",
+    "coverage": "survey-snapshot",
+    "citation_key": "li2023a",
+    "source_citations": [
+      "Li et al., 2023a"
+    ],
+    "authors": [
+      "Li, M.",
+      "Lin, S.C.",
+      "Ma, X.",
+      "Lin, J."
+    ],
+    "source_reference": "Li, M., Lin, S.C., Ma, X., Lin, J., 2023a. Slim: Sparsified late interaction for multi-vector retrieval with inverted indexes, in: Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 1954–1959.",
+    "source_title": "Slim: Sparsified late interaction for multi-vector retrieval with inverted indexes",
+    "cited_in_sections": [
+      "2.5",
+      "7.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.5",
+      "7.1",
+      "7.2"
+    ]
+  },
+  {
+    "id": "citadel",
+    "name": "CITADEL",
+    "year": 2023,
+    "reference_venue_or_version": "ACL",
+    "title": "CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval",
+    "url": "https://aclanthology.org/2023.acl-long.663/",
+    "role": "Learns lexical routing for local token interactions.",
+    "coverage": "survey-snapshot",
+    "citation_key": "li2023b",
+    "source_citations": [
+      "Li et al., 2023b"
+    ],
+    "authors": [
+      "Li, M.",
+      "Lin, S.C.",
+      "Oguz, B.",
+      "Ghoshal, A.",
+      "Lin, J.",
+      "Mehdad, Y.",
+      "Yih, W.t.",
+      "Chen, X."
+    ],
+    "source_reference": "Li, M., Lin, S.C., Oguz, B., Ghoshal, A., Lin, J., Mehdad, Y., Yih, W.t., Chen, X., 2023b. CITADEL: Conditional token interaction via dynamic lexical routing for efficient and effective multi-vector retrieval, in: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Association for Computational Linguistics. pp. 11891–11907. URL: https://aclanthology.org/ 2023.acl-long.663/, doi:10.18653/v1/2023.acl-long.663.",
+    "source_title": "CITADEL: Conditional token interaction via dynamic lexical routing for efficient and effective multi-vector retrieval",
+    "cited_in_sections": [
+      "7.1",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "7.1",
+      "7.2",
+      "11.2"
+    ]
+  },
+  {
+    "id": "lin2021notes",
+    "name": "A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques",
+    "title": "A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques",
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2106.14807",
+    "coverage": "survey-snapshot",
+    "citation_key": "lin2021notes",
+    "source_citations": [
+      "Lin and Ma, 2021"
+    ],
+    "authors": [
+      "Lin, J.",
+      "Ma, X."
+    ],
+    "source_reference": "Lin, J., Ma, X., 2021. A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques. CoRR abs/2106.14807. URL: https://arxiv.org/abs/2106.14807, arXiv:2106.14807.",
+    "source_title": "A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques",
+    "cited_in_sections": [
+      "2.5"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "2.5"
+    ]
+  },
+  {
+    "id": "lin2021book",
+    "name": "Pretrained Transformers for Text Ranking: BERT and Beyond",
+    "title": "Pretrained Transformers for Text Ranking: BERT and Beyond",
+    "year": 2021,
+    "url": "https://doi.org/10.2200/S01123ED1V01Y202108HLT053",
+    "coverage": "survey-snapshot",
+    "citation_key": "lin2021book",
+    "source_citations": [
+      "Lin et al., 2021"
+    ],
+    "authors": [
+      "Lin, J.",
+      "Nogueira, R.",
+      "Yates, A."
+    ],
+    "source_reference": "Lin, J., Nogueira, R., Yates, A., 2021. Pretrained Transformers for Text Ranking: BERT and Beyond. Synthesis Lectures on Human Language Technologies, Morgan and Claypool Publishers. URL: https://doi.org/10.2200/S01123ED1V01Y202108HLT053, doi:10. 2200/S01123ED1V01Y202108HLT053.",
+    "source_title": "Pretrained Transformers for Text Ranking: BERT and Beyond",
+    "cited_in_sections": [
+      "1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1"
+    ]
+  },
+  {
+    "id": "matching",
+    "name": "Matching and pruning analysis",
+    "year": 2024,
+    "reference_venue_or_version": "TOIS",
+    "title": "An Analysis on Matching Mechanisms and Token Pruning for Late-Interaction Models",
+    "url": "https://doi.org/10.1145/3639818",
+    "role": "Studies document- and query-token pruning with different system effects.",
+    "coverage": "survey-snapshot",
+    "citation_key": "liu2024",
+    "source_citations": [
+      "Liu et al., 2024"
+    ],
+    "authors": [
+      "Liu, Q.",
+      "Guo, G.",
+      "Mao, J.",
+      "Dou, Z.",
+      "Wen, J.R.",
+      "Jiang, H.",
+      "Zhang, X.",
+      "Cao, Z."
+    ],
+    "source_reference": "Liu, Q., Guo, G., Mao, J., Dou, Z., Wen, J.R., Jiang, H., Zhang, X., Cao, Z., 2024. An analysis on matching mechanisms and token pruning for late-interaction models. ACM Transactions on Information Systems 42, 1–28. doi:10.1145/3639818.",
+    "source_title": "An analysis on matching mechanisms and token pruning for late-interaction models",
+    "cited_in_sections": [
+      "2.4",
+      "5.3.1",
+      "5.5",
+      "6.5.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.4",
+      "5.3.1",
+      "5.5",
+      "6.5.1"
+    ]
+  },
+  {
+    "id": "agenticr",
+    "name": "Agentic-R",
+    "year": 2026,
+    "reference_venue_or_version": "ACL Findings",
+    "title": "Agentic-R: Learning to Retrieve for Agentic Search",
+    "url": "https://aclanthology.org/2026.findings-acl.785/",
+    "role": "Context for agent-retriever learning and downstream evaluation.",
+    "coverage": "survey-snapshot",
+    "citation_key": "liu2026",
+    "source_citations": [
+      "Liu et al., 2026"
+    ],
+    "authors": [
+      "Liu, W.",
+      "Ma, X.",
+      "Zhu, Y.",
+      "Li, Y.",
+      "Shi, D.",
+      "Yin, D.",
+      "Dou, Z."
+    ],
+    "source_reference": "Liu, W., Ma, X., Zhu, Y., Li, Y., Shi, D., Yin, D., Dou, Z., 2026. Agentic-R: Learning to retrieve for agentic search, in: Findings of the Association for Computational Linguistics: ACL 2026, Association for Computational Linguistics. pp. 15987–16005. URL: https://aclanthology. org/2026.findings-acl.785/, doi:10.18653/v1/2026.findings-acl.785.",
+    "source_title": "Agentic-R: Learning to retrieve for agentic search",
+    "cited_in_sections": [
+      "11.5"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "11.5"
+    ]
+  },
+  {
+    "id": "po",
+    "name": "PO / query decomposition",
+    "year": 2025,
+    "reference_venue_or_version": "ICML",
+    "title": "PO: Performance-Oriented Query Decomposer for Multi-Vector Retrieval",
+    "url": "https://arxiv.org/abs/2505.19189",
+    "role": "Optimizes query decomposition for retrieval performance.",
+    "coverage": "survey-snapshot",
+    "citation_key": "liu2025",
+    "source_citations": [
+      "Liu et al., 2025"
+    ],
+    "authors": [
+      "Liu, Y.",
+      "Li, J.",
+      "Wu, Y.",
+      "Chen, Z."
+    ],
+    "source_reference": "Liu, Y., Li, J., Wu, Y., Chen, Z., 2025. Po: Performance-oriented query decomposer for multi-vector retrieval, in: Proceedings of the 42nd International Conference on Machine Learning (ICML 2025). URL: https://arxiv.org/pdf/2505.19189, arXiv:2505.19189.",
+    "source_title": "Po: Performance-oriented query decomposer for multi-vector retrieval",
+    "cited_in_sections": [
+      "8.3",
+      "11.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "8.3",
+      "11.3"
+    ]
+  },
+  {
+    "id": "vidore3",
+    "name": "ViDoRe V3",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios",
+    "url": "https://arxiv.org/abs/2601.08620",
+    "role": "Motivates realistic visual-document evaluation.",
+    "coverage": "survey-snapshot",
+    "citation_key": "loison2026",
+    "source_citations": [
+      "Loison et al., 2026"
+    ],
+    "authors": [
+      "Loison, A.",
+      "Macé, Q.",
+      "Edy, A.",
+      "Xing, V.",
+      "Balough, T.",
+      "Moreira, G.",
+      "Liu, B.",
+      "Faysse, M.",
+      "Hudelot, C.",
+      "Viaud, G."
+    ],
+    "source_reference": "Loison, A., Macé, Q., Edy, A., Xing, V., Balough, T., Moreira, G., Liu, B., Faysse, M., Hudelot, C., Viaud, G., 2026. ViDoRe V3: A comprehensive evaluation of retrieval augmented generation in complex real-world scenarios. URL: https://arxiv.org/abs/2601.08620, arXiv:2601.08620.",
+    "source_title": "ViDoRe V3: A comprehensive evaluation of retrieval augmented generation in complex real-world scenarios",
+    "cited_in_sections": [
+      "11.7"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "10.2",
+      "10.5",
+      "11.7"
+    ]
+  },
+  {
+    "id": "colbertxm",
+    "name": "ColBERT-XM",
+    "year": 2025,
+    "reference_venue_or_version": "COLING",
+    "title": "ColBERT-XM: A Modular Multi-Vector Representation Model for Zero-Shot Multilingual Information Retrieval",
+    "url": "https://aclanthology.org/2025.coling-main.295/",
+    "role": "Uses modular language adaptation for multilingual retrieval.",
+    "coverage": "survey-snapshot",
+    "citation_key": "louis2025",
+    "source_citations": [
+      "Louis et al., 2025"
+    ],
+    "authors": [
+      "Louis, A.",
+      "Saxena, V.K.",
+      "van Dijck, G.",
+      "Spanakis, G."
+    ],
+    "source_reference": "Louis, A., Saxena, V.K., van Dijck, G., Spanakis, G., 2025. Colbert-xm: A modular multi-vector representation model for zero-shot multilingual information retrieval, in: Rambow, O., Wanner, L., Apidianaki, M., Al-Khalifa, H., Eugenio, B.D., Schockaert, S. (Eds.), Proceedings of the 31st International Conference on Computational Linguistics, COLING 2025, Abu Dhabi, UAE, January 19-24, 2025, Association for Computational Linguistics. pp. 4370–4383. URL: https://aclanthology.org/2025.coling-main.295/.",
+    "source_title": "Colbert-xm: A modular multi-vector representation model for zero-shot multilingual information retrieval",
+    "cited_in_sections": [
+      "2.5",
+      "10.1",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.5",
+      "10.1",
+      "10.5"
+    ]
+  },
+  {
+    "id": "mebert",
+    "name": "ME-BERT",
+    "title": "Sparse, dense, and attentional representations for text retrieval",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2005.00181",
+    "coverage": "survey-snapshot",
+    "citation_key": "luan2020",
+    "source_citations": [
+      "Luan et al., 2020"
+    ],
+    "authors": [
+      "Luan, Y.",
+      "Eisenstein, J.",
+      "Toutanova, K.",
+      "Collins, M."
+    ],
+    "source_reference": "Luan, Y., Eisenstein, J., Toutanova, K., Collins, M., 2020. Sparse, dense, and attentional representations for text retrieval. CoRR abs/2005.00181. URL: https://arxiv.org/abs/2005.00181, arXiv:2005.00181.",
+    "source_title": "Sparse, dense, and attentional representations for text retrieval",
+    "cited_in_sections": [
+      "1",
+      "2.3"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1",
+      "2.3"
+    ]
+  },
+  {
+    "id": "light-colpali",
+    "name": "Light-ColPali / Light-ColQwen2",
+    "title": "Towards storage-efficient visual document retrieval: An empirical study on reducing patch-level embeddings",
+    "year": 2025,
+    "url": "https://aclanthology.org/2025.findings-acl.1003/",
+    "coverage": "survey-snapshot",
+    "citation_key": "ma2025",
+    "source_citations": [
+      "Ma et al., 2025"
+    ],
+    "authors": [
+      "Ma, Y.",
+      "Li, J.",
+      "Zang, Y.",
+      "Wu, X.",
+      "Dong, X.",
+      "Zhang, P.",
+      "Cao, Y.",
+      "Duan, H.",
+      "Wang, J.",
+      "Cao, Y.",
+      "Sun, A."
+    ],
+    "source_reference": "Ma, Y., Li, J., Zang, Y., Wu, X., Dong, X., Zhang, P., Cao, Y., Duan, H., Wang, J., Cao, Y., et al., 2025. Towards storage-efficient visual document retrieval: An empirical study on reducing patch-level embeddings, in: Findings of the Association for Computational Linguistics: ACL 2025, pp. 19568–19580.",
+    "source_title": "Towards storage-efficient visual document retrieval: An empirical study on reducing patch-level embeddings",
+    "cited_in_sections": [
+      "5.3.3",
+      "11.7"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3",
+      "11.7"
+    ]
+  },
+  {
+    "id": "constbert",
+    "name": "ConstBERT",
+    "title": "Efficient constant-space multi-vector retrieval",
+    "year": 2025,
+    "url": "https://doi.org/10.1007/978-3-031-88714-7_22",
+    "coverage": "survey-snapshot",
+    "citation_key": "macavaney2025",
+    "source_citations": [
+      "MacAvaney et al., 2025"
+    ],
+    "authors": [
+      "MacAvaney, S.",
+      "Mallia, A.",
+      "Tonellotto, N."
+    ],
+    "source_reference": "MacAvaney, S., Mallia, A., Tonellotto, N., 2025. Efficient constant-space multi-vector retrieval, in: European Conference on Information Retrieval, pp. 237–245.",
+    "source_title": "Efficient constant-space multi-vector retrieval",
+    "cited_in_sections": [
+      "5.3.3",
+      "5.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3",
+      "5.4",
+      "5.5",
+      "9.2"
+    ]
+  },
+  {
+    "id": "plaidrepro",
+    "name": "PLAID reproduction",
+    "year": 2024,
+    "reference_venue_or_version": "SIGIR",
+    "title": "A Reproducibility Study of PLAID",
+    "url": "https://doi.org/10.1145/3626772.3657856",
+    "role": "Examines implementation and configuration effects on retrieval trade-offs.",
+    "coverage": "survey-snapshot",
+    "citation_key": "macavaney2024",
+    "source_citations": [
+      "MacAvaney and Tonellotto, 2024"
+    ],
+    "authors": [
+      "MacAvaney, S.",
+      "Tonellotto, N."
+    ],
+    "source_reference": "MacAvaney, S., Tonellotto, N., 2024. A reproducibility study of PLAID, in: Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR 2024, Washington DC, USA, July 14-18, 2024, ACM. pp. 1411–1419. URL: https://doi.org/10.1145/3626772.3657856, doi:10.1145/3626772.3657856.",
+    "source_title": "A reproducibility study of PLAID",
+    "cited_in_sections": [
+      "6.2.1",
+      "9.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.2.1",
+      "9.2"
+    ]
+  },
+  {
+    "id": "macavaney2019",
+    "name": "CEDR: contextualized embeddings for document ranking",
+    "title": "CEDR: contextualized embeddings for document ranking",
+    "year": 2019,
+    "url": "https://doi.org/10.1145/3331184.3331317",
+    "coverage": "survey-snapshot",
+    "citation_key": "macavaney2019",
+    "source_citations": [
+      "MacAvaney et al., 2019"
+    ],
+    "authors": [
+      "MacAvaney, S.",
+      "Yates, A.",
+      "Cohan, A.",
+      "Goharian, N."
+    ],
+    "source_reference": "MacAvaney, S., Yates, A., Cohan, A., Goharian, N., 2019. CEDR: contextualized embeddings for document ranking, in: Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR 2019, Paris, France, July 21-25, 2019, ACM. pp. 1101–1104. URL: https://doi.org/10.1145/3331184.3331317, doi:10.1145/3331184.3331317.",
+    "source_title": "CEDR: contextualized embeddings for document ranking",
+    "cited_in_sections": [
+      "1",
+      "2.2",
+      "2.5"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1",
+      "2.2",
+      "2.5"
+    ]
+  },
+  {
+    "id": "macdonald2021",
+    "name": "Pyterrier: Declarative experimentation in python from BM25 to dense retrieval",
+    "title": "Pyterrier: Declarative experimentation in python from BM25 to dense retrieval",
+    "year": 2021,
+    "url": "https://doi.org/10.1145/3459637.3482013",
+    "coverage": "survey-snapshot",
+    "citation_key": "macdonald2021",
+    "source_citations": [
+      "Macdonald et al., 2021"
+    ],
+    "authors": [
+      "Macdonald, C.",
+      "Tonellotto, N.",
+      "MacAvaney, S.",
+      "Ounis, I."
+    ],
+    "source_reference": "Macdonald, C., Tonellotto, N., MacAvaney, S., Ounis, I., 2021. Pyterrier: Declarative experimentation in python from BM25 to dense retrieval, in: CIKM ’21: The 30th ACM International Conference on Information and Knowledge Management, Virtual Event, Queensland, Australia, November 1 - 5, 2021, ACM. pp. 4526–4533. URL: https://doi.org/10.1145/3459637.3482013, doi:10.1145/3459637.3482013.",
+    "source_title": "Pyterrier: Declarative experimentation in python from BM25 to dense retrieval",
+    "cited_in_sections": [
+      "9.3"
+    ],
+    "category": "software",
+    "discussed_in_sections": [
+      "9.3"
+    ]
+  },
+  {
+    "id": "marginmerge",
+    "name": "MarginMerge",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Coverage Matters: MarginMerge for Compressing Multi-Vector Visual Document Retrievers",
+    "url": "https://arxiv.org/abs/2608.02969",
+    "role": "Studies evidence coverage when compressing visual multi-vectors.",
+    "coverage": "survey-snapshot",
+    "citation_key": "mahdizadeh2026",
+    "source_citations": [
+      "Mahdizadeh et al., 2026"
+    ],
+    "authors": [
+      "Mahdizadeh, A.",
+      "Salari, A.",
+      "Rajabi, S.",
+      "Mirabbasi, S.",
+      "Nasiopoulos, P.",
+      "Morsali, A."
+    ],
+    "source_reference": "Mahdizadeh, A., Salari, A., Rajabi, S., Mirabbasi, S., Nasiopoulos, P., Morsali, A., 2026. Coverage matters: Marginmerge for compressing multi-vector visual document retrievers. arXiv preprint arXiv:2608.02969 URL: https://arxiv.org/abs/2608.02969.",
+    "source_title": "Coverage matters: Marginmerge for compressing multi-vector visual document retrievers",
+    "cited_in_sections": [
+      "5.3.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3"
+    ]
+  },
+  {
+    "id": "hierarchy",
+    "name": "TACHIOM",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Efficient Multivector Retrieval with Token-Aware Clustering and Hierarchical Indexing",
+    "url": "https://arxiv.org/abs/2604.28142",
+    "role": "Combines token-aware clustering and hierarchical candidate search.",
+    "coverage": "survey-snapshot",
+    "citation_key": "martinico2026",
+    "source_citations": [
+      "Martinico et al., 2026"
+    ],
+    "authors": [
+      "Martinico, S.",
+      "Nardini, F.M.",
+      "Rulli, C.",
+      "Venturini, R."
+    ],
+    "source_reference": "Martinico, S., Nardini, F.M., Rulli, C., Venturini, R., 2026. Efficient multivector retrieval with token-aware clustering and hierarchical indexing. arXiv preprint arXiv:2604.28142 .",
+    "source_title": "Efficient multivector retrieval with token-aware clustering and hierarchical indexing",
+    "cited_in_sections": [
+      "6.2.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.1",
+      "6.2.2",
+      "6.6"
+    ]
+  },
+  {
+    "id": "colmate",
+    "name": "ColMate",
+    "year": 2025,
+    "reference_venue_or_version": "EMNLP Industry",
+    "title": "ColMate: Contrastive Late Interaction and Masked Text for Multimodal Document Retrieval",
+    "url": "https://aclanthology.org/2025.emnlp-industry.145/",
+    "role": "Adds OCR-based pre-training and masked contrastive learning.",
+    "coverage": "survey-snapshot",
+    "citation_key": "masry2025",
+    "source_citations": [
+      "Masry et al., 2025"
+    ],
+    "authors": [
+      "Masry, A.",
+      "Thakkar, M.",
+      "Bechard, P.",
+      "Madhusudhan, S.T.",
+      "Awal, R.",
+      "Mishra, S.",
+      "Suresh, A.K.",
+      "Daruru, S.",
+      "Hoque, E.",
+      "Gella, S.",
+      "Scholak, T.",
+      "Rajeswar, S."
+    ],
+    "source_reference": "Masry, A., Thakkar, M., Bechard, P., Madhusudhan, S.T., Awal, R., Mishra, S., Suresh, A.K., Daruru, S., Hoque, E., Gella, S., Scholak, T., Rajeswar, S., 2025. ColMate: Contrastive late interaction and masked text for multimodal document retrieval, in: Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: Industry Track, Association for Computational Linguistics, Suzhou (China). pp. 2071–2080. URL: https://aclanthology.org/2025.emnlp-industry.145/, doi:10.18653/v1/2025.emnlp-industry.145.",
+    "source_title": "ColMate: Contrastive late interaction and masked text for multimodal document retrieval",
+    "cited_in_sections": [
+      "10.2",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "10.2",
+      "10.5"
+    ]
+  },
+  {
+    "id": "nemotron",
+    "name": "Nemotron ColEmbed V2",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Nemotron ColEmbed V2: Top-Performing Late Interaction Embedding Models for Visual Document Retrieval",
+    "url": "https://arxiv.org/abs/2602.03992",
+    "role": "Scales visual late-interaction representation learning.",
+    "coverage": "survey-snapshot",
+    "citation_key": "moreira2026",
+    "source_citations": [
+      "Moreira et al., 2026"
+    ],
+    "authors": [
+      "Moreira, G.d.S.P.",
+      "Ak, R.",
+      "Xu, M.",
+      "Holworthy, O.",
+      "Schifferer, B.",
+      "Yu, Z.",
+      "Babakhin, Y.",
+      "Osmulski, R.",
+      "Cai, J.",
+      "Chesler, R.",
+      "Liu, B.",
+      "Oldridge, E."
+    ],
+    "source_reference": "Moreira, G.d.S.P., Ak, R., Xu, M., Holworthy, O., Schifferer, B., Yu, Z., Babakhin, Y., Osmulski, R., Cai, J., Chesler, R., Liu, B., Oldridge, E., 2026. Nemotron colembed v2: Top-performing late interaction embedding models for visual document retrieval. URL: https://arxiv.org/abs/ 2602.03992, arXiv:2602.03992.",
+    "source_title": "Nemotron colembed v2: Top-performing late interaction embedding models for visual document retrieval",
+    "cited_in_sections": [
+      "1",
+      "10.2",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "10.2",
+      "10.5"
+    ]
+  },
+  {
+    "id": "colbertx",
+    "name": "ColBERT-X",
+    "year": 2022,
+    "reference_venue_or_version": "ECIR",
+    "title": "Transfer Learning Approaches for Building Cross-Language Dense Retrieval Models",
+    "url": "https://doi.org/10.1007/978-3-030-99736-6_26",
+    "role": "Studies cross-language transfer with multilingual encoders.",
+    "coverage": "survey-snapshot",
+    "citation_key": "nair2022",
+    "source_citations": [
+      "Nair et al., 2022"
+    ],
+    "authors": [
+      "Nair, S.",
+      "Yang, E.",
+      "Lawrie, D.J.",
+      "Duh, K.",
+      "McNamee, P.",
+      "Murray, K.",
+      "Mayfield, J.",
+      "Oard, D.W."
+    ],
+    "source_reference": "Nair, S., Yang, E., Lawrie, D.J., Duh, K., McNamee, P., Murray, K., Mayfield, J., Oard, D.W., 2022. Transfer learning approaches for building cross-language dense retrieval models, in: Advances in Information Retrieval - 44th European Conference on IR Research, ECIR 2022, Stavanger, Norway, April 10-14, 2022, Proceedings, Part I, Springer. pp. 382–396. URL: https://doi.org/10.1007/978-3-030-99736-6_26, doi:10.1007/978-3-030-99736-6_26.",
+    "source_title": "Transfer learning approaches for building cross-language dense retrieval models",
+    "cited_in_sections": [
+      "10.1",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "10.1",
+      "10.5"
+    ]
+  },
+  {
+    "id": "emvb",
+    "name": "EMVB",
+    "year": 2024,
+    "reference_venue_or_version": "arXiv",
+    "title": "Efficient Multi-Vector Dense Retrieval Using Bit Vectors",
+    "url": "https://arxiv.org/abs/2404.02805",
+    "role": "Uses bit-vector prefiltering and quantized, SIMD-oriented execution.",
+    "coverage": "survey-snapshot",
+    "citation_key": "nardini2024",
+    "source_citations": [
+      "Nardini et al., 2024"
+    ],
+    "authors": [
+      "Nardini, F.M.",
+      "Rulli, C.",
+      "Venturini, R."
+    ],
+    "source_reference": "Nardini, F.M., Rulli, C., Venturini, R., 2024. Efficient multi-vector dense retrieval using bit vectors. arXiv preprint arXiv:2404.02805 .",
+    "source_title": "Efficient multi-vector dense retrieval using bit vectors",
+    "cited_in_sections": [
+      "6.2.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.1",
+      "6.2.2",
+      "6.6"
+    ]
+  },
+  {
+    "id": "ni2022",
+    "name": "Large dual encoders are generalizable retrievers",
+    "title": "Large dual encoders are generalizable retrievers",
+    "year": 2022,
+    "url": "https://aclanthology.org/2022.emnlp-main.669/",
+    "coverage": "survey-snapshot",
+    "citation_key": "ni2022",
+    "source_citations": [
+      "Ni et al., 2022"
+    ],
+    "authors": [
+      "Ni, J.",
+      "Qu, C.",
+      "Lu, J.",
+      "Dai, Z.",
+      "Abrego, G.H.",
+      "Ma, J.",
+      "Zhao, V.",
+      "Luan, Y.",
+      "Hall, K.",
+      "Chang, M.W.",
+      "Yang, Y."
+    ],
+    "source_reference": "Ni, J., Qu, C., Lu, J., Dai, Z., Abrego, G.H., Ma, J., Zhao, V., Luan, Y., Hall, K., Chang, M.W., et al., 2022. Large dual encoders are generalizable retrievers, in: Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing, pp. 9844–9855.",
+    "source_title": "Large dual encoders are generalizable retrievers",
+    "cited_in_sections": [
+      "1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1"
+    ]
+  },
+  {
+    "id": "nogueira2019mono",
+    "name": "Passage re-ranking with BERT",
+    "title": "Passage re-ranking with BERT",
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1901.04085",
+    "coverage": "survey-snapshot",
+    "citation_key": "nogueira2019mono",
+    "source_citations": [
+      "Nogueira and Cho, 2019"
+    ],
+    "authors": [
+      "Nogueira, R.",
+      "Cho, K."
+    ],
+    "source_reference": "Nogueira, R., Cho, K., 2019. Passage re-ranking with BERT. CoRR abs/1901.04085. URL: http://arxiv.org/abs/1901.04085, arXiv:1901.04085.",
+    "source_title": "Passage re-ranking with BERT",
+    "cited_in_sections": [
+      "2.2"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "2.2"
+    ]
+  },
+  {
+    "id": "nogueira2019multi",
+    "name": "Multi-Stage Document Ranking with BERT",
+    "title": "Multi-Stage Document Ranking with BERT",
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1910.14424",
+    "coverage": "survey-snapshot",
+    "citation_key": "nogueira2019multi",
+    "source_citations": [
+      "Nogueira et al., 2019"
+    ],
+    "authors": [
+      "Nogueira, R.",
+      "Yang, W.",
+      "Cho, K.",
+      "Lin, J."
+    ],
+    "source_reference": "Nogueira, R., Yang, W., Cho, K., Lin, J., 2019. Multi-Stage Document Ranking with BERT URL: http://arxiv.org/abs/1910.14424.",
+    "source_title": "Multi-Stage Document Ranking with BERT URL: http://arxiv.org/abs/1910.14424",
+    "cited_in_sections": [
+      "1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1"
+    ]
+  },
+  {
+    "id": "scv",
+    "name": "SCV",
+    "year": 2025,
+    "reference_venue_or_version": "COLING Industry",
+    "title": "SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors",
+    "url": "https://aclanthology.org/2025.coling-industry.63/",
+    "role": "Constructs span representations; also uses coarse-to-fine retrieval.",
+    "coverage": "survey-snapshot",
+    "citation_key": "park2025",
+    "source_citations": [
+      "Park et al., 2025"
+    ],
+    "authors": [
+      "Park, C.",
+      "Jeong, S.",
+      "Kim, M.",
+      "Lim, K.",
+      "Lee, Y.H."
+    ],
+    "source_reference": "Park, C., Jeong, S., Kim, M., Lim, K., Lee, Y.H., 2025. SCV: Light and effective multi-vector retrieval with sequence compressive vectors, in: Proceedings of the 31st International Conference on Computational Linguistics: Industry Track, Association for Computational Linguistics, Abu Dhabi, UAE. pp. 760–770. URL: https://aclanthology.org/2025.coling-industry.63/.",
+    "source_title": "SCV: Light and effective multi-vector retrieval with sequence compressive vectors",
+    "cited_in_sections": [
+      "5.3.3",
+      "5.5",
+      "6.2.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3",
+      "5.4",
+      "5.5",
+      "6.1",
+      "6.2.2",
+      "6.6"
+    ]
+  },
+  {
+    "id": "samer",
+    "name": "SaMer",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Do All Visual Tokens Matter Equally? Object-Evidence Preserving Token Merging for Vision-Language Retrieval",
+    "url": "https://arxiv.org/abs/2607.04605",
+    "role": "Targets preservation of object-level visual evidence during merging.",
+    "coverage": "survey-snapshot",
+    "citation_key": "park2026",
+    "source_citations": [
+      "Park et al., 2026"
+    ],
+    "authors": [
+      "Park, S.",
+      "Jung, J.",
+      "Park, J.",
+      "Kang, J."
+    ],
+    "source_reference": "Park, S., Jung, J., Park, J., Kang, J., 2026. Do all visual tokens matter equally? object-evidence preserving token merging for vision-language retrieval. URL: https://arxiv.org/abs/2607.04605, arXiv:2607.04605.",
+    "source_title": "Do all visual tokens matter equally? object-evidence preserving token merging for vision-language retrieval",
+    "cited_in_sections": [
+      "11.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "11.1"
+    ]
+  },
+  {
+    "id": "att",
+    "name": "ColBERT-Att",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "ColBERT-Att: Late-Interaction Meets Attention for Enhanced Retrieval",
+    "url": "https://arxiv.org/abs/2603.25248",
+    "role": "Uses attention-derived weights for selected matches.",
+    "coverage": "survey-snapshot",
+    "citation_key": "patel2026",
+    "source_citations": [
+      "Patel and Dutta, 2026"
+    ],
+    "authors": [
+      "Patel, R.N.",
+      "Dutta, S."
+    ],
+    "source_reference": "Patel, R.N., Dutta, S., 2026. Colbert-att: Late-interaction meets attention for enhanced retrieval. arXiv preprint arXiv:2603.25248 doi:10.48550/ arXiv.2603.25248.",
+    "source_title": "Colbert-att: Late-interaction meets attention for enhanced retrieval",
+    "cited_in_sections": [
+      "4.2",
+      "4.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "4.1",
+      "4.2",
+      "4.4"
+    ]
+  },
+  {
+    "id": "flash",
+    "name": "Flash-MaxSim",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval",
+    "url": "https://arxiv.org/abs/2605.29517",
+    "role": "Fuses scoring operations to reduce memory traffic.",
+    "coverage": "survey-snapshot",
+    "citation_key": "pony2026a",
+    "source_citations": [
+      "Pony et al., 2026a"
+    ],
+    "authors": [
+      "Pony, R.",
+      "Ezer, D.",
+      "Goldfarb, A.R.",
+      "Friedman, I.",
+      "Naparstek, O.",
+      "Barzelay, U."
+    ],
+    "source_reference": "Pony, R., Ezer, D., Goldfarb, A.R., Friedman, I., Naparstek, O., Barzelay, U., 2026a. FLASH-MAXSIM: IO-aware fused kernels for late-interaction retrieval. URL: https://arxiv.org/abs/2605.29517, arXiv:2605.29517.",
+    "source_title": "FLASH-MAXSIM: IO-aware fused kernels for late-interaction retrieval",
+    "cited_in_sections": [
+      "1",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "11.2"
+    ]
+  },
+  {
+    "id": "bandit",
+    "name": "Col-Bandit",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Col-Bandit: Zero-Shot Query-Time Pruning for Late-Interaction Retrieval",
+    "url": "https://arxiv.org/abs/2602.02827",
+    "role": "Adaptively allocates MaxSim evaluations during top-k reranking.",
+    "coverage": "survey-snapshot",
+    "citation_key": "pony2026b",
+    "source_citations": [
+      "Pony et al., 2026b"
+    ],
+    "authors": [
+      "Pony, R.",
+      "Raz, A.",
+      "Naparstek, O.",
+      "Friedman, I.",
+      "Barzelay, U."
+    ],
+    "source_reference": "Pony, R., Raz, A., Naparstek, O., Friedman, I., Barzelay, U., 2026b. Col-bandit: Zero-shot query-time pruning for late-interaction retrieval. arXiv preprint arXiv:2602.02827 doi:10.48550/arXiv.2602.02827.",
+    "source_title": "Col-bandit: Zero-shot query-time pruning for late-interaction retrieval",
+    "cited_in_sections": [
+      "1",
+      "4.4",
+      "6.5.2",
+      "11.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "4.4",
+      "6.1",
+      "6.5.2",
+      "6.6",
+      "6.7",
+      "11.3"
+    ]
+  },
+  {
+    "id": "pradeep2021",
+    "name": "The expando-mono-duo design pattern for text ranking with pretrained sequence-to-sequence models",
+    "title": "The expando-mono-duo design pattern for text ranking with pretrained sequence-to-sequence models",
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2101.05667",
+    "coverage": "survey-snapshot",
+    "citation_key": "pradeep2021",
+    "source_citations": [
+      "Pradeep et al., 2021"
+    ],
+    "authors": [
+      "Pradeep, R.",
+      "Nogueira, R.",
+      "Lin, J."
+    ],
+    "source_reference": "Pradeep, R., Nogueira, R., Lin, J., 2021. The expando-mono-duo design pattern for text ranking with pretrained sequence-to-sequence models. CoRR abs/2101.05667. URL: https://arxiv.org/abs/2101.05667, arXiv:2101.05667.",
+    "source_title": "The expando-mono-duo design pattern for text ranking with pretrained sequence-to-sequence models",
+    "cited_in_sections": [
+      "2.5"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "2.5"
+    ]
+  },
+  {
+    "id": "qdrantteamnd",
+    "name": "qdrant/qdrant: Qdrant vector database and vector search engine",
+    "title": "qdrant/qdrant: Qdrant vector database and vector search engine",
+    "year": null,
+    "url": "https://github.com/qdrant/qdrant",
+    "coverage": "survey-snapshot",
+    "citation_key": "qdrantteamnd",
+    "source_citations": [
+      "Qdrant Team, n.d."
+    ],
+    "authors": [
+      "Qdrant Team"
+    ],
+    "source_reference": "Qdrant Team, . qdrant/qdrant: Qdrant vector database and vector search engine. GitHub repository. URL: https://github.com/qdrant/qdrant. accessed: 2026-05-23.",
+    "source_title": "qdrant/qdrant: Qdrant vector database and vector search engine",
+    "cited_in_sections": [
+      "9.3"
+    ],
+    "category": "software",
+    "discussed_in_sections": [
+      "9.3"
+    ]
+  },
+  {
+    "id": "aligner",
+    "name": "ALIGNER",
+    "title": "Multi-vector retrieval as sparse alignment",
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2211.01267",
+    "coverage": "survey-snapshot",
+    "citation_key": "qian2022",
+    "source_citations": [
+      "Qian et al., 2022"
+    ],
+    "authors": [
+      "Qian, Y.",
+      "Lee, J.",
+      "Duddu, S.M.K.",
+      "Dai, Z.",
+      "Brahma, S.",
+      "Naim, I.",
+      "Lei, T.",
+      "Zhao, V.Y."
+    ],
+    "source_reference": "Qian, Y., Lee, J., Duddu, S.M.K., Dai, Z., Brahma, S., Naim, I., Lei, T., Zhao, V.Y., 2022. Multi-vector retrieval as sparse alignment. arXiv preprint arXiv:2211.01267 .",
+    "source_title": "Multi-vector retrieval as sparse alignment",
+    "cited_in_sections": [
+      "2.3",
+      "7.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.3",
+      "7.1"
+    ]
+  },
+  {
+    "id": "anymod",
+    "name": "Compression across modalities",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Multi-Vector Index Compression in Any Modality",
+    "url": "https://arxiv.org/abs/2602.21202",
+    "role": "Examines compression across different multi-vector inputs.",
+    "coverage": "survey-snapshot",
+    "citation_key": "qin2026",
+    "source_citations": [
+      "Qin et al., 2026"
+    ],
+    "authors": [
+      "Qin, H.",
+      "Martin, A.",
+      "Jha, R.",
+      "Zuo, C.",
+      "Kriz, R.",
+      "Van Durme, B."
+    ],
+    "source_reference": "Qin, H., Martin, A., Jha, R., Zuo, C., Kriz, R., Van Durme, B., 2026. Multi-vector index compression in any modality. URL: https: //arxiv.org/abs/2602.21202, arXiv:2602.21202.",
+    "source_title": "Multi-vector index compression in any modality",
+    "cited_in_sections": [
+      "5.3.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3"
+    ]
+  },
+  {
+    "id": "videocolbert",
+    "name": "Video-ColBERT",
+    "year": 2025,
+    "reference_venue_or_version": "arXiv",
+    "title": "Video-colbert: Contextualized late interaction for text-to-video retrieval",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Reddy_Video-ColBERT_Contextualized_Late_Interaction_for_Text-to-Video_Retrieval_CVPR_2025_paper.html",
+    "role": "Represents visual, speech, text, and metadata evidence for video retrieval.",
+    "coverage": "survey-snapshot",
+    "citation_key": "reddy2025",
+    "source_citations": [
+      "Reddy et al., 2025"
+    ],
+    "authors": [
+      "Reddy, A.",
+      "Martin, A.",
+      "Yang, E.",
+      "Yates, A.",
+      "Sanders, K.",
+      "Murray, K.",
+      "Kriz, R.",
+      "de Melo, C.M.",
+      "Van Durme, B.",
+      "Chellappa, R."
+    ],
+    "source_reference": "Reddy, A., Martin, A., Yang, E., Yates, A., Sanders, K., Murray, K., Kriz, R., de Melo, C.M., Van Durme, B., Chellappa, R., 2025. Video-colbert: Contextualized late interaction for text-to-video retrieval, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 19691–19701.",
+    "source_title": "Video-colbert: Contextualized late interaction for text-to-video retrieval",
+    "cited_in_sections": [
+      "1",
+      "10.2",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "10.2",
+      "10.5"
+    ]
+  },
+  {
+    "id": "diagnosable",
+    "name": "Diagnosable ColBERT",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Diagnosable ColBERT: Debugging Late-Interaction Retrieval Models Using a Learned Latent Space as Reference",
+    "url": "https://arxiv.org/abs/2604.19566",
+    "role": "Uses a learned reference space for diagnostic interpretation.",
+    "coverage": "survey-snapshot",
+    "citation_key": "remy2026",
+    "source_citations": [
+      "Remy, 2026"
+    ],
+    "authors": [
+      "Remy, F."
+    ],
+    "source_reference": "Remy, F., 2026. Diagnosable colbert: Debugging late-interaction retrieval models using a learned latent space as reference. arXiv preprint arXiv:2604.19566 .",
+    "source_title": "Diagnosable colbert: Debugging late-interaction retrieval models using a learned latent space as reference",
+    "cited_in_sections": [
+      "9.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "9.5"
+    ]
+  },
+  {
+    "id": "robertson1994",
+    "name": "Okapi at TREC-3",
+    "title": "Okapi at TREC-3",
+    "year": 1994,
+    "url": "http://trec.nist.gov/pubs/trec3/papers/city.ps.gz",
+    "coverage": "survey-snapshot",
+    "citation_key": "robertson1994",
+    "source_citations": [
+      "Robertson et al., 1994"
+    ],
+    "authors": [
+      "Robertson, S.E.",
+      "Walker, S.",
+      "Jones, S.",
+      "Hancock-Beaulieu, M.",
+      "Gatford, M."
+    ],
+    "source_reference": "Robertson, S.E., Walker, S., Jones, S., Hancock-Beaulieu, M., Gatford, M., 1994. Okapi at TREC-3, in: Proceedings of The Third Text REtrieval Conference, TREC 1994, Gaithersburg, Maryland, USA, November 2-4, 1994, National Institute of Standards and Technology (NIST). pp. 109–126. URL: http://trec.nist.gov/pubs/trec3/papers/city.ps.gz.",
+    "source_title": "Okapi at TREC-3",
+    "cited_in_sections": [
+      "1",
+      "2.5",
+      "4.1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1",
+      "2.5",
+      "4.1"
+    ]
+  },
+  {
+    "id": "plaid",
+    "name": "PLAID",
+    "year": 2022,
+    "reference_venue_or_version": "CIKM",
+    "title": "PLAID: An Efficient Engine for Late Interaction Retrieval",
+    "url": "https://doi.org/10.1145/3511808.3557325",
+    "role": "Prunes with centroid-level scores before residual reconstruction and final scoring.",
+    "coverage": "survey-snapshot",
+    "citation_key": "santhanam2022a",
+    "source_citations": [
+      "Santhanam et al., 2022a"
+    ],
+    "authors": [
+      "Santhanam, K.",
+      "Khattab, O.",
+      "Potts, C.",
+      "Zaharia, M."
+    ],
+    "source_reference": "Santhanam, K., Khattab, O., Potts, C., Zaharia, M., 2022a. PLAID: an efficient engine for late interaction retrieval, in: Proceedings of the 31st ACM International Conference on Information and Knowledge Management, Atlanta, GA, USA, October 17-21, 2022, ACM. pp. 1747–1756. URL: https://doi.org/10.1145/3511808.3557325, doi:10.1145/3511808.3557325.",
+    "source_title": "PLAID: an efficient engine for late interaction retrieval",
+    "cited_in_sections": [
+      "1",
+      "2.3",
+      "2.5",
+      "5.1",
+      "6.2.1",
+      "9.2",
+      "9.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "2.3",
+      "2.5",
+      "5.1",
+      "5.3.1",
+      "5.5",
+      "6.1",
+      "6.2.1",
+      "6.2.2",
+      "6.4.2",
+      "6.6",
+      "7.1",
+      "7.3",
+      "8.2.3",
+      "9.2",
+      "9.3",
+      "9.6"
+    ]
+  },
+  {
+    "id": "colbertv2",
+    "name": "ColBERTv2",
+    "year": 2022,
+    "reference_venue_or_version": "NAACL",
+    "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+    "url": "https://aclanthology.org/2022.naacl-main.272/",
+    "role": "Residual compression reduces vector storage; denoised supervision is a separate training contribution.",
+    "coverage": "survey-snapshot",
+    "citation_key": "santhanam2022b",
+    "source_citations": [
+      "Santhanam et al., 2022b"
+    ],
+    "authors": [
+      "Santhanam, K.",
+      "Khattab, O.",
+      "Saad-Falcon, J.",
+      "Potts, C.",
+      "Zaharia, M."
+    ],
+    "source_reference": "Santhanam, K., Khattab, O., Saad-Falcon, J., Potts, C., Zaharia, M., 2022b. Colbertv2: Effective and efficient retrieval via lightweight late interaction, in: Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, NAACL 2022, Seattle, WA, United States, July 10-15, 2022, Association for Computational Linguistics. pp. 3715–3734. URL: https://doi.org/10.18653/v1/2022.naacl-main.272, doi:10.18653/V1/2022.NAACL-MAIN.272.",
+    "source_title": "Colbertv2: Effective and efficient retrieval via lightweight late interaction",
+    "cited_in_sections": [
+      "1",
+      "2.3",
+      "2.4",
+      "2.5",
+      "5.1",
+      "5.5",
+      "9.1.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "2.3",
+      "2.4",
+      "2.5",
+      "5.1",
+      "5.3.1",
+      "5.4",
+      "5.5",
+      "6.2.1",
+      "6.6",
+      "7.1",
+      "7.2",
+      "8.2.3",
+      "9.1.2",
+      "9.2",
+      "9.4"
+    ]
+  },
+  {
+    "id": "warp",
+    "name": "WARP",
+    "year": 2025,
+    "reference_venue_or_version": "SIGIR",
+    "title": "WARP: An Efficient Engine for Multi-Vector Retrieval",
+    "url": "https://doi.org/10.1145/3726302.3729904",
+    "role": "Accelerates XTR-trained retrieval with imputation and efficient score reduction.",
+    "coverage": "survey-snapshot",
+    "citation_key": "scheerer2025",
+    "source_citations": [
+      "Scheerer et al., 2025"
+    ],
+    "authors": [
+      "Scheerer, J.L.",
+      "Zaharia, M.",
+      "Potts, C.",
+      "Alonso, G.",
+      "Khattab, O."
+    ],
+    "source_reference": "Scheerer, J.L., Zaharia, M., Potts, C., Alonso, G., Khattab, O., 2025. Warp: An efficient engine for multi-vector retrieval, in: Proceedings of the 48th international ACM SIGIR conference on research and development in information retrieval, pp. 2504–2512.",
+    "source_title": "Warp: An efficient engine for multi-vector retrieval",
+    "cited_in_sections": [
+      "6.4.2",
+      "9.3",
+      "11.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.1",
+      "6.4.2",
+      "6.6",
+      "6.7",
+      "9.2",
+      "9.3",
+      "11.3"
+    ]
+  },
+  {
+    "id": "prunecompare",
+    "name": "Pruning comparison",
+    "year": 2026,
+    "reference_venue_or_version": "SIGIR",
+    "title": "Comparing Token Pruning Approaches for Multi-Vector Retrieval",
+    "url": "https://doi.org/10.1145/3805712.3808564",
+    "role": "Compares pruning under a common evaluation setting.",
+    "coverage": "survey-snapshot",
+    "citation_key": "schlatt2026",
+    "source_citations": [
+      "Schlatt et al., 2026"
+    ],
+    "authors": [
+      "Schlatt, F.",
+      "Barschel, H.",
+      "Hagen, M."
+    ],
+    "source_reference": "Schlatt, F., Barschel, H., Hagen, M., 2026. Comparing token pruning approaches for multi-vector retrieval, in: Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, Association for Computing Machinery. URL: https: //doi.org/10.1145/3805712.3808564, doi:10.1145/3805712.3808564.",
+    "source_title": "Comparing token pruning approaches for multi-vector retrieval",
+    "cited_in_sections": [
+      "5.3.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.1"
+    ]
+  },
+  {
+    "id": "tile",
+    "name": "TileMaxSim",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "TileMaxSim: IO-Aware GPU MaxSim Scoring with Dimension Tiling and Fused Product Quantization",
+    "url": "https://arxiv.org/abs/2606.26439",
+    "role": "Uses tiled GPU scoring and fused quantization operations.",
+    "coverage": "survey-snapshot",
+    "citation_key": "sharma2026",
+    "source_citations": [
+      "Sharma, 2026"
+    ],
+    "authors": [
+      "Sharma, A."
+    ],
+    "source_reference": "Sharma, A., 2026. TileMaxSim: IO-aware GPU MaxSim scoring with dimension tiling and fused product quantization. URL: https://arxiv. org/abs/2606.26439, arXiv:2606.26439.",
+    "source_title": "TileMaxSim: IO-aware GPU MaxSim scoring with dimension tiling and fused product quantization",
+    "cited_in_sections": [
+      "1",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "11.2"
+    ]
+  },
+  {
+    "id": "lateon",
+    "name": "LateOn / mLateOn",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search",
+    "url": "https://arxiv.org/abs/2607.27178",
+    "role": "Studies open training and transfer across languages and retrieval settings.",
+    "coverage": "survey-snapshot",
+    "citation_key": "sourty2026",
+    "source_citations": [
+      "Sourty et al., 2026"
+    ],
+    "authors": [
+      "Sourty, R.",
+      "Chaffin, A.",
+      "Moura Junior, P.R.",
+      "Chatelain, A."
+    ],
+    "source_reference": "Sourty, R., Chaffin, A., Moura Junior, P.R., Chatelain, A., 2026. Denseon with the lateon: Fully open dense and late-interaction models for multilingual, long-context, and code search. URL: https://arxiv.org/abs/2607.27178, arXiv:2607.27178.",
+    "source_title": "Denseon with the lateon: Fully open dense and late-interaction models for multilingual, long-context, and code search",
+    "cited_in_sections": [
+      "1",
+      "9.1.3",
+      "10.1",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "9.1.3",
+      "10.1",
+      "10.5"
+    ]
+  },
+  {
+    "id": "sparckjones2000",
+    "name": "A probabilistic model of information retrieval: development and comparative experiments: Part 2",
+    "title": "A probabilistic model of information retrieval: development and comparative experiments: Part 2",
+    "year": 2000,
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0306457300000169",
+    "coverage": "survey-snapshot",
+    "citation_key": "sparckjones2000",
+    "source_citations": [
+      "Spärck Jones et al., 2000"
+    ],
+    "authors": [
+      "Spärck Jones, K.",
+      "Walker, S.",
+      "Robertson, S.E."
+    ],
+    "source_reference": "Spärck Jones, K., Walker, S., Robertson, S.E., 2000. A probabilistic model of information retrieval: development and comparative experiments: Part 2. Information processing and management 36, 809–840.",
+    "source_title": "A probabilistic model of information retrieval: development and comparative experiments: Part 2",
+    "cited_in_sections": [
+      "4.1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "4.1"
+    ]
+  },
+  {
+    "id": "spike",
+    "name": "Spike Hijacking",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv / LIR Workshop",
+    "title": "Spike Hijacking in Late-Interaction Retrieval",
+    "url": "https://arxiv.org/abs/2604.05253",
+    "role": "Examines hard-max concentration and alternative pooling rules.",
+    "coverage": "survey-snapshot",
+    "citation_key": "suresh2026",
+    "source_citations": [
+      "Suresh et al., 2026"
+    ],
+    "authors": [
+      "Suresh, K.",
+      "Vatsa, T.",
+      "King, T.",
+      "Kadav, A.",
+      "Friedrich, M."
+    ],
+    "source_reference": "Suresh, K., Vatsa, T., King, T., Kadav, A., Friedrich, M., 2026. Spike hijacking in late-interaction retrieval. doi:10.48550/arXiv.2604.05253. accepted at the 1st Late Interaction Retrieval Workshop at ECIR 2026.",
+    "source_title": "Spike hijacking in late-interaction retrieval",
+    "cited_in_sections": [
+      "4.3",
+      "4.4",
+      "9.4",
+      "11.6"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "4.3",
+      "4.4",
+      "9.4",
+      "11.6"
+    ]
+  },
+  {
+    "id": "mvr",
+    "name": "MVR",
+    "title": "Improving document representations by generating pseudo query embeddings for dense retrieval",
+    "year": 2021,
+    "url": "https://doi.org/10.18653/v1/2021.acl-long.392",
+    "coverage": "survey-snapshot",
+    "citation_key": "tang2021",
+    "source_citations": [
+      "Tang et al., 2021"
+    ],
+    "authors": [
+      "Tang, H.",
+      "Sun, X.",
+      "Jin, B.",
+      "Wang, J.",
+      "Zhang, F.",
+      "Wu, W."
+    ],
+    "source_reference": "Tang, H., Sun, X., Jin, B., Wang, J., Zhang, F., Wu, W., 2021. Improving document representations by generating pseudo query embeddings for dense retrieval, in: Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers), Association for Computational Linguistics, Online. pp. 5054–5064. URL: https://aclanthology.org/2021.acl-long.392/, doi:10.18653/v1/2021.acl-long.392.",
+    "source_title": "Improving document representations by generating pseudo query embeddings for dense retrieval",
+    "cited_in_sections": [
+      "2.3"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "2.3"
+    ]
+  },
+  {
+    "id": "thakur2021",
+    "name": "BEIR: A heterogenous benchmark for zero-shot evaluation of information retrieval models",
+    "title": "BEIR: A heterogenous benchmark for zero-shot evaluation of information retrieval models",
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2104.08663",
+    "coverage": "survey-snapshot",
+    "citation_key": "thakur2021",
+    "source_citations": [
+      "Thakur et al., 2021"
+    ],
+    "authors": [
+      "Thakur, N.",
+      "Reimers, N.",
+      "Rücklé, A.",
+      "Srivastava, A.",
+      "Gurevych, I."
+    ],
+    "source_reference": "Thakur, N., Reimers, N., Rücklé, A., Srivastava, A., Gurevych, I., 2021. BEIR: A heterogenous benchmark for zero-shot evaluation of information retrieval models. CoRR abs/2104.08663. URL: https://arxiv.org/abs/2104.08663, arXiv:2104.08663.",
+    "source_title": "BEIR: A heterogenous benchmark for zero-shot evaluation of information retrieval models",
+    "cited_in_sections": [
+      "1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1"
+    ]
+  },
+  {
+    "id": "gem",
+    "name": "GEM",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "GEM: A Native Graph-Based Index for Multi-Vector Retrieval",
+    "url": "https://arxiv.org/abs/2603.20336",
+    "role": "Constructs a native graph over vector sets.",
+    "coverage": "survey-snapshot",
+    "citation_key": "tian2026",
+    "source_citations": [
+      "Tian et al., 2026"
+    ],
+    "authors": [
+      "Tian, Y.",
+      "Tian, Z.",
+      "Zhao, X.",
+      "Zhang, R.",
+      "Zhou, X."
+    ],
+    "source_reference": "Tian, Y., Tian, Z., Zhao, X., Zhang, R., Zhou, X., 2026. GEM: A native graph-based index for multi-vector retrieval. URL: https://arxiv.org/ abs/2603.20336, arXiv:2603.20336.",
+    "source_title": "GEM: A native graph-based index for multi-vector retrieval",
+    "cited_in_sections": [
+      "1",
+      "6.3.2",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "6.3.2",
+      "6.6",
+      "11.2"
+    ]
+  },
+  {
+    "id": "qprune",
+    "name": "Query embedding pruning",
+    "year": 2021,
+    "reference_venue_or_version": "CIKM",
+    "title": "Query Embedding Pruning for Dense Retrieval",
+    "url": "https://doi.org/10.1145/3459637.3482162",
+    "role": "Prunes query probes during candidate generation while retaining full-query final scoring.",
+    "coverage": "survey-snapshot",
+    "citation_key": "tonellotto2021",
+    "source_citations": [
+      "Tonellotto and Macdonald, 2021"
+    ],
+    "authors": [
+      "Tonellotto, N.",
+      "Macdonald, C."
+    ],
+    "source_reference": "Tonellotto, N., Macdonald, C., 2021. Query embedding pruning for dense retrieval, in: CIKM ’21: The 30th ACM International Conference on Information and Knowledge Management, Virtual Event, Queensland, Australia, November 1 - 5, 2021, ACM. pp. 3453–3457. URL: https://doi.org/10.1145/3459637.3482162, doi:10.1145/3459637.3482162.",
+    "source_title": "Query embedding pruning for dense retrieval",
+    "cited_in_sections": [
+      "6.5.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.5.1"
+    ]
+  },
+  {
+    "id": "clamr",
+    "name": "CLaMR",
+    "year": 2025,
+    "reference_venue_or_version": "arXiv",
+    "title": "CLaMR: Contextualized Late-Interaction for Multimodal Content Retrieval",
+    "url": "https://arxiv.org/abs/2506.06144",
+    "role": "Represents visual, speech, text, and metadata evidence for video retrieval.",
+    "coverage": "survey-snapshot",
+    "citation_key": "wan2025",
+    "source_citations": [
+      "Wan et al., 2025"
+    ],
+    "authors": [
+      "Wan, D.",
+      "Wang, H.",
+      "Stengel-Eskin, E.",
+      "Cho, J.",
+      "Bansal, M."
+    ],
+    "source_reference": "Wan, D., Wang, H., Stengel-Eskin, E., Cho, J., Bansal, M., 2025. CLaMR: Contextualized late-interaction for multimodal content retrieval. URL: https://arxiv.org/abs/2506.06144, arXiv:2506.06144.",
+    "source_title": "CLaMR: Contextualized late-interaction for multimodal content retrieval",
+    "cited_in_sections": [
+      "10.2",
+      "10.5"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "10.2",
+      "10.5"
+    ]
+  },
+  {
+    "id": "plaidprf",
+    "name": "PLAID-PRF",
+    "year": 2026,
+    "reference_venue_or_version": "SIGIR",
+    "title": "PLAID-PRF: Pseudo-Relevance Feedback with Centroid-Like Tokens in PLAID",
+    "url": "https://doi.org/10.1145/3805712.3809690",
+    "role": "Reuses index centroids for feedback expansion.",
+    "coverage": "survey-snapshot",
+    "citation_key": "wang2026",
+    "source_citations": [
+      "Wang et al., 2026"
+    ],
+    "authors": [
+      "Wang, X.",
+      "MacAvaney, S.",
+      "Macdonald, C."
+    ],
+    "source_reference": "Wang, X., MacAvaney, S., Macdonald, C., 2026. PLAID-PRF: Pseudo-relevance feedback with centroid-like tokens in PLAID, in: Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, Association for Computing Machinery, New York, NY, USA. doi:10.1145/3805712.3809690.",
+    "source_title": "PLAID-PRF: Pseudo-relevance feedback with centroid-like tokens in PLAID",
+    "cited_in_sections": [
+      "8.2.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "8",
+      "8.2",
+      "8.2.3"
+    ]
+  },
+  {
+    "id": "cwprf",
+    "name": "CWPRF",
+    "year": 2023,
+    "reference_venue_or_version": "ACL",
+    "title": "Effective Contrastive Weighting for Dense Query Expansion",
+    "url": "https://aclanthology.org/2023.acl-long.710/",
+    "role": "Learns the usefulness of contextual feedback embeddings.",
+    "coverage": "survey-snapshot",
+    "citation_key": "wang2023a",
+    "source_citations": [
+      "Wang et al., 2023a"
+    ],
+    "authors": [
+      "Wang, X.",
+      "MacAvaney, S.",
+      "Macdonald, C.",
+      "Ounis, I."
+    ],
+    "source_reference": "Wang, X., MacAvaney, S., Macdonald, C., Ounis, I., 2023a. Effective contrastive weighting for dense query expansion, in: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), ACL 2023, Toronto, Canada, July 9- 14, 2023, Association for Computational Linguistics. pp. 12688–12704. URL: https://doi.org/10.18653/v1/2023.acl-long.710, doi:10.18653/V1/2023.ACL-LONG.710.",
+    "source_title": "Effective contrastive weighting for dense query expansion",
+    "cited_in_sections": [
+      "8.2.2",
+      "8.2.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "8",
+      "8.2",
+      "8.2.2",
+      "8.2.3"
+    ]
+  },
+  {
+    "id": "prf2021",
+    "name": "Early ColBERT-PRF",
+    "year": 2021,
+    "reference_venue_or_version": "ICTIR",
+    "title": "Pseudo-Relevance Feedback for Multiple Representation Dense Retrieval",
+    "url": "https://doi.org/10.1145/3471158.3472250",
+    "role": "Introduces feedback expansion in the multi-vector representation space.",
+    "coverage": "survey-snapshot",
+    "citation_key": "wang2021",
+    "source_citations": [
+      "Wang et al., 2021"
+    ],
+    "authors": [
+      "Wang, X.",
+      "Macdonald, C.",
+      "Tonellotto, N.",
+      "Ounis, I."
+    ],
+    "source_reference": "Wang, X., Macdonald, C., Tonellotto, N., Ounis, I., 2021. Pseudo-relevance feedback for multiple representation dense retrieval, in: ICTIR ’21: The 2021 ACM SIGIR International Conference on the Theory of Information Retrieval, Virtual Event, Canada, July 11, 2021, ACM. pp. 297–306. URL: https://doi.org/10.1145/3471158.3472250, doi:10.1145/3471158.3472250.",
+    "source_title": "Pseudo-relevance feedback for multiple representation dense retrieval",
+    "cited_in_sections": [
+      "1",
+      "8.2.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "8.2.1"
+    ]
+  },
+  {
+    "id": "prf",
+    "name": "ColBERT-PRF",
+    "year": 2023,
+    "reference_venue_or_version": "TWeb",
+    "title": "ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval",
+    "url": "https://doi.org/10.1145/3572405",
+    "role": "Clusters feedback embeddings and selects semantic query expansions.",
+    "coverage": "survey-snapshot",
+    "citation_key": "wang2023b",
+    "source_citations": [
+      "Wang et al., 2023b"
+    ],
+    "authors": [
+      "Wang, X.",
+      "Macdonald, C.",
+      "Tonellotto, N.",
+      "Ounis, I."
+    ],
+    "source_reference": "Wang, X., Macdonald, C., Tonellotto, N., Ounis, I., 2023b. Colbert-prf: Semantic pseudo-relevance feedback for dense passage and document retrieval. ACM Transactions on the Web 17, 3–39. URL: https://dl.acm.org/doi/pdf/10.1145/3572405, doi:10.1145/3572405.",
+    "source_title": "Colbert-prf: Semantic pseudo-relevance feedback for dense passage and document retrieval",
+    "cited_in_sections": [
+      "1",
+      "8.2.1",
+      "8.2.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "1",
+      "8",
+      "8.2",
+      "8.2.1",
+      "8.2.2",
+      "8.2.3"
+    ]
+  },
+  {
+    "id": "colstar",
+    "name": "Col⋆",
+    "title": "Reproducibility, Replicability, and Insights into Dense Multi-Representation Retrieval Models: from ColBERT to Col⋆",
+    "year": 2023,
+    "url": "https://doi.org/10.1145/3539618.3591916",
+    "coverage": "survey-snapshot",
+    "citation_key": "wang2023c",
+    "source_citations": [
+      "Wang et al., 2023c"
+    ],
+    "authors": [
+      "Wang, X.",
+      "Macdonald, C.",
+      "Tonellotto, N.",
+      "Ounis, I."
+    ],
+    "source_reference": "Wang, X., Macdonald, C., Tonellotto, N., Ounis, I., 2023c. Reproducibility, Replicability, and Insights into Dense Multi-Representation Retrieval Models: from ColBERT to Col⋆, in: Proceedings of SIGIR.",
+    "source_title": "Reproducibility, Replicability, and Insights into Dense Multi-Representation Retrieval Models: from ColBERT to Col⋆",
+    "cited_in_sections": [
+      "9.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "9.2"
+    ]
+  },
+  {
+    "id": "nevir",
+    "name": "NevIR",
+    "title": "Nevir: Negation in neural information retrieval",
+    "year": 2024,
+    "url": "https://aclanthology.org/2024.eacl-long.139/",
+    "coverage": "survey-snapshot",
+    "citation_key": "weller2024",
+    "source_citations": [
+      "Weller et al., 2024"
+    ],
+    "authors": [
+      "Weller, O.",
+      "Lawrie, D.",
+      "Van Durme, B."
+    ],
+    "source_reference": "Weller, O., Lawrie, D., Van Durme, B., 2024. Nevir: Negation in neural information retrieval, in: Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 2274–2287.",
+    "source_title": "Nevir: Negation in neural information retrieval",
+    "cited_in_sections": [
+      "9.4"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "9.4"
+    ]
+  },
+  {
+    "id": "mlr",
+    "name": "MLR",
+    "year": 2023,
+    "reference_venue_or_version": "DocEng",
+    "title": "Investigating multi-layer representations for dense passage retrieval",
+    "url": "https://aclanthology.org/2025.findings-emnlp.1333/",
+    "role": "Transfers lexical importance estimates to offline embedding pruning.",
+    "coverage": "survey-snapshot",
+    "citation_key": "xie2025",
+    "source_citations": [
+      "Xie and Lukasiewicz, 2025"
+    ],
+    "authors": [
+      "Xie, Z.",
+      "Lukasiewicz, T."
+    ],
+    "source_reference": "Xie, Z., Lukasiewicz, T., 2025. Investigating multi-layer representations for dense passage retrieval, in: Findings of the Association for Computational Linguistics: EMNLP 2025, pp. 24522–24536.",
+    "source_title": "Investigating multi-layer representations for dense passage retrieval",
+    "cited_in_sections": [
+      "2.3"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "2.3"
+    ]
+  },
+  {
+    "id": "ance",
+    "name": "ANCE",
+    "title": "Approximate nearest neighbor negative contrastive learning for dense text retrieval",
+    "year": 2021,
+    "url": "https://openreview.net/forum?id=zeFrfgyZln",
+    "coverage": "survey-snapshot",
+    "citation_key": "xiong2021",
+    "source_citations": [
+      "Xiong et al., 2021"
+    ],
+    "authors": [
+      "Xiong, L.",
+      "Xiong, C.",
+      "Li, Y.",
+      "Tang, K.",
+      "Liu, J.",
+      "Bennett, P.N.",
+      "Ahmed, J.",
+      "Overwijk, A."
+    ],
+    "source_reference": "Xiong, L., Xiong, C., Li, Y., Tang, K., Liu, J., Bennett, P.N., Ahmed, J., Overwijk, A., 2021. Approximate nearest neighbor negative contrastive learning for dense text retrieval, in: 9th International Conference on Learning Representations, ICLR 2021, Virtual Event, Austria, May 3-7, 2021, OpenReview.net. URL: https://openreview.net/forum?id=zeFrfgyZln.",
+    "source_title": "Approximate nearest neighbor negative contrastive learning for dense text retrieval",
+    "cited_in_sections": [
+      "2.2",
+      "2.5"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "2.2",
+      "2.5"
+    ]
+  },
+  {
+    "id": "colchunk",
+    "name": "ColChunk",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Visual Late Chunking: An Empirical Study of Contextual Chunking for Efficient Visual Document Retrieval",
+    "url": "https://arxiv.org/abs/2604.10167",
+    "role": "Combines contextual patch clustering with a spatial prior.",
+    "coverage": "survey-snapshot",
+    "citation_key": "yan2026a",
+    "source_citations": [
+      "Yan et al., 2026a"
+    ],
+    "authors": [
+      "Yan, Y.",
+      "Ou, M.",
+      "Cao, Y.",
+      "Huo, J.",
+      "Zou, X.",
+      "Liu, S.",
+      "Kwok, J.",
+      "Hu, X."
+    ],
+    "source_reference": "Yan, Y., Ou, M., Cao, Y., Huo, J., Zou, X., Liu, S., Kwok, J., Hu, X., 2026a. Visual late chunking: An empirical study of contextual chunking for efficient visual document retrieval. URL: https://arxiv.org/abs/2604.10167, arXiv:2604.10167.",
+    "source_title": "Visual late chunking: An empirical study of contextual chunking for efficient visual document retrieval",
+    "cited_in_sections": [
+      "10.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "10.2"
+    ]
+  },
+  {
+    "id": "sculpt",
+    "name": "Prune-then-merge",
+    "year": 2026,
+    "reference_venue_or_version": "ACL Findings",
+    "title": "Sculpting the Vector Space: Towards Efficient Multi-Vector Visual Document Retrieval via Prune-then-Merge Framework",
+    "url": "https://aclanthology.org/2026.findings-acl.1247/",
+    "role": "Combines visual-token pruning and merging.",
+    "coverage": "survey-snapshot",
+    "citation_key": "yan2026b",
+    "source_citations": [
+      "Yan et al., 2026b"
+    ],
+    "authors": [
+      "Yan, Y.",
+      "Ou, M.",
+      "Cao, Y.",
+      "Zou, X.",
+      "Huo, J.",
+      "Liu, S.",
+      "Kwok, J.",
+      "Hu, X."
+    ],
+    "source_reference": "Yan, Y., Ou, M., Cao, Y., Zou, X., Huo, J., Liu, S., Kwok, J., Hu, X., 2026b. Sculpting the vector space: Towards efficient multi-vector visual document retrieval via prune-then-merge framework, in: Findings of the Association for Computational Linguistics: ACL 2026, Association for Computational Linguistics, San Diego, California, United States. pp. 24883–24925. URL: https://aclanthology.org/ 2026.findings-acl.1247/, doi:10.18653/v1/2026.findings-acl.1247.",
+    "source_title": "Sculpting the vector space: Towards efficient multi-vector visual document retrieval via prune-then-merge framework",
+    "cited_in_sections": [
+      "5.3.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.3.3"
+    ]
+  },
+  {
+    "id": "mvhnsw",
+    "name": "MV-HNSW",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "Unified and Efficient Approach for Multi-Vector Similarity Search",
+    "url": "https://arxiv.org/abs/2604.02815",
+    "role": "Adapts hierarchical graph search to multi-vector objects.",
+    "coverage": "survey-snapshot",
+    "citation_key": "yang2026a",
+    "source_citations": [
+      "Yang et al., 2026a"
+    ],
+    "authors": [
+      "Yang, B.",
+      "Zeng, Y.",
+      "Zhang, H.",
+      "Zheng, Z.",
+      "Chi, Y.",
+      "Tong, Y.",
+      "Xu, K."
+    ],
+    "source_reference": "Yang, B., Zeng, Y., Zhang, H., Zheng, Z., Chi, Y., Tong, Y., Xu, K., 2026a. Unified and efficient approach for multi-vector similarity search. arXiv preprint arXiv:2604.02815 .",
+    "source_title": "Unified and efficient approach for multi-vector similarity search",
+    "cited_in_sections": [
+      "6.3.2",
+      "11.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "6.3.2",
+      "6.6",
+      "11.2"
+    ]
+  },
+  {
+    "id": "routir",
+    "name": "RoutIR",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "RoutIR: Fast Serving of Retrieval Pipelines for Retrieval-Augmented Generation",
+    "url": "https://arxiv.org/abs/2601.10644",
+    "role": "Addresses serving and execution of retrieval pipelines.",
+    "coverage": "survey-snapshot",
+    "citation_key": "yang2026b",
+    "source_citations": [
+      "Yang et al., 2026b"
+    ],
+    "authors": [
+      "Yang, E.",
+      "Yates, A.",
+      "Lawrie, D.",
+      "Mayfield, J.",
+      "Adriaanse, T."
+    ],
+    "source_reference": "Yang, E., Yates, A., Lawrie, D., Mayfield, J., Adriaanse, T., 2026b. RoutIR: Fast serving of retrieval pipelines for retrieval-augmented generation doi:10.48550/arXiv.2601.10644, arXiv:2601.10644.",
+    "source_title": "RoutIR: Fast serving of retrieval pipelines for retrieval-augmented generation doi:10.48550/arXiv.2601.10644, arXiv:2601.10644",
+    "cited_in_sections": [
+      "9.3"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "9.3"
+    ]
+  },
+  {
+    "id": "sar",
+    "name": "ColBERTSaR",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "ColBERTSaR: Sparsified ColBERT Index via Product Quantization",
+    "url": "https://arxiv.org/abs/2606.05568",
+    "role": "Uses residual-free codeword identifiers and inverted lists; also reduces storage.",
+    "coverage": "survey-snapshot",
+    "citation_key": "yang2026c",
+    "source_citations": [
+      "Yang et al., 2026c"
+    ],
+    "authors": [
+      "Yang, E.",
+      "Yates, A.",
+      "Lawrie, D.",
+      "Mayfield, J.",
+      "Samuel, S.",
+      "Jha, R."
+    ],
+    "source_reference": "Yang, E., Yates, A., Lawrie, D., Mayfield, J., Samuel, S., Jha, R., 2026c. ColBERTSaR: Sparsified ColBERT index via product quantization. arXiv preprint arXiv:2606.05568 URL: https://arxiv.org/abs/2606.05568.",
+    "source_title": "ColBERTSaR: Sparsified ColBERT index via product quantization",
+    "cited_in_sections": [
+      "5.1",
+      "7.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.1",
+      "7.1",
+      "7.2",
+      "7.3"
+    ]
+  },
+  {
+    "id": "cq",
+    "name": "Contextual Quantization",
+    "year": 2022,
+    "reference_venue_or_version": "ACL",
+    "title": "Compact Token Representations with Contextual Quantization for Efficient Document Re-ranking",
+    "url": "https://aclanthology.org/2022.acl-long.51/",
+    "role": "Compresses contextual document-token representations for reranking.",
+    "coverage": "survey-snapshot",
+    "citation_key": "yang2022",
+    "source_citations": [
+      "Yang et al., 2022"
+    ],
+    "authors": [
+      "Yang, Y.",
+      "Qiao, Y.",
+      "Yang, T."
+    ],
+    "source_reference": "Yang, Y., Qiao, Y., Yang, T., 2022. Compact token representations with contextual quantization for efficient document re-ranking, in: Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 695–707.",
+    "source_title": "Compact token representations with contextual quantization for efficient document re-ranking",
+    "cited_in_sections": [
+      "5.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "5.1"
+    ]
+  },
+  {
+    "id": "ance-prf",
+    "name": "ANCE-PRF",
+    "title": "Improving query representations for dense retrieval with pseudo relevance feedback",
+    "year": 2021,
+    "url": "https://doi.org/10.1145/3459637.3482124",
+    "coverage": "survey-snapshot",
+    "citation_key": "yu2021",
+    "source_citations": [
+      "Yu et al., 2021"
+    ],
+    "authors": [
+      "Yu, H.",
+      "Xiong, C.",
+      "Callan, J."
+    ],
+    "source_reference": "Yu, H., Xiong, C., Callan, J., 2021. Improving query representations for dense retrieval with pseudo relevance feedback, in: CIKM ’21: The 30th ACM International Conference on Information and Knowledge Management, Virtual Event, Queensland, Australia, November 1 - 5, 2021, ACM. pp. 3592–3596. URL: https://doi.org/10.1145/3459637.3482124, doi:10.1145/3459637.3482124.",
+    "source_title": "Improving query representations for dense retrieval with pseudo relevance feedback",
+    "cited_in_sections": [
+      "8.1"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "8.1"
+    ]
+  },
+  {
+    "id": "hplus",
+    "name": "H+ Embedding",
+    "year": 2026,
+    "reference_venue_or_version": "arXiv",
+    "title": "H+ Embedding: Harmonizing Global and Token-Level Retrieval with Context-Dependent Phrases",
+    "url": "https://arxiv.org/abs/2608.00065",
+    "role": "Motivates learned interaction units beyond fixed token segmentation.",
+    "coverage": "survey-snapshot",
+    "citation_key": "zhang2026",
+    "source_citations": [
+      "Zhang et al., 2026"
+    ],
+    "authors": [
+      "Zhang, S.",
+      "Hu, J.",
+      "Feng, Y.",
+      "Wang, Z.",
+      "Pan, Z.",
+      "Dong, G.",
+      "Yuan, X.",
+      "Hong, J.",
+      "Wang, X."
+    ],
+    "source_reference": "Zhang, S., Hu, J., Feng, Y., Wang, Z., Pan, Z., Dong, G., Yuan, X., Hong, J., Wang, X., 2026. H+ Embedding: Harmonizing global and token-level retrieval with context-dependent phrases. URL: https://arxiv.org/abs/2608.00065, arXiv:2608.00065.",
+    "source_title": "H+ Embedding: Harmonizing global and token-level retrieval with context-dependent phrases",
+    "cited_in_sections": [
+      "11.1"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "11.1"
+    ]
+  },
+  {
+    "id": "zhang2022",
+    "name": "Multi-view document representation learning for open-domain dense retrieval",
+    "title": "Multi-view document representation learning for open-domain dense retrieval",
+    "year": 2022,
+    "url": "https://aclanthology.org/2022.acl-long.414/",
+    "coverage": "survey-snapshot",
+    "citation_key": "zhang2022",
+    "source_citations": [
+      "Zhang et al., 2022"
+    ],
+    "authors": [
+      "Zhang, S.",
+      "Liang, Y.",
+      "Gong, M.",
+      "Jiang, D.",
+      "Duan, N."
+    ],
+    "source_reference": "Zhang, S., Liang, Y., Gong, M., Jiang, D., Duan, N., 2022. Multi-view document representation learning for open-domain dense retrieval, in: Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 5990–6000.",
+    "source_title": "Multi-view document representation learning for open-domain dense retrieval",
+    "cited_in_sections": [
+      "1",
+      "2.4"
+    ],
+    "category": "background-and-boundary",
+    "discussed_in_sections": [
+      "1",
+      "2.4"
+    ]
+  },
+  {
+    "id": "lossless",
+    "name": "Dominance-based pruning",
+    "year": 2025,
+    "reference_venue_or_version": "SIGIR",
+    "title": "Towards Lossless Token Pruning in Late-Interaction Retrieval Models",
+    "url": "https://doi.org/10.1145/3726302.3730100",
+    "role": "Separates exact dominance conditions from approximate practical pruning.",
+    "coverage": "survey-snapshot",
+    "citation_key": "zong2025",
+    "source_citations": [
+      "Zong and Piwowarski, 2025"
+    ],
+    "authors": [
+      "Zong, Y.",
+      "Piwowarski, B."
+    ],
+    "source_reference": "Zong, Y., Piwowarski, B., 2025. Towards lossless token pruning in late-interaction retrieval models, in: Ferro, N., Maistro, M., Pasi, G., Alonso, O., Trotman, A., Verberne, S. (Eds.), Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR 2025, Padua, Italy, July 13-18, 2025, ACM. pp. 2407–2417. URL: https://doi.org/10.1145/3726302.3730100, doi:10.1145/3726302.3730100.",
+    "source_title": "Towards lossless token pruning in late-interaction retrieval models",
+    "cited_in_sections": [
+      "2.4",
+      "5.3.2"
+    ],
+    "category": "late-interaction-and-extensions",
+    "discussed_in_sections": [
+      "2.4",
+      "5.3.2"
+    ]
   }
 ]

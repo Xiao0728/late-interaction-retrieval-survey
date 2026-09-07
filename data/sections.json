@@ -1,0 +1,382 @@
+[
+  {
+    "id": "1",
+    "title": "Introduction",
+    "start_line": 61
+  },
+  {
+    "id": "2",
+    "title": "Defining Late Interaction",
+    "start_line": 158
+  },
+  {
+    "id": "2.1",
+    "title": "Formal definition and structural properties",
+    "start_line": 165
+  },
+  {
+    "id": "2.2",
+    "title": "Independent encoding and delayed matching",
+    "start_line": 213
+  },
+  {
+    "id": "2.3",
+    "title": "Late interaction retrieval versus multi-vector retrieval",
+    "start_line": 224
+  },
+  {
+    "id": "2.4",
+    "title": "MaxSim and its retrieval-theoretic interpretation",
+    "start_line": 241
+  },
+  {
+    "id": "2.5",
+    "title": "Scope, boundaries, and edge cases",
+    "start_line": 273
+  },
+  {
+    "id": "3",
+    "title": "ColBERT as a Prototype Late-Interaction Pipeline",
+    "start_line": 298
+  },
+  {
+    "id": "3.1",
+    "title": "The modular ColBERT prototype",
+    "start_line": 305
+  },
+  {
+    "id": "3.2",
+    "title": "How later work modifies the prototype",
+    "start_line": 352
+  },
+  {
+    "id": "4",
+    "title": "Scoring and Matching Variants",
+    "start_line": 481
+  },
+  {
+    "id": "4.1",
+    "title": "Learned Token Importance, Relations, and Signed Evidence",
+    "start_line": 499
+  },
+  {
+    "id": "4.2",
+    "title": "Attention-Derived Match Weighting",
+    "start_line": 643
+  },
+  {
+    "id": "4.3",
+    "title": "Hard-Max Pooling and Smoother Alternatives",
+    "start_line": 707
+  },
+  {
+    "id": "4.4",
+    "title": "Discussion and Takeaways",
+    "start_line": 769
+  },
+  {
+    "id": "5",
+    "title": "Lightweight Document Representations",
+    "start_line": 1019
+  },
+  {
+    "id": "5.1",
+    "title": "Residual and Code-Based Compression",
+    "start_line": 1051
+  },
+  {
+    "id": "5.2",
+    "title": "Dimensionality Reduction",
+    "start_line": 1136
+  },
+  {
+    "id": "5.3",
+    "title": "Reducing the Number or Granularity of Local Units",
+    "start_line": 1150
+  },
+  {
+    "id": "5.3.1",
+    "title": "Heuristic and Learned Document-Token Pruning",
+    "start_line": 1156
+  },
+  {
+    "id": "5.3.2",
+    "title": "Dominance-Based Near-Lossless Pruning",
+    "start_line": 1207
+  },
+  {
+    "id": "5.3.3",
+    "title": "Pooling, Span Compression, and Fixed Budgets",
+    "start_line": 1234
+  },
+  {
+    "id": "5.4",
+    "title": "Reported Footprints and Comparison Limits",
+    "start_line": 1311
+  },
+  {
+    "id": "5.5",
+    "title": "Discussion and Takeaways",
+    "start_line": 1330
+  },
+  {
+    "id": "6",
+    "title": "Efficient Late-Interaction Retrieval",
+    "start_line": 1412
+  },
+  {
+    "id": "6.1",
+    "title": "Online Retrieval Costs",
+    "start_line": 1425
+  },
+  {
+    "id": "6.2",
+    "title": "Multi-Stage Late-Interaction Retrieval",
+    "start_line": 1518
+  },
+  {
+    "id": "6.2.1",
+    "title": "PLAID: Centroid Filtering and Residual Scoring",
+    "start_line": 1524
+  },
+  {
+    "id": "6.2.2",
+    "title": "Bit-Vector, Graph, and Coarse-to-Fine Retrieval",
+    "start_line": 1537
+  },
+  {
+    "id": "6.3",
+    "title": "Vector-Set Indexes and Single-Vector Candidate Search",
+    "start_line": 1563
+  },
+  {
+    "id": "6.3.1",
+    "title": "DESSERT: Retrieval Tables for Vector Sets",
+    "start_line": 1568
+  },
+  {
+    "id": "6.3.2",
+    "title": "Native Multi-Vector Graph Indexes",
+    "start_line": 1577
+  },
+  {
+    "id": "6.3.3",
+    "title": "MUVERA and LEMUR: Single-Vector Candidate Search",
+    "start_line": 1596
+  },
+  {
+    "id": "6.4",
+    "title": "Retrieval and Scoring Co-Design",
+    "start_line": 1631
+  },
+  {
+    "id": "6.4.1",
+    "title": "XTR: Training for Token Retrieval and Scoring",
+    "start_line": 1634
+  },
+  {
+    "id": "6.4.2",
+    "title": "WARP: Efficient XTR Retrieval",
+    "start_line": 1652
+  },
+  {
+    "id": "6.5",
+    "title": "Query-Time Pruning and Adaptive Scoring",
+    "start_line": 1660
+  },
+  {
+    "id": "6.5.1",
+    "title": "Query-Token Pruning",
+    "start_line": 1667
+  },
+  {
+    "id": "6.5.2",
+    "title": "Adaptive Score Evaluation",
+    "start_line": 1678
+  },
+  {
+    "id": "6.6",
+    "title": "Deployment Requirements and Evaluation",
+    "start_line": 1689
+  },
+  {
+    "id": "6.7",
+    "title": "Discussion and Takeaways",
+    "start_line": 1797
+  },
+  {
+    "id": "7",
+    "title": "Sparse and Hybrid Retrieval for Late Interaction",
+    "start_line": 1821
+  },
+  {
+    "id": "7.1",
+    "title": "Scope and Boundaries of Sparse Late Interaction",
+    "start_line": 1832
+  },
+  {
+    "id": "7.2",
+    "title": "Sparse Candidate Retrieval and Hybrid Scoring",
+    "start_line": 2032
+  },
+  {
+    "id": "7.3",
+    "title": "Discussion and Takeaways",
+    "start_line": 2128
+  },
+  {
+    "id": "8",
+    "title": "Query-Side Enhancement with Pseudo-Relevance Feedback",
+    "start_line": 2172
+  },
+  {
+    "id": "8.1",
+    "title": "A Framework for Token-Level Semantic Feedback",
+    "start_line": 2179
+  },
+  {
+    "id": "8.2",
+    "title": "Pseudo-Relevance Feedback for Late Interaction",
+    "start_line": 2276
+  },
+  {
+    "id": "8.2.1",
+    "title": "Runtime Clustering Feedback",
+    "start_line": 2283
+  },
+  {
+    "id": "8.2.2",
+    "title": "Learned Feedback Weighting",
+    "start_line": 2304
+  },
+  {
+    "id": "8.2.3",
+    "title": "Index-Aware Feedback Selection",
+    "start_line": 2360
+  },
+  {
+    "id": "8.3",
+    "title": "Discussion and Takeaways",
+    "start_line": 2407
+  },
+  {
+    "id": "9",
+    "title": "Training and Methodological Infrastructure",
+    "start_line": 2451
+  },
+  {
+    "id": "9.1",
+    "title": "Training Late-Interaction Models",
+    "start_line": 2462
+  },
+  {
+    "id": "9.1.1",
+    "title": "Supervised Training and Negative Sampling",
+    "start_line": 2470
+  },
+  {
+    "id": "9.1.2",
+    "title": "Distillation and Denoised Supervision",
+    "start_line": 2502
+  },
+  {
+    "id": "9.1.3",
+    "title": "Multi-Vector Pre-training and Model Adaptation",
+    "start_line": 2541
+  },
+  {
+    "id": "9.2",
+    "title": "Reproducibility and Evaluation Protocols",
+    "start_line": 2578
+  },
+  {
+    "id": "9.3",
+    "title": "Software and Serving Infrastructure",
+    "start_line": 2649
+  },
+  {
+    "id": "9.4",
+    "title": "Diagnostics and Failure Analysis",
+    "start_line": 2706
+  },
+  {
+    "id": "9.5",
+    "title": "Interpretation of Local Evidence",
+    "start_line": 2742
+  },
+  {
+    "id": "9.6",
+    "title": "Discussion and Takeaways",
+    "start_line": 2772
+  },
+  {
+    "id": "10",
+    "title": "Extensions Beyond Standard Ad Hoc Text Retrieval",
+    "start_line": 2797
+  },
+  {
+    "id": "10.1",
+    "title": "Multilingual and Cross-Lingual Retrieval",
+    "start_line": 2811
+  },
+  {
+    "id": "10.2",
+    "title": "Multimodal and Visually Rich Document Retrieval",
+    "start_line": 2867
+  },
+  {
+    "id": "10.3",
+    "title": "Specialised Domains and Retrieval Capabilities",
+    "start_line": 2982
+  },
+  {
+    "id": "10.4",
+    "title": "Iterative and Multi-Hop Retrieval",
+    "start_line": 3050
+  },
+  {
+    "id": "10.5",
+    "title": "Discussion and Takeaways",
+    "start_line": 3153
+  },
+  {
+    "id": "11",
+    "title": "Open Challenges and Future Directions",
+    "start_line": 3317
+  },
+  {
+    "id": "11.1",
+    "title": "Learning the Units of Interaction",
+    "start_line": 3331
+  },
+  {
+    "id": "11.2",
+    "title": "Composable, Updatable, and Hardware-Aware Retrieval Infrastructure",
+    "start_line": 3349
+  },
+  {
+    "id": "11.3",
+    "title": "Risk-Aware and Query-Adaptive Late Interaction",
+    "start_line": 3388
+  },
+  {
+    "id": "11.4",
+    "title": "Learning and Approximation with Explicit Preservation Targets",
+    "start_line": 3415
+  },
+  {
+    "id": "11.5",
+    "title": "Stateful Late Interaction for RAG and Agentic Search",
+    "start_line": 3444
+  },
+  {
+    "id": "11.6",
+    "title": "Causal Diagnosis, Robustness, and Control of Local Evidence",
+    "start_line": 3474
+  },
+  {
+    "id": "11.7",
+    "title": "Evaluation under Heterogeneous and Changing Conditions",
+    "start_line": 3499
+  }
+]
