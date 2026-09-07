@@ -8,7 +8,7 @@ Companion resources for **[A Survey of Late-Interaction Neural Retrieval: Paradi
 
 Late interaction retains independently encoded local representations and performs fine-grained matching at scoring time. This survey organizes the field around the components of the retrieval pipeline, connecting model design to representation storage, candidate generation, final scoring, and deployment.
 
-The complete bibliography contains **120 literature and resource records** from the August 2026 survey snapshot. The reading lists select papers by their substantive contribution to each chapter. Backbone reuse, baseline comparisons, and passing citations do not create additional placements. See [coverage and provenance](docs/coverage.md).
+The complete bibliography contains **literature and resource records** from the **August 2026** survey snapshot. The reading lists select papers by their substantive contribution to each chapter. Backbone reuse, baseline comparisons, and passing citations do not create additional placements. See [coverage and provenance](docs/coverage.md).
 
 ## Start Here
 
