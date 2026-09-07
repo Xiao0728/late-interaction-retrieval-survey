@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-07 — Contribution-based selection
+
+- Selected method chapters by substantive contribution rather than all citation or mention occurrences.
+- Limited backbone repetition; retained ColBERTv2 in compression and training for distinct contributions.
+- Restricted the PRF table to four directly relevant late-interaction feedback papers.
+- Added explicit chapter/background/bibliography-only dispositions and per-placement rationale.
+- Preserved all 120 bibliography records and the source citation evidence; updated validation to distinguish completeness from editorial selection.
+
 ## 2026-09-07 — Simplified chapter reading lists
 
 - Restored one paper table per chapter, with within-chapter deduplication and cross-chapter repetition.

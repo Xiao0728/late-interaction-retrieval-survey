@@ -11,12 +11,13 @@ def outputs():
     sections = json.loads((ROOT / 'data/sections.json').read_text())
     readme = (ROOT / 'README.md').read_text()
     prefix = readme.split('## Reading Lists')[0]
-    prefix = re.sub(r'The collection contains.*?\[citation audit\]\(docs/citation-audit.md\)\.', 'The collection contains **120 distinct bibliography records** from the August 2026 survey snapshot, including background work and software. Papers are grouped by survey chapter; a work may appear in multiple relevant chapters. Background and boundary cases are collected at the end. See [coverage and provenance](docs/coverage.md).', prefix)
+    prefix = re.sub(r'The collection contains[^\n]+', 'The complete bibliography contains **120 literature and resource records** from the August 2026 survey snapshot. The reading lists select papers by their substantive contribution to each chapter. Backbone reuse, baseline comparisons, and passing citations do not create additional placements. See [coverage and provenance](docs/coverage.md).', prefix)
+    selection = json.loads((ROOT / 'data/reading-list-selection.json').read_text())
     text = prefix + '## Reading Lists\n\n'
     text += 'Download [references.bib](references.bib) for the literature, or [survey.bib](survey.bib) to cite the survey.\n\n'
     display = json.loads((ROOT / 'data/reading-list-display.json').read_text())
 
-    def table(group):
+    def table(group, chapter=None):
         result = '| Work | Year / venue or version | Paper | Main contribution / relevance |\n| --- | --- | --- | --- |\n'
         for paper in sorted(group, key=lambda p: (p['year'] or 0, p['name'].casefold())):
             extra = display.get(paper['citation_key'], {})
@@ -26,19 +27,27 @@ def outputs():
             venue = extra.get('venue', paper.get('reference_venue_or_version', ''))
             date = str(paper['year'] or 'n.d.') + (' · ' + venue if venue else '')
             role = extra.get('role', paper.get('role', ''))
+            contributions = selection[paper['citation_key']].get('chapters', {})
+            if chapter is not None and len(contributions) > 1:
+                role = contributions[str(chapter)]['reason']
             result += f"| {name} | {cell(date)} | [{cell(paper['title'])}]({paper['url']}) | {cell(role)} |\n"
         return result + '\n'
 
     for chapter in range(3, 12):
         heading = next(sec['title'] for sec in sections if sec['id'] == str(chapter))
         text += f'<a id="section-{chapter}"></a>\n\n### Section {chapter}: {heading}\n\n'
-        group = [p for p in papers if p['category'] != 'background-and-boundary' and any(s.split('.')[0] == str(chapter) for s in p['discussed_in_sections'])]
-        text += table(group)
+        group = [p for p in papers if str(chapter) in selection[p['citation_key']].get('chapters', {})]
+        if chapter == 8:
+            text += 'Pseudo-relevance feedback methods developed for late-interaction retrieval. Related dense PRF and query decomposition appear in the background collection.\n\n'
+        if chapter == 11:
+            text += 'Selected work on emerging interaction units, agentic search, and evaluation. Agentic systems and benchmarks provide research context; they are not all late-interaction methods.\n\n'
+        text += table(group, chapter)
     text += '<a id="background-and-boundary-cases"></a>\n\n### Background and Boundary Cases\n\n'
     text += 'These works provide background, wider multi-vector designs, comparison methods, and evaluation context. Poly-encoders, ME-BERT, MVR, and MLR illustrate the wider multi-vector family; DPR, ANCE, and Contriever are single-vector baselines. COIL and XTR remain in their substantive chapters because the survey discusses their modified forms of late interaction in detail.\n\n'
-    text += table([p for p in papers if p['category'] == 'background-and-boundary'])
+    text += table([p for p in papers if selection[p['citation_key']]['placement'] == 'background'])
+    text += 'Additional historical, conceptual, and software-community references remain available in [references.bib](references.bib).\n\n'
     text += '## Citation' + readme.split('## Citation', 1)[1]
-    text = text.replace("The reading lists follow the survey's numbered subsections with many-to-many paper placement.", "The reading lists follow the survey's chapters, with background and boundary cases collected separately.")
+    text = text.replace("The reading lists follow the survey's numbered subsections with many-to-many paper placement.", "The reading lists select substantive contributions by chapter, with related background collected separately.")
     bib = '% Literature cited by the survey; cite the survey itself using survey.bib.\n% Author initials and publication years follow the surveyed reference version.\n\n'
     for p in papers:
         def esc(value):

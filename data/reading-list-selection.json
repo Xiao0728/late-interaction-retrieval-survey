@@ -1,0 +1,1465 @@
+{
+  "abdallah2026": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "1",
+      "10.2",
+      "10.5",
+      "11.1"
+    ]
+  },
+  "acquavia2023": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.1"
+    ]
+  },
+  "ali2026": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Exclusion-inversion analysis diagnoses failure behavior; its candidate-stage remedy is not presented as a new MaxSim rule."
+      }
+    },
+    "source_sections": [
+      "4.4"
+    ]
+  },
+  "an2026": {
+    "placement": "chapters",
+    "chapters": {
+      "4": {
+        "reason": "Directly studies or modifies local evidence weighting, aggregation, or scoring behavior."
+      }
+    },
+    "source_sections": [
+      "4.1",
+      "4.4"
+    ]
+  },
+  "answerai2024": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.3"
+    ]
+  },
+  "archish2026": {
+    "placement": "chapters",
+    "chapters": {
+      "4": {
+        "reason": "Directly studies or modifies local evidence weighting, aggregation, or scoring behavior."
+      }
+    },
+    "source_sections": [
+      "4.1",
+      "4.4"
+    ]
+  },
+  "bian2025": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "6.1",
+      "6.2.2",
+      "6.6"
+    ]
+  },
+  "chaffin2026": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.1.3"
+    ]
+  },
+  "chaffin2025": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "1",
+      "9.3"
+    ]
+  },
+  "chandna2024": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.5",
+      "11.6"
+    ]
+  },
+  "chen2024": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "7.2"
+    ]
+  },
+  "chen2026a": {
+    "placement": "chapters",
+    "chapters": {
+      "11": {
+        "reason": "Selected work motivates an emerging interaction-unit, agentic-search, or evaluation research direction; inclusion does not imply a canonical late-interaction method."
+      }
+    },
+    "source_sections": [
+      "11.5"
+    ]
+  },
+  "chen2026b": {
+    "placement": "chapters",
+    "chapters": {
+      "11": {
+        "reason": "Selected work motivates an emerging interaction-unit, agentic-search, or evaluation research direction; inclusion does not imply a canonical late-interaction method."
+      }
+    },
+    "source_sections": [
+      "11.7"
+    ]
+  },
+  "clavie2025": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "10.1",
+      "10.5"
+    ]
+  },
+  "clavie2024": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.3"
+    ]
+  },
+  "clavie2026": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "1",
+      "2.3"
+    ]
+  },
+  "cui2025": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Attention-derived region supervision directly targets visual-document retrieval."
+      }
+    },
+    "source_sections": [
+      "11.4",
+      "11.6"
+    ]
+  },
+  "deng2026": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "2.5",
+      "10.3",
+      "10.5"
+    ]
+  },
+  "dhulipala2024": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "6.1",
+      "6.3.3",
+      "6.6",
+      "6.7",
+      "11.2"
+    ]
+  },
+  "edy2026": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "4.4"
+    ]
+  },
+  "engels2023": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "6.3.1",
+      "6.6"
+    ]
+  },
+  "faysse2025": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Visual document retrieval is the substantive extension; using MaxSim is not a new scoring contribution."
+      }
+    },
+    "source_sections": [
+      "1",
+      "5.3.3",
+      "10.2",
+      "10.5",
+      "11.7"
+    ]
+  },
+  "formal2024": {
+    "placement": "chapters",
+    "chapters": {
+      "7": {
+        "reason": "Directly contributes sparse alignment, lexical routing, or a sparse late-interaction substrate."
+      }
+    },
+    "source_sections": [
+      "1",
+      "2.5",
+      "7.1",
+      "7.2",
+      "11.2"
+    ]
+  },
+  "formal2021a": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "1",
+      "2.5",
+      "7.1"
+    ]
+  },
+  "formal2021b": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "2.4",
+      "9.5"
+    ]
+  },
+  "fujimaki2026": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "10.3",
+      "10.5",
+      "11.7"
+    ]
+  },
+  "gao2021": {
+    "placement": "chapters",
+    "chapters": {
+      "7": {
+        "reason": "Directly contributes sparse alignment, lexical routing, or a sparse late-interaction substrate."
+      }
+    },
+    "source_sections": [
+      "2.5",
+      "7.1",
+      "7.2"
+    ]
+  },
+  "georgiou2026": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "1",
+      "10.2",
+      "10.5",
+      "11.5"
+    ]
+  },
+  "ghosh2026": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.2"
+    ]
+  },
+  "giacalone2024": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.4"
+    ]
+  },
+  "guo2026": {
+    "placement": "chapters",
+    "chapters": {
+      "7": {
+        "reason": "Directly contributes sparse alignment, lexical routing, or a sparse late-interaction substrate."
+      }
+    },
+    "source_sections": [
+      "1",
+      "7.1",
+      "11.2"
+    ]
+  },
+  "he2025": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.1",
+      "5.4",
+      "5.5"
+    ]
+  },
+  "hofstatter2022": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.2"
+    ]
+  },
+  "humeau2020": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "2.3"
+    ]
+  },
+  "izacard2022": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "2.5"
+    ]
+  },
+  "jha2026a": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "6.4.1",
+      "9.2"
+    ]
+  },
+  "jha2024": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Reduced embedding dimensionality directly targets storage."
+      },
+      "10": {
+        "reason": "Multilingual late-interaction modeling directly addresses language transfer."
+      }
+    },
+    "source_sections": [
+      "5.2",
+      "10.1",
+      "10.5"
+    ]
+  },
+  "jha2026b": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.3"
+    ]
+  },
+  "josef2026": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.3"
+    ]
+  },
+  "jaasaari2026": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "1",
+      "6.1",
+      "6.3.3",
+      "6.6",
+      "6.7",
+      "11.2"
+    ]
+  },
+  "kang2025": {
+    "placement": "chapters",
+    "chapters": {
+      "4": {
+        "reason": "Directly studies or modifies local evidence weighting, aggregation, or scoring behavior."
+      }
+    },
+    "source_sections": [
+      "2.4",
+      "4.1",
+      "4.4",
+      "11.4"
+    ]
+  },
+  "kankanampati2026": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "1",
+      "5.3.1",
+      "11.4"
+    ]
+  },
+  "karpukhin2020": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "1",
+      "2.2",
+      "2.5"
+    ]
+  },
+  "khattab2021": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "10.4",
+      "10.5",
+      "11.5"
+    ]
+  },
+  "khattab2020": {
+    "placement": "chapters",
+    "chapters": {
+      "3": {
+        "reason": "Introduces the reference late-interaction architecture."
+      }
+    },
+    "source_sections": [
+      "1",
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "3",
+      "3.1",
+      "3.2",
+      "4",
+      "4.2",
+      "4.4",
+      "5",
+      "5.1",
+      "5.3.1",
+      "5.3.2",
+      "5.3.3",
+      "5.4",
+      "5.5",
+      "6.3.1",
+      "6.4.1",
+      "7",
+      "7.1",
+      "7.2",
+      "8.2.1",
+      "9.1",
+      "9.1.1",
+      "9.1.2",
+      "9.1.3",
+      "9.2",
+      "9.3",
+      "9.5",
+      "10.1",
+      "10.3"
+    ]
+  },
+  "killingback2026a": {
+    "placement": "chapters",
+    "chapters": {
+      "4": {
+        "reason": "Directly studies or modifies local evidence weighting, aggregation, or scoring behavior."
+      }
+    },
+    "source_sections": [
+      "1",
+      "4.1",
+      "4.4",
+      "11.4"
+    ]
+  },
+  "kim2026heaven": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "11.3",
+      "11.7"
+    ]
+  },
+  "kim2026litta": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Visually grounded test-time alignment is retained as a multimodal extension, not classified as late-interaction PRF."
+      }
+    },
+    "source_sections": [
+      "1",
+      "8.3",
+      "10.2",
+      "10.5"
+    ]
+  },
+  "lassance2021": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "2.4",
+      "5.3.1"
+    ]
+  },
+  "lassance2022": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "2.4",
+      "2.5",
+      "5.3.1"
+    ]
+  },
+  "lee2023": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "2.5",
+      "6.1",
+      "6.4.1",
+      "6.4.2",
+      "6.6",
+      "6.7",
+      "9.1.3",
+      "9.2"
+    ]
+  },
+  "lei2023": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "1"
+    ]
+  },
+  "li2021": {
+    "placement": "background",
+    "reason": "Dense-retrieval PRF background; not a late-interaction PRF method.",
+    "source_sections": [
+      "8.1"
+    ]
+  },
+  "li2023a": {
+    "placement": "chapters",
+    "chapters": {
+      "7": {
+        "reason": "Directly contributes sparse alignment, lexical routing, or a sparse late-interaction substrate."
+      }
+    },
+    "source_sections": [
+      "2.5",
+      "7.1",
+      "7.2"
+    ]
+  },
+  "li2023b": {
+    "placement": "chapters",
+    "chapters": {
+      "7": {
+        "reason": "Directly contributes sparse alignment, lexical routing, or a sparse late-interaction substrate."
+      }
+    },
+    "source_sections": [
+      "7.1",
+      "7.2",
+      "11.2"
+    ]
+  },
+  "lin2021notes": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "2.5"
+    ]
+  },
+  "lin2021book": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "1"
+    ]
+  },
+  "liu2024": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Token-pruning analysis directly informs representation reduction."
+      },
+      "9": {
+        "reason": "Matching-mechanism analysis directly diagnoses late-interaction behavior."
+      }
+    },
+    "source_sections": [
+      "2.4",
+      "5.3.1",
+      "5.5",
+      "6.5.1"
+    ]
+  },
+  "liu2026": {
+    "placement": "chapters",
+    "chapters": {
+      "11": {
+        "reason": "Selected work motivates an emerging interaction-unit, agentic-search, or evaluation research direction; inclusion does not imply a canonical late-interaction method."
+      }
+    },
+    "source_sections": [
+      "11.5"
+    ]
+  },
+  "liu2025": {
+    "placement": "background",
+    "reason": "Query decomposition is related query enhancement, not pseudo-relevance feedback for late interaction.",
+    "source_sections": [
+      "8.3",
+      "11.3"
+    ]
+  },
+  "loison2026": {
+    "placement": "chapters",
+    "chapters": {
+      "11": {
+        "reason": "Selected work motivates an emerging interaction-unit, agentic-search, or evaluation research direction; inclusion does not imply a canonical late-interaction method."
+      }
+    },
+    "source_sections": [
+      "10.2",
+      "10.5",
+      "11.7"
+    ]
+  },
+  "louis2025": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "2.5",
+      "10.1",
+      "10.5"
+    ]
+  },
+  "luan2020": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "1",
+      "2.3"
+    ]
+  },
+  "ma2025": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.3",
+      "11.7"
+    ]
+  },
+  "macavaney2025": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.3",
+      "5.4",
+      "5.5",
+      "9.2"
+    ]
+  },
+  "macavaney2024": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "6.2.1",
+      "9.2"
+    ]
+  },
+  "macavaney2019": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "1",
+      "2.2",
+      "2.5"
+    ]
+  },
+  "macdonald2021": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.3"
+    ]
+  },
+  "mahdizadeh2026": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.3"
+    ]
+  },
+  "martinico2026": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "6.1",
+      "6.2.2",
+      "6.6"
+    ]
+  },
+  "masry2025": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "10.2",
+      "10.5"
+    ]
+  },
+  "moreira2026": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "1",
+      "10.2",
+      "10.5"
+    ]
+  },
+  "nair2022": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "10.1",
+      "10.5"
+    ]
+  },
+  "nardini2024": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "6.1",
+      "6.2.2",
+      "6.6"
+    ]
+  },
+  "ni2022": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "1"
+    ]
+  },
+  "nogueira2019mono": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "2.2"
+    ]
+  },
+  "nogueira2019multi": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "1"
+    ]
+  },
+  "park2025": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Sequence-compressive vectors reduce stored representation size."
+      },
+      "6": {
+        "reason": "Its coarse-to-fine retrieval design also changes candidate retrieval."
+      }
+    },
+    "source_sections": [
+      "5.3.3",
+      "5.4",
+      "5.5",
+      "6.1",
+      "6.2.2",
+      "6.6"
+    ]
+  },
+  "park2026": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Object-evidence-preserving token merging directly addresses visual representation compression."
+      }
+    },
+    "source_sections": [
+      "11.1"
+    ]
+  },
+  "patel2026": {
+    "placement": "chapters",
+    "chapters": {
+      "4": {
+        "reason": "Directly studies or modifies local evidence weighting, aggregation, or scoring behavior."
+      }
+    },
+    "source_sections": [
+      "4.1",
+      "4.2",
+      "4.4"
+    ]
+  },
+  "pony2026a": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Fused MaxSim kernels directly accelerate execution without introducing a new relevance function."
+      }
+    },
+    "source_sections": [
+      "1",
+      "11.2"
+    ]
+  },
+  "pony2026b": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "1",
+      "4.4",
+      "6.1",
+      "6.5.2",
+      "6.6",
+      "6.7",
+      "11.3"
+    ]
+  },
+  "pradeep2021": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "2.5"
+    ]
+  },
+  "qdrantteamnd": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.3"
+    ]
+  },
+  "qian2022": {
+    "placement": "chapters",
+    "chapters": {
+      "7": {
+        "reason": "Directly contributes sparse alignment, lexical routing, or a sparse late-interaction substrate."
+      }
+    },
+    "source_sections": [
+      "2.3",
+      "7.1"
+    ]
+  },
+  "qin2026": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.3"
+    ]
+  },
+  "reddy2025": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "1",
+      "10.2",
+      "10.5"
+    ]
+  },
+  "remy2026": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.5"
+    ]
+  },
+  "robertson1994": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "1",
+      "2.5",
+      "4.1"
+    ]
+  },
+  "santhanam2022a": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Centroid filtering and residual scoring directly change retrieval execution; downstream reuse does not justify additional placement."
+      }
+    },
+    "source_sections": [
+      "1",
+      "2.3",
+      "2.5",
+      "5.1",
+      "5.3.1",
+      "5.5",
+      "6.1",
+      "6.2.1",
+      "6.2.2",
+      "6.4.2",
+      "6.6",
+      "7.1",
+      "7.3",
+      "8.2.3",
+      "9.2",
+      "9.3",
+      "9.6"
+    ]
+  },
+  "santhanam2022b": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Residual compression reduces stored token-vector payload."
+      },
+      "9": {
+        "reason": "Denoised distillation is a substantive training contribution, beyond use as a backbone."
+      }
+    },
+    "source_sections": [
+      "1",
+      "2.3",
+      "2.4",
+      "2.5",
+      "5.1",
+      "5.3.1",
+      "5.4",
+      "5.5",
+      "6.2.1",
+      "6.6",
+      "7.1",
+      "7.2",
+      "8.2.3",
+      "9.1.2",
+      "9.2",
+      "9.4"
+    ]
+  },
+  "scheerer2025": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "6.1",
+      "6.4.2",
+      "6.6",
+      "6.7",
+      "9.2",
+      "9.3",
+      "11.3"
+    ]
+  },
+  "schlatt2026": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.1"
+    ]
+  },
+  "sharma2026": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Dimension tiling and fused product-quantization execution target MaxSim efficiency."
+      }
+    },
+    "source_sections": [
+      "1",
+      "11.2"
+    ]
+  },
+  "sourty2026": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Open model training and adaptation are direct methodological contributions."
+      },
+      "10": {
+        "reason": "Multilingual, long-context, and code retrieval are explicit extension settings."
+      }
+    },
+    "source_sections": [
+      "1",
+      "9.1.3",
+      "10.1",
+      "10.5"
+    ]
+  },
+  "sparckjones2000": {
+    "placement": "bibliography-only",
+    "reason": "General background or historical context retained in the complete bibliography; not necessary for the focused method reading lists.",
+    "source_sections": [
+      "4.1"
+    ]
+  },
+  "suresh2026": {
+    "placement": "chapters",
+    "chapters": {
+      "4": {
+        "reason": "Investigates hard-max aggregation and smoother alternatives."
+      },
+      "9": {
+        "reason": "Provides robustness diagnostics for local distractors and document-length effects."
+      }
+    },
+    "source_sections": [
+      "4.3",
+      "4.4",
+      "9.4",
+      "11.6"
+    ]
+  },
+  "tang2021": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "2.3"
+    ]
+  },
+  "thakur2021": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "1"
+    ]
+  },
+  "tian2026": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "1",
+      "6.3.2",
+      "6.6",
+      "11.2"
+    ]
+  },
+  "tonellotto2021": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "6.5.1"
+    ]
+  },
+  "wan2025": {
+    "placement": "chapters",
+    "chapters": {
+      "10": {
+        "reason": "Directly develops a multilingual, multimodal, domain-specific, or iterative retrieval extension."
+      }
+    },
+    "source_sections": [
+      "10.2",
+      "10.5"
+    ]
+  },
+  "wang2026": {
+    "placement": "chapters",
+    "chapters": {
+      "8": {
+        "reason": "Directly develops pseudo-relevance feedback for late-interaction retrieval."
+      }
+    },
+    "source_sections": [
+      "8",
+      "8.2",
+      "8.2.3"
+    ]
+  },
+  "wang2023a": {
+    "placement": "chapters",
+    "chapters": {
+      "8": {
+        "reason": "Directly develops pseudo-relevance feedback for late-interaction retrieval."
+      }
+    },
+    "source_sections": [
+      "8",
+      "8.2",
+      "8.2.2",
+      "8.2.3"
+    ]
+  },
+  "wang2021": {
+    "placement": "chapters",
+    "chapters": {
+      "8": {
+        "reason": "Directly develops pseudo-relevance feedback for late-interaction retrieval."
+      }
+    },
+    "source_sections": [
+      "1",
+      "8.2.1"
+    ]
+  },
+  "wang2023b": {
+    "placement": "chapters",
+    "chapters": {
+      "8": {
+        "reason": "Directly develops pseudo-relevance feedback for late-interaction retrieval."
+      }
+    },
+    "source_sections": [
+      "1",
+      "8",
+      "8.2",
+      "8.2.1",
+      "8.2.2",
+      "8.2.3"
+    ]
+  },
+  "wang2023c": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.2"
+    ]
+  },
+  "weller2024": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.4"
+    ]
+  },
+  "xie2025": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "2.3"
+    ]
+  },
+  "xiong2021": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "2.2",
+      "2.5"
+    ]
+  },
+  "yan2026a": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Contextual visual chunking directly addresses representation granularity and retrieval efficiency."
+      }
+    },
+    "source_sections": [
+      "10.2"
+    ]
+  },
+  "yan2026b": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.3.3"
+    ]
+  },
+  "yang2026a": {
+    "placement": "chapters",
+    "chapters": {
+      "6": {
+        "reason": "Directly contributes candidate search, indexing, query-time pruning, or scoring execution."
+      }
+    },
+    "source_sections": [
+      "6.3.2",
+      "6.6",
+      "11.2"
+    ]
+  },
+  "yang2026b": {
+    "placement": "chapters",
+    "chapters": {
+      "9": {
+        "reason": "Directly contributes training, reproducibility, diagnosis, interpretation, or supporting infrastructure."
+      }
+    },
+    "source_sections": [
+      "9.3"
+    ]
+  },
+  "yang2026c": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Product quantization reduces index storage."
+      },
+      "7": {
+        "reason": "The sparsified index directly contributes an alternative retrieval substrate."
+      }
+    },
+    "source_sections": [
+      "5.1",
+      "7.1",
+      "7.2",
+      "7.3"
+    ]
+  },
+  "yang2022": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "5.1"
+    ]
+  },
+  "yu2021": {
+    "placement": "background",
+    "reason": "Dense-retrieval PRF background; not a late-interaction PRF method.",
+    "source_sections": [
+      "8.1"
+    ]
+  },
+  "zhang2026": {
+    "placement": "chapters",
+    "chapters": {
+      "11": {
+        "reason": "Selected work motivates an emerging interaction-unit, agentic-search, or evaluation research direction; inclusion does not imply a canonical late-interaction method."
+      }
+    },
+    "source_sections": [
+      "11.1"
+    ]
+  },
+  "zhang2022": {
+    "placement": "background",
+    "reason": "Selected comparison, wider multi-vector design, or related retrieval context; not classified as a core chapter method.",
+    "source_sections": [
+      "1",
+      "2.4"
+    ]
+  },
+  "zong2025": {
+    "placement": "chapters",
+    "chapters": {
+      "5": {
+        "reason": "Directly contributes to, or evaluates, reducing stored document representations."
+      }
+    },
+    "source_sections": [
+      "2.4",
+      "5.3.2"
+    ]
+  }
+}
