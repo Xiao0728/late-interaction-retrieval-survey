@@ -136,7 +136,6 @@ Download [references.bib](references.bib) for the literature, or [survey.bib](su
 
 | Work | Year / venue or version | Paper | Main contribution / relevance |
 | --- | --- | --- | --- |
-| COIL | 2021 · NAACL | [COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List](https://aclanthology.org/2021.naacl-main.241/) | Lexically gates contextual token matching; a boundary case in the survey. |
 | ALIGNER | 2022 · arXiv | [Multi-vector retrieval as sparse alignment](https://arxiv.org/abs/2211.01267) | Formulates multi-vector retrieval as sparse alignment. |
 | CITADEL | 2023 · ACL | [CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval](https://aclanthology.org/2023.acl-long.663/) | Learns lexical routing for local token interactions. |
 | SLIM | 2023 · SIGIR | [SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted Indexes](https://doi.org/10.1145/3539618.3591977) | Uses sparse local representations and inverted-index-compatible retrieval. |
@@ -240,6 +239,7 @@ These works provide background, wider multi-vector designs, comparison methods, 
 | ANCE-PRF | 2021 · CIKM | [Improving query representations for dense retrieval with pseudo relevance feedback](https://doi.org/10.1145/3459637.3482124) | Studies pseudo-relevance feedback for single-vector dense retrieval. |
 | BEIR | 2021 · arXiv | [BEIR: A heterogenous benchmark for zero-shot evaluation of information retrieval models](https://arxiv.org/abs/2104.08663) | Provides heterogeneous datasets for zero-shot retrieval evaluation. |
 | MVR | 2021 · ACL | [Improving document representations by generating pseudo query embeddings for dense retrieval](https://doi.org/10.18653/v1/2021.acl-long.392) | Generates multiple pseudo-query embeddings to represent document relevance views. |
+| COIL | 2021 · NAACL | [COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List](https://aclanthology.org/2021.naacl-main.241/) | Lexically gates contextual token matching; a boundary case in the survey. |
 | SPLADE | 2021 · SIGIR | [SPLADE: sparse lexical and expansion model for first stage ranking](https://doi.org/10.1145/3404835.3463098) | Supplies a learned sparse lexical retrieval comparison. |
 | VectorPRF | 2021 · arXiv | [Pseudo relevance feedback with deep language models and dense retrievers: Successes and pitfalls](https://arxiv.org/abs/2108.11044) | Studies the benefits and pitfalls of feedback for dense retrievers. |
 | Contriever | 2022 · TMLR | [Unsupervised dense information retrieval with contrastive learning](https://openreview.net/forum?id=jKN1pXi7b0) | Provides an unsupervised single-vector dense retrieval baseline. |
